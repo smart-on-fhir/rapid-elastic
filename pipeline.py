@@ -26,7 +26,7 @@ def path_csv(disease) -> Path:
     return path_file(f'{disease}.csv')
 
 def path_json(disease) -> Path:
-    return path_file(f'{disease}.csv')
+    return path_file(f'{disease}.json')
 
 def path_file(filename) -> Path:
     return Path(os.path.join(os.path.dirname(__file__), 'output', filename))
@@ -69,9 +69,13 @@ def process(disease, querystring) -> List[Path]:
                    'hits': [e.__dict__ for e in entry_list]}
 
     with open(path_csv(disease), 'w') as fp:
+        print('writing...')
+        print(str(fp.name))
         fp.writelines(output_csv)
 
     with open(path_json(disease), 'w') as fp:
+        print('writing...')
+        print(str(fp.name))
         json.dump(output_json, fp, indent=4)
 
     return list_files(disease)
