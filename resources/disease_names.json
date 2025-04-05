@@ -475,10 +475,9 @@
     "Sickle Cell Disease": [
         "Sickle Cell Disease",
         "Hemoglobin SS Disease",
+        "Hemoglobin SC Disease",
         "HbSS Disease",
-        "Sickle Cell Disorder",
-        "Hemoglobin SS Disease",
-        "Hemoglobin SC Disease"
+        "Sickle Cell Disorder"
     ],
     "Small Intestinal Atresia": [
         "Small Intestinal Atresia",
@@ -519,8 +518,7 @@
         "Transposition of the Great Arteries",
         "Dextro-Transposition of the Great Arteries",
         "l-Transposition of the Great Arteries",
-        "Congenitally Corrected Transposition of the Great Arteries",
-        "d-TGA", "l-TGA"
+        "Congenitally Corrected Transposition of the Great Arteries"
     ],
     "Tuberous Sclerosis Complex": [
         "Tuberous Sclerosis Complex",
@@ -534,7 +532,7 @@
     "Turner Syndrome": [
         "Turner Syndrome",
         "Monosomy X",
-        "Ullrich-Turner Syndrome",,
+        "Ullrich-Turner Syndrome",
         "Ullrich Turner Syndrome",
         "Turner Mosaicism",
         "X Chromosome Deletion",
@@ -551,6 +549,13 @@
         "ELN deletion",
         "Supravalvular Aortic Stenosis Syndrome",
         "Microdeletion 7q11.23"
-
+    ],
+    "Pitt Hopkins" : [
+        "Pitt Hopkins",
+        "Pitt-Hopkins",
+        "Pitt-Hopkin",
+        "Pitt Hopkin's",
+        "TCF4 mutation",
+        "PTHS"
     ]
 }

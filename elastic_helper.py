@@ -45,7 +45,6 @@ def get_hits(disease_query_string: str, scroll_size=1000) -> dict:
         hits = scroll_response['hits']['hits']
         if not hits:
             break
-
         all_hits.extend(hits)
         scroll_id = scroll_response['_scroll_id']  # Update scroll ID for next round
 
