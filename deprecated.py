@@ -45,11 +45,3 @@ DISEASE_SEARCH = {
         "Congenital Adrenal Hyperplasia"],
     "cystic fibrosis (CF)": ["cystic fibrosis"]
 }
-
-if __name__ == '__main__':
-
-    for disease, keyword_list in DISEASE_SEARCH.items():
-        disease = disease.replace(' ', '_')
-        querystring = kql_syntax.match_phrase_any(keyword_list)
-
-        pipeline.process(disease, querystring)
