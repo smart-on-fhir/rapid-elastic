@@ -7,7 +7,13 @@ import filetool
 RARE_LT10_PER_100K = "RARE_LT10_PER_100K.csv"
 RARE_LT50_PER_100K = "RARE_LT50_PER_100K.csv"
 
-def read_disease_names(disease_csv: Path | str) -> dict:
+def strip_paren(disease: str) -> str:
+    # Replace anything in parentheses (non-greedy match)
+    # Autosomal Recessive Polycystic Kidney Disease (ARPKD) -->
+    # Autosomal Recessive Polycystic Kidney Disease
+    return re.sub(r"\s*\([^)]*\)", "", disease)
+
+def dict_disease_names(disease_csv: Path | str) -> dict:
     with open(filetool.resource(disease_csv), newline='') as csvfile:
         reader = csv.reader(csvfile)
         out = {}
@@ -27,18 +33,13 @@ def read_disease_names(disease_csv: Path | str) -> dict:
             out[disease_name] = [disease_name]
         return out
 
-def strip_paren(disease: str) -> str:
-    # Replace anything in parentheses (non-greedy match)
-    # Autosomal Recessive Polycystic Kidney Disease (ARPKD) -->
-    # Autosomal Recessive Polycystic Kidney Disease
-    return re.sub(r"\s*\([^)]*\)", "", disease)
-
-def disease_names() -> Path:
-    out = read_disease_names(RARE_LT10_PER_100K) | read_disease_names(RARE_LT50_PER_100K)
+def disease_names(filename_csv) -> Path:
+    print(f'reading .... {filename_csv}')
+    out = dict_disease_names(filename_csv)
     print(f"{len(out.keys())} disease names")
-    return filetool.write_json(out, filetool.resource('disease_names.json'))
+    return filetool.write_json(out, filetool.resource(f'disease_names_{filename_csv}.json'))
 
 
 if __name__ == '__main__':
-    # print(disease_names())
-    pass
+    disease_names(RARE_LT10_PER_100K)
+    disease_names(RARE_LT50_PER_100K)
