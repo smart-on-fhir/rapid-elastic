@@ -935,7 +935,7 @@
         "ATXN2 gene expansion",
         "ATXN2 expansion",
         "expansion in ATXN2",
-        "Trinucleotide repeat in ATXN2\n\n",
+        "Trinucleotide repeat in ATXN2",
         "Polyglutamine SCA2"
     ],
     "Refsum disease": [
@@ -944,18 +944,49 @@
         "Phytanic acid storage disease",
         "Phytanic acid oxidase deficiency",
         "PHYH mutation",
-        "PEX7 mutation",
+        "PEX7 mutation"
     ],
     "Ullrich congenital muscular dystrophy": [
-        "Ullrich congenital muscular dystrophy"
+        "Ullrich congenital muscular dystrophy",
+        "Ullrich muscular dystrophy",
+        "Congenital muscular dystrophy with collagen VI deficiency",
+        "COL6-related muscular dystrophy",
+        "Collagen VI-related congenital muscular dystrophy",
+        "COL6A1 mutation",
+        "COL6A2 mutation",
+        "COL6A3 mutation",
+        "Collagen VI deficiency on muscle biopsy",
+        "Absent or reduced collagen VI staining",
+        "Autosomal recessive collagen VI-related dystrophy",
+        "Dominant-negative COL6A mutation"
     ],
     "Glutaric aciduria type 1": [
-        "Glutaric aciduria type 1"
+        "Glutaric aciduria type 1",
+        "Glutaric aciduria type I",
+        "Glutaryl-CoA dehydrogenase deficiency",
+        "Abnormal acylcarnitine profile",
+        "Metabolic disorder with glutaric acid accumulation",
+        "GCDH deficiency",
+        "GCDH mutation",
+        "Glutaric acidemia I"
     ],
     "Sensenbrenner syndrome": [
-        "Sensenbrenner syndrome"
+        "Sensenbrenner syndrome",
+        "Cranioectodermal dysplasia",
+        "Ciliopathy with cranioectodermal features",
+        "Short-rib dysplasia with ectodermal and craniofacial anomalies",
+        "IFT122 mutation",
+        "WDR35 mutation",
+        "IFT43 mutation",
+        "IFT52 mutation",
+        "IFT140 mutation"
     ],
     "Pseudoachondroplasia": [
-        "Pseudoachondroplasia"
+        "Pseudoachondroplasia",
+        "Pseudoachondroplastic dysplasia",
+        "Pseudoachondroplastic dwarfism",
+        "PSACH",
+        "COMP-related pseudoachondroplasia",
+        "COMP mutation"
     ]
 }
