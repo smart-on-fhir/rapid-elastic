@@ -94,9 +94,47 @@ def llm_prompt_synonyms(disease_json: str | Path) -> str:
     out = '\n'.join(out)
     return filetool.write_text(out, filetool.resource(f'{disease_json}.prompts.txt'))
 
+def expand(phrase: str, search: str, replace_list: list) -> list:
+    if search in phrase:
+        return [phrase.replace(search, repl) for repl in replace_list]
+
+def expand_all(disease_json: str | Path) -> Path:
+    """
+    :param disease_json: filename of curated disease names and synyms
+    :return: LVG (lexical variant generated) expressions
+    """
+    disease_dict = filetool.read_json(filetool.resource(disease_json))
+    expanded = dict()
+    for disease, synonyms in disease_dict.items():
+        expanded[disease] = list()
+        lvg = list()
+
+        for syn in synonyms:
+            lvg.append(syn)
+            if '-' in syn:
+                lvg.append(syn.replace('-', ' '))
+
+            syn = syn.lower()
+
+            if 'microdeletion' in syn:
+                lvg += expand(syn, 'microdeletion', ['deletion', 'deficiency', 'mutation', 'variant', 'pathogenic'])
+            elif 'deletion' in syn:
+                lvg += expand(syn, 'deletion', ['deficiency', 'mutation', 'variant', 'pathogenic'])
+            if 'mutation' in syn:
+                lvg += expand(syn, 'mutation', ['gene mutation', 'pathogenic', 'variant'])
+            if 'variant' in syn:
+                lvg += expand(syn, 'variant', ['gene mutation', 'pathogenic', 'mutation'])
+
+        expanded[disease] = sorted(list(set(lvg)))
+    return filetool.write_json(expanded, filetool.resource('disease_names_expanded.json'))
+
 
 if __name__ == '__main__':
     # disease_names()
     # find_duplicates()
     # merge()
-    llm_prompt_synonyms('disease_names_merged.json')
+    #llm_prompt_synonyms('disease_names_merged.json')
+
+    # print(expand("DTNA mutation", "mutation", ["mutation", "variant", "pathogenic"]))
+
+    print(expand_all('disease_names_merged.json'))
