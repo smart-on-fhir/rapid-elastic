@@ -38,14 +38,17 @@ def dict_disease_names(disease_csv: Path | str) -> dict:
             out[disease_name] = [disease_name]
         return out
 
-def disease_names(filename_csv=None) -> Path | List[Path]:
+def disease_names_csv(filename_csv=None) -> Path | List[Path]:
     if not filename_csv:
-        return [disease_names(i) for i in CSV_LIST]
+        return [disease_names_csv(i) for i in CSV_LIST]
 
     print(f'reading .... {filename_csv}')
     out = dict_disease_names(filename_csv)
     print(f"{len(out.keys())} disease names")
     return filetool.write_json(out, filetool.resource(f'{filename_csv}.json'))
+
+def disease_names_json(filename_json: Path | str) -> dict:
+    return filetool.read_json(filetool.resource(filename_json))
 
 def find_duplicates():
     merged = dict()
@@ -72,7 +75,7 @@ def find_duplicates():
     return filetool.write_json(duplicates, filetool.resource('disease_names_duplicates.json'))
 
 def merge():
-    original = filetool.read_json(filetool.resource('disease_names.json'))
+    original = filetool.read_json(filetool.resource('disease_names_csv.json'))
     original_keys = [key.lower() for key in original.keys()]
     merged = original
 
@@ -90,7 +93,10 @@ def llm_prompt_synonyms(disease_json: str | Path) -> str:
     disease_dict = filetool.read_json(filetool.resource(disease_json))
     out = list()
     for disease in disease_dict.keys():
-        out.append(f'What are the EHR search terms in clinical note text for exact synonyms of "{disease}"?')
+        # out.append(f'What are the EHR search terms in clinical note text for exact synonyms of "{disease}"?')
+        prompt = f'What are the synonyms of "{disease}"?'
+        prompt += f'Respond with JSON where the key is "exact" or "related" and the values are a list.'
+        out.append(prompt)
     out = '\n'.join(out)
     return filetool.write_text(out, filetool.resource(f'{disease_json}.prompts.txt'))
 
@@ -130,11 +136,10 @@ def expand_all(disease_json: str | Path) -> Path:
 
 
 if __name__ == '__main__':
-    # disease_names()
+    llm_prompt_synonyms('disease_names_expanded.json')
+    # disease_names_csv()
     # find_duplicates()
     # merge()
-    #llm_prompt_synonyms('disease_names_merged.json')
 
     # print(expand("DTNA mutation", "mutation", ["mutation", "variant", "pathogenic"]))
-
-    print(expand_all('disease_names_merged.json'))
+    # print(expand_all('disease_names_merged.json'))

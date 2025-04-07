@@ -54,9 +54,6 @@
         "Congenital Adrenal Hyperplasia due to 21 Hydroxylase Deficiency",
         "Congenital Adrenal Hyperplasia due to 21-Hydroxylase Deficiency"
     ],
-    "cystic fibrosis (CF)": [
-        "cystic fibrosis"
-    ],
     "Hurler Syndrome": [
         "Hurler Syndrome",
         "MPS I H",
@@ -267,9 +264,8 @@
     "22q11.2 Deletion Syndrome": [
         "22q11.2 Deletion Syndrome",
         "22q11.2 deficiency syndrome",
-        "22q11.2 mutation syndrome",
-        "22q11.2 pathogenic syndrome",
-        "22q11.2 variant syndrome",
+        "22q11.2 mutation",
+        "22q11.2 pathogenic",
         "22q11.2DS",
         "CATCH22",
         "Conotruncal Anomaly Face Syndrome",
@@ -278,10 +274,7 @@
         "Sedlackova Syndrome",
         "Shprintzen Syndrome",
         "Velocardiofacial Syndrome",
-        "deficiency 22q11.2 syndrome",
-        "mutation 22q11.2 syndrome",
-        "pathogenic 22q11.2 syndrome",
-        "variant 22q11.2 syndrome"
+        "deficiency 22q11.2"
     ],
     "Alpha-1 Antitrypsin Deficiency": [
         "AATD",
@@ -1305,7 +1298,7 @@
         "Situs ambiguous with asplenia",
         "Situs ambiguous with polysplenia"
     ],
-    "VACTERL/VATER association": [
+    "VACTERL-VATER association": [
         "VACTERL abnormalities",
         "VACTERL abnormality",
         "VACTERL anomalies",

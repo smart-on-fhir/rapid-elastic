@@ -70,7 +70,10 @@ def process(disease, querystring) -> List[Path]:
 
 
 if __name__ == "__main__":
-    disease_json = filetool.read_json(filetool.resource('disease_names.json'))
+    disease_json = filetool.read_json(filetool.resource('disease_names_expanded.json'))
+
+    print(f'{len(disease_json.keys())} rare-diseases, processing now....')
+    print(disease_json)
 
     for disease, keyword_list in disease_json.items():
         disease = disease.replace(' ', '_')
