@@ -1,0 +1,101 @@
+{
+    "hurler syndrome": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "hunter syndrome": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "sanfilippo syndrome": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "morquio a syndrome": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "krabbe disease": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "metachromatic leukodystrophy": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "niemann pick disease type c": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "methylmalonic acidemia": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "propionic acidemia": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "isovaleric acidemia": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "x linked adrenoleukodystrophy": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "tay sachs disease": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "sandhoff disease": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "spinal muscular atrophy type i": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "dystrophic epidermolysis bullosa": [
+        "UNIQUE_LT10_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "angelman syndrome": [
+        "UNIQUE_LT50_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "prader willi syndrome": [
+        "UNIQUE_LT50_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv"
+    ],
+    "beckwith wiedemann syndrome": [
+        "UNIQUE_LT50_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv",
+        "BROAD_LT50_PER_100K.csv"
+    ],
+    "medium chain acyl coa dehydrogenase deficiency": [
+        "UNIQUE_LT50_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv",
+        "BROAD_LT50_PER_100K.csv"
+    ],
+    "noonan syndrome": [
+        "UNIQUE_LT50_PER_100K.csv",
+        "BROAD_LT10_PER_100K.csv",
+        "BROAD_LT50_PER_100K.csv"
+    ],
+    "charge syndrome": [
+        "UNIQUE_LT50_PER_100K.csv",
+        "BROAD_LT50_PER_100K.csv"
+    ],
+    "stickler syndrome": [
+        "UNIQUE_LT50_PER_100K.csv",
+        "BROAD_LT50_PER_100K.csv"
+    ],
+    "salla disease": [
+        "BROAD_LT10_PER_100K.csv",
+        "BROAD_LT50_PER_100K.csv"
+    ],
+    "carbamoyl phosphate synthetase i deficiency": [
+        "BROAD_LT10_PER_100K.csv",
+        "BROAD_LT50_PER_100K.csv"
+    ]
+}

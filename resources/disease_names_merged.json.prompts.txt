@@ -1,0 +1,27 @@
+What are the EHR search terms in clinical note text for exact synonyms of "Hallermann-Streiff syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Jacobsen syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Miller-Dieker syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Shwachman-Diamond syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Leigh syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Salla disease"?
+What are the EHR search terms in clinical note text for exact synonyms of "Cornelia de Lange syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Pierre Robin sequence"?
+What are the EHR search terms in clinical note text for exact synonyms of "Goldenhar syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Primary ciliary dyskinesia"?
+What are the EHR search terms in clinical note text for exact synonyms of "-gardt disease"?
+What are the EHR search terms in clinical note text for exact synonyms of "Usher syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "1p36 deletion syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "16p11.2 microdeletion syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Heterotaxy syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "VACTERL/VATER association"?
+What are the EHR search terms in clinical note text for exact synonyms of "Lennox-Gastaut syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Hereditary neuropathy with liability to pressure palsies"?
+What are the EHR search terms in clinical note text for exact synonyms of "Juvenile myoclonic epilepsy"?
+What are the EHR search terms in clinical note text for exact synonyms of "Alport syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Isolated growth hormone deficiency type II"?
+What are the EHR search terms in clinical note text for exact synonyms of "Spinocerebellar ataxia type 2"?
+What are the EHR search terms in clinical note text for exact synonyms of "Refsum disease"?
+What are the EHR search terms in clinical note text for exact synonyms of "Ullrich congenital muscular dystrophy"?
+What are the EHR search terms in clinical note text for exact synonyms of "Glutaric aciduria type 1"?
+What are the EHR search terms in clinical note text for exact synonyms of "Sensenbrenner syndrome"?
+What are the EHR search terms in clinical note text for exact synonyms of "Pseudoachondroplasia"?
