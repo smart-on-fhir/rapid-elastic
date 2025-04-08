@@ -4,12 +4,10 @@ import filetool
 import elastic_helper
 import kql_syntax
 
-S3_OUTPUT = '/lab-share/CHIP-Mandl-e2/Public/rapid-elastic-output'
-
 # Class to wrap the response cols
 class Entry:
     _timestamp: str = ''
-    fhir_ref: str = ''
+    group_name: str = ''
     anon_ref: str = ''
     anon_subject_ref: str = ''
     anon_encounter_ref: str = ''
@@ -17,17 +15,17 @@ class Entry:
     doc_codes: dict = {}
 
     def to_csv(self):
+        header = 'subject_ref,encounter_ref,document_ref,group_name,document_title\n'
         out = [self.anon_subject_ref,
                self.anon_encounter_ref,
                self.anon_ref,
-               self.fhir_ref,
+               self.group_name,
                self.doc_code_text]
-        return ','.join(out)
-
+        return header + ','.join(out)
 
 def process(disease, querystring) -> List[Path]:
 
-    if filetool.output(f'{disease}.csv').exists() and filetool.output(f'{disease}.json').exists():
+    if filetool.output(f'{disease}.csv').exists() or filetool.output(f'{disease}.csv.gz').exists():
         print(f'"{disease}" already processed')
         return filetool.list_output(disease)
     else:
@@ -42,7 +40,7 @@ def process(disease, querystring) -> List[Path]:
         _source = hit['_source']
 
         e = Entry()
-        e.fhir_ref = _source.get('fhir_ref', '')
+        e.group_name = _source.get('group_name', '')
         e.anon_ref = _source.get('anon_ref', '')
         e.anon_subject_ref = _source.get('anon_subject_ref', '')
         e.anon_encounter_ref = _source.get('anon_encounter_ref', '')
@@ -60,8 +58,8 @@ def process(disease, querystring) -> List[Path]:
                    'total': len(all_hits),
                    'hits': [e.__dict__ for e in entry_list]}
 
-    filetool.write_text(output_csv, filetool.output(f'{disease}.csv'))
     filetool.write_json(output_json, filetool.output(f'{disease}.json'))
+    filetool.write_text(output_csv, filetool.output(f'{disease}.csv'))
 
 
 ###############################################################################
@@ -69,8 +67,6 @@ def process(disease, querystring) -> List[Path]:
 # MAIN query elastic and write results
 #
 ###############################################################################
-
-
 if __name__ == "__main__":
     disease_json = filetool.read_json(filetool.resource('disease_names_expanded.json'))
 
@@ -80,5 +76,4 @@ if __name__ == "__main__":
     for disease, keyword_list in disease_json.items():
         disease = disease.replace(' ', '_')
         querystring = kql_syntax.match_phrase_any(keyword_list)
-
         process(disease, querystring)

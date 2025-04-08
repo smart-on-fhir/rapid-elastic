@@ -27,18 +27,6 @@
         "Galactose-1-Phosphate Uridyltransferase Deficiency",
         "Galactosemia Type I",
         "Type I Galactosemia"
-
-    ],
-    "Alpha-1 Antitrypsin Deficiency (AATD)": [
-        "A1AT Deficiency",
-        "AAT Deficiency",
-        "Alpha 1 Antitrypsin Deficiency",
-        "Alpha 1 PI Deficiency",
-        "Alpha 1 Protease Inhibitor Deficiency",
-        "Alpha-1 Antitrypsin Deficiency",
-        "Alpha-1 PI Deficiency",
-        "Alpha-1 Protease Inhibitor Deficiency",
-        "Serum protease inhibitor Deficiency"
     ],
     "Medium-Chain Acyl-CoA Dehydrogenase Deficiency": [
         "ACADM Deficiency",
@@ -371,7 +359,6 @@
     ],
     "CHARGE Syndrome": [
         "CHARGE Syndrome",
-        "CHARGE Association",
         "Hall Hittner Syndrome",
         "Hall-Hittner Syndrome",
         "CHD7 Disorder",

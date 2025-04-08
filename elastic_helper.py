@@ -1,18 +1,17 @@
 import os
 import json
 from elasticsearch import Elasticsearch
+import config
+import filetool
 
-# HTTP Basic Auth
-ELASTIC_USER = os.environ.get("ELASTIC_USER")
-ELASTIC_PASS = os.environ.get("ELASTIC_PASS")
 
 # Response includes/excludes
-INCLUDE_COLS = ['fhir_ref', 'anon_ref', 'anon_subject_ref', 'anon_encounter_ref', 'codes', '@timestamp']
-EXCLUDE_COLS = []
-# EXCLUDE_COLS = ['note']
+INCLUDE_COLS = ['fhir_ref', 'anon_ref', 'anon_subject_ref', 'anon_encounter_ref', 'codes', 'group_name', '@timestamp']
+# EXCLUDE_COLS = []
+EXCLUDE_COLS = ['note']
 
 def connect() -> Elasticsearch:
-    return Elasticsearch("http://localhost:9200", basic_auth=(ELASTIC_USER, ELASTIC_PASS))
+    return Elasticsearch("http://localhost:9200", basic_auth=(config.ELASTIC_USER, config.ELASTIC_PASS))
 
 def query_string(expression) -> dict:
     return {"query": {"query_string": {"query": expression}}}
@@ -24,13 +23,12 @@ def return_these() -> dict:
     return {'_source': {'includes': INCLUDE_COLS, 'excludes': EXCLUDE_COLS}}
 
 def get_hits(disease_query_string: str, scroll_size=1000) -> dict:
-    print(f'connecting user "{ELASTIC_USER}"')
+    print(f'connecting user "{config.ELASTIC_USER}"')
     client = connect()
     query = query_string(disease_query_string)
     query = query | return_these()
-
     print(query)
-    response = client.search(body=query, scroll='2m', size=scroll_size)
+    response = client.search(body=query, scroll='5m', size=scroll_size)
 
     total = response['hits']['total']
     print(f'{total} response hits')

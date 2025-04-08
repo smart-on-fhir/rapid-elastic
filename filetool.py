@@ -13,6 +13,12 @@ def list_output(disease) -> List[Path]:
     return [output(f'{disease}.csv'),
             output(f'{disease}.json')]
 
+def rsync_output() -> str:
+    """
+    :return: rsync command to "sync" uploading to a remote host the local output directory
+    """
+    return f"rsync -azvrh --progress {output('*.csv.gz')} "
+
 ###############################################################################
 #
 # Read/Write Text
