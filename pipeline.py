@@ -4,6 +4,8 @@ import filetool
 import elastic_helper
 import kql_syntax
 
+S3_OUTPUT = '/lab-share/CHIP-Mandl-e2/Public/rapid-elastic-output'
+
 # Class to wrap the response cols
 class Entry:
     _timestamp: str = ''

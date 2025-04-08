@@ -2,7 +2,8 @@
     "Phenylketonuria (PKU)": [
         "hyperphenylalaninemia",
         "phenylalanine hydroxylase deficiency",
-        "phenylketonuria"
+        "phenylketonuria",
+        "PAH deficiency"
     ],
     "Primary Congenital Hypothyroidism": [
         "Congenital Hypothyroidism",
@@ -15,15 +16,18 @@
         "Branched Chain Ketoaciduria",
         "Branched-Chain Ketoaciduria",
         "Maple Syrup Urine Disease",
-        "Maple Syrup Urine Syndrome"
+        "Maple Syrup Urine Syndrome",
+        "BCKD deficiency",
+        "MSUD"
     ],
     "Classic Galactosemia (Type I)": [
         "Classic Galactosemia",
         "GALT Deficiency",
         "Galactose 1 Phosphate Uridyltransferase Deficiency",
-        "Galactose 1-Phosphate Uridyltransferase Deficiency",
         "Galactose-1-Phosphate Uridyltransferase Deficiency",
-        "Galactosemia Type I"
+        "Galactosemia Type I",
+        "Type I Galactosemia"
+
     ],
     "Alpha-1 Antitrypsin Deficiency (AATD)": [
         "A1AT Deficiency",
@@ -33,7 +37,8 @@
         "Alpha 1 Protease Inhibitor Deficiency",
         "Alpha-1 Antitrypsin Deficiency",
         "Alpha-1 PI Deficiency",
-        "Alpha-1 Protease Inhibitor Deficiency"
+        "Alpha-1 Protease Inhibitor Deficiency",
+        "Serum protease inhibitor deficiency"
     ],
     "Medium-Chain Acyl-CoA Dehydrogenase Deficiency": [
         "ACADM Deficiency",
@@ -42,7 +47,8 @@
         "Medium Chain Acyl CoA Dehydrogenase Deficiency",
         "Medium Chain Acyl Coenzyme A Dehydrogenase Deficiency",
         "Medium-Chain Acyl-CoA Dehydrogenase Deficiency",
-        "Medium-Chain Acyl-Coenzyme A Dehydrogenase Deficiency"
+        "Medium-Chain Acyl-Coenzyme A Dehydrogenase Deficiency",
+        "ACADM mutation"
     ],
     "Congenital Adrenal Hyperplasia (21-hydroxylase)": [
         "21 Hydroxylase Deficiency",
@@ -50,100 +56,123 @@
         "CAH due to 21 Hydroxylase Deficiency",
         "CAH due to 21-Hydroxylase Deficiency",
         "Classic Congenital Adrenal Hyperplasia",
+        "Classic CAH",
         "Congenital Adrenal Hyperplasia",
         "Congenital Adrenal Hyperplasia due to 21 Hydroxylase Deficiency",
-        "Congenital Adrenal Hyperplasia due to 21-Hydroxylase Deficiency"
+        "Congenital Adrenal Hyperplasia due to 21-Hydroxylase Deficiency",
+        "CYP21A2 deficiency"
     ],
     "Hurler Syndrome": [
         "Hurler Syndrome",
+        "Mucopolysaccharidosis Type I H",
+        "Alpha-L-iduronidase deficiency",
+        "IDUA deficiency",
         "MPS I H",
         "MPS I-H"
     ],
     "Hunter Syndrome": [
         "Hunter Syndrome",
-        "MPS II"
+        "Mucopolysaccharidosis Type II",
+        "MPS II",
+        "Iduronate-2-sulfatase deficiency",
+        "I2S deficiency"
     ],
     "Sanfilippo Syndrome": [
+        "Sanfilippo Syndrome",
+        "Heparan sulfate degradation disorder",
+        "Mucopolysaccharidosis Type III",
         "MPS III",
-        "Sanfilippo Syndrome"
+        "MPS IIIA",
+        "MPS IIIB",
+        "MPS IIIC",
+        "MPS IIID"
     ],
     "Morquio A Syndrome": [
+        "Morquio A Syndrome",
+        "Mucopolysaccharidosis Type IVA",
         "MPS IV A",
         "MPS IV-A",
-        "Morquio A Syndrome"
+        "GALNS deficiency"
     ],
     "Krabbe Disease": [
+        "Krabbe Disease",
         "Globoid Cell Leukodystrophy",
-        "Krabbe Disease"
+        "Galactocerebrosidase deficiency",
+        "GALC deficiency"
     ],
     "Metachromatic Leukodystrophy": [
+        "Metachromatic Leukodystrophy",
+        "Metachromatic Leukoencephalopathy",
         "ARSA Deficiency",
         "ARSA Mutation",
+        "ARSA pathogenic",
+        "ARSA variant",
         "Arylsulfatase A Deficiency",
         "Arylsulfatase A Enzyme Deficiency",
         "Cerebroside Sulfatase Deficiency",
         "Greenfield's Disease",
-        "Metachromatic Leukodystrophy",
-        "Metachromatic Leukoencephalopathy",
         "Scholz Disease",
-        "Sulfatide Lipidosis",
-        "arsa pathogenic",
-        "arsa variant"
+        "Sulfatide Lipidosis"
     ],
     "X-linked Adrenoleukodystrophy": [
+        "X linked Adrenoleukodystrophy",
+        "X linked Cerebral Adrenoleukodystrophy",
         "Adrenomyeloneuropathy",
         "X ALD",
         "X linked ALD",
-        "X linked Adrenoleukodystrophy",
-        "X linked Cerebral Adrenoleukodystrophy",
         "X-ALD",
         "X-linked ALD",
         "X-linked Adrenoleukodystrophy",
-        "X-linked Cerebral Adrenoleukodystrophy"
+        "X-linked Cerebral Adrenoleukodystrophy",
+        "ABCD1 deficiency"
     ],
     "Tay-Sachs Disease": [
+        "Tay-Sachs Disease",
+        "Tay Sachs Disease",
         "GM2 Gangliosidosis Type 1",
         "GM2 Gangliosidosis Type I",
         "GM2 Gangliosidosis, Type I",
         "HEXA Deficiency",
         "Hexosaminidase A Deficiency",
-        "Tay Sachs Disease",
-        "Tay-Sachs Disease",
         "Type 1 GM2 Gangliosidosis",
         "Type I GM2 Gangliosidosis"
     ],
     "Sandhoff Disease": [
-        "Beta Hexosaminidase Beta Subunit Deficiency",
-        "Beta-Hexosaminidase Beta-Subunit Deficiency",
-        "HEXB Mutation",
-        "Hexosaminidase A and B Deficiency",
         "Sandhoff Disease",
         "Sandhoff Jatzkewitz Pilz Disease",
         "Sandhoff-Jatzkewitz-Pilz Disease",
-        "Total Hexosaminidase Deficiency",
-        "hexb gene mutation",
-        "hexb pathogenic",
-        "hexb variant"
+        "GM2 Gangliosidosis Type II",
+        "Beta Hexosaminidase Beta Subunit Deficiency",
+        "Beta-Hexosaminidase Beta-Subunit Deficiency",
+        "Autosomal recessive GM2 gangliosidosis",
+        "HEXB deficiency",
+        "HEXB Mutation",
+        "HEXB pathogenic",
+        "HEXB variant",
+        "Hexosaminidase A and B Deficiency",
+        "Total Hexosaminidase Deficiency"
     ],
     "Niemann-Pick Disease Type C": [
         "NPC1 Mutation",
         "NPC2 Mutation",
+        "NPC1 deficiency",
+        "NPC2 deficiency",
         "Niemann Pick Disease Type C",
         "Niemann Pick Disease Type C1",
         "Niemann Pick Disease Type C2",
         "Niemann-Pick Disease Type C",
+        "Niemann-Pick Type C",
         "Niemann-Pick Disease Type C1",
         "Niemann-Pick Disease Type C2",
-        "npc1 gene mutation",
         "npc1 pathogenic",
         "npc1 variant",
-        "npc2 gene mutation",
         "npc2 pathogenic",
         "npc2 variant"
     ],
     "GSD Type Ia": [
         "GSD Ia",
         "GSD Type Ia",
+        "G6PC deficiency",
         "Glucose 6 Phosphatase Deficiency",
         "Glucose-6 Phosphatase Deficiency",
         "Glucose-6-Phosphatase Deficiency",
@@ -153,68 +182,73 @@
         "Von Gierke Disease"
     ],
     "Homocystinuria": [
+        "Homocystinuria",
         "CBS Deficiency",
         "Cystathionine Beta Synthase Deficiency",
         "Cystathionine Beta-Synthase Deficiency",
-        "Homocystinuria",
         "Hyperhomocysteinemia",
         "Methionine Metabolism Disorder",
         "Sulfur Bearing Amino Acid Metabolism",
         "Sulfur-Bearing Amino-Acid Metabolism"
     ],
     "Propionic Acidemia": [
-        "Ketotic Hyperglycinemia",
-        "PCCA Mutation",
-        "PCCB Mutation",
         "Propionic Acidemia",
         "Propionic Aciduria",
+        "Ketotic Hyperglycinemia",
+        "PCC deficiency",
         "Propionyl CoA Carboxylase Deficiency",
         "Propionyl-CoA Carboxylase Deficiency",
-        "pcca gene mutation",
+        "PCCA Mutation",
+        "PCCB Mutation",
         "pcca pathogenic",
         "pcca variant",
-        "pccb gene mutation",
         "pccb pathogenic",
         "pccb variant"
     ],
     "Methylmalonic Acidemia": [
-        "Cobalamin A Deficiency",
-        "Cobalamin-A Deficiency",
-        "MMUT Mutation",
         "Methylmalonic Acidemia",
         "Methylmalonic Aciduria",
+        "Cobalamin A Deficiency",
+        "Cobalamin-A Deficiency",
+        "MUT deficiency",
         "Methylmalonyl CoA Mutase Deficiency",
         "Methylmalonyl-CoA Mutase Deficiency",
-        "mmut gene mutation",
+        "MMUT Mutation",
         "mmut pathogenic",
         "mmut variant"
     ],
     "Isovaleric Acidemia": [
-        "Isovaleric Acid CoA Dehydrogenase Deficiency",
-        "Isovaleric Acid-CoA Dehydrogenase Deficiency",
-        "Isovaleric Acidaemia",
         "Isovaleric Acidemia",
         "Isovaleric Aciduria",
+        "Isovaleric Acidaemia",
+        "IVD deficiency",
+        "Isovaleric Acid CoA Dehydrogenase Deficiency",
+        "Isovaleric Acid-CoA Dehydrogenase Deficiency",
         "Isovaleryl CoA Dehydrogenase Deficiency",
         "Isovaleryl-CoA Dehydrogenase Deficiency"
     ],
     "VLCAD Deficiency": [
+        "VLCADD",
         "ACADVL Deficiency",
         "VLCAD Deficiency",
-        "VLCADD",
+        "ACADVL mutation",
         "Very Long Chain Acyl CoA Dehydrogenase",
         "Very Long Chain Acyl Coenzyme A Dehydrogenase Deficiency",
         "Very Long-Chain Acyl-CoA Dehydrogenase",
         "Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency"
     ],
     "Biotinidase Deficiency": [
-        "BTD Deficiency",
-        "Biotin Responsive Multiple Carboxylase Deficiency",
-        "Biotin-Responsive Multiple Carboxylase Deficiency",
         "Biotinidase Deficiency",
-        "Multiple Carboxylase Deficiency"
+        "Biotinidase enzyme deficiency",
+        "BTD Deficiency",
+        "Multiple Carboxylase Deficiency",
+        "Biotin Responsive Multiple Carboxylase Deficiency",
+        "Biotin-Responsive Multiple Carboxylase Deficiency"
     ],
     "Pyruvate Dehydrogenase Complex Deficiency": [
+        "Pyruvate Dehydrogenase Complex Deficiency",
+        "Pyruvate Dehydrogenase Deficiency",
+        "Pyruvate Decarboxylase Deficiency",
         "Ataxia with Lactic Acidosis",
         "DLAT Mutation",
         "DLD Mutation",
@@ -222,30 +256,23 @@
         "PDHA1 Mutation",
         "PDHB Mutation",
         "PDHC Deficiency",
-        "Pyruvate Decarboxylase Deficiency",
-        "Pyruvate Dehydrogenase Complex Deficiency",
-        "Pyruvate Dehydrogenase Deficiency",
-        "dlat gene mutation",
         "dlat pathogenic",
         "dlat variant",
-        "dld gene mutation",
         "dld pathogenic",
         "dld variant",
-        "pdha1 gene mutation",
         "pdha1 pathogenic",
         "pdha1 variant",
-        "pdhb gene mutation",
         "pdhb pathogenic",
         "pdhb variant"
     ],
     "Spinal Muscular Atrophy Type I": [
+        "Spinal Muscular Atrophy Type I",
         "Infantile Spinal Muscular Atrophy Type 1",
         "Infantile Spinal Muscular Atrophy Type I",
         "Infantile Spinal Muscular Atrophy, Type 1",
         "Infantile Spinal Muscular Atrophy, Type I",
         "SMA Type I",
         "SMA1",
-        "Spinal Muscular Atrophy Type I",
         "Type 1 Infantile Spinal Muscular Atrophy",
         "Type I Infantile Spinal Muscular Atrophy",
         "Werdnig Hoffmann Disease",
@@ -253,11 +280,11 @@
     ],
     "Dystrophic Epidermolysis Bullosa": [
         "Albopapuloid Epidermolysis Bullosa",
+        "COL7A1-related Epidermolysis Bullosa",
         "COL7A1 Mutation",
         "Dystrophic Epidermolysis Bullosa",
         "Epidermolysis Bullosa Dystrophica",
         "Epidermolysis Bullosa Pruriginosa",
-        "col7a1 gene mutation",
         "col7a1 pathogenic",
         "col7a1 variant"
     ],
@@ -274,7 +301,8 @@
         "Sedlackova Syndrome",
         "Shprintzen Syndrome",
         "Velocardiofacial Syndrome",
-        "deficiency 22q11.2"
+        "deficiency 22q11.2",
+        "TBX1 deletion"
     ],
     "Alpha-1 Antitrypsin Deficiency": [
         "AATD",
@@ -288,7 +316,6 @@
         "PiSZ Genotype",
         "PiZZ Genotype",
         "SERPINA1 Mutation",
-        "serpina1 gene mutation",
         "serpina1 pathogenic",
         "serpina1 variant"
     ],
@@ -302,32 +329,30 @@
         "Angelman Syndrome",
         "Happy Puppet Syndrome",
         "UBE3A mutation",
-        "ube3a gene mutation",
         "ube3a pathogenic",
         "ube3a variant"
     ],
     "Autosomal Recessive Polycystic Kidney Disease": [
-        "ARPKD",
         "Autosomal Recessive Polycystic Kidney Disease",
+        "ARPKD",
         "Infantile Polycystic Kidney Disease",
         "PKHD1 Mutation",
         "Polycystic Kidney and Hepatic Disease Type 1",
         "Polycystic Kidney and Hepatic Disease Type I",
-        "pkhd1 gene mutation",
         "pkhd1 pathogenic",
         "pkhd1 variant"
     ],
     "Beckwith-Wiedemann Syndrome": [
-        "11p15.5 Chromosomal Region Abnormalities",
-        "Beckwith Wiedemann Syndrome",
         "Beckwith-Wiedemann Syndrome",
+        "Beckwith Wiedemann Syndrome",
+        "11p15.5 Chromosomal Region Abnormalities",
+        "11p15.5 imprinting disorder",
         "CDKN1C Mutation",
         "EMG Syndrome",
         "Exomphalos Macroglossia Gigantism Syndrome",
         "Exomphalos-Macroglossia-Gigantism Syndrome",
         "Wiedemann Beckwith Syndrome",
         "Wiedemann-Beckwith Syndrome",
-        "cdkn1c gene mutation",
         "cdkn1c pathogenic",
         "cdkn1c variant"
     ],
@@ -340,12 +365,19 @@
         "Hypertrophic Neuropathy of Infancy",
         "Peroneal Muscular Atrophy",
         "Roussy Levy",
-        "Roussy-Levy"
+        "Roussy-Levy",
+        "PMP22 mutation",
+        "MPZ mutation",
+        "GJB1 mutation",
+        "MFN2 mutation"
     ],
     "CHARGE Syndrome": [
         "CHARGE Syndrome",
+        "CHARGE Association",
         "Hall Hittner Syndrome",
-        "Hall-Hittner Syndrome"
+        "Hall-Hittner Syndrome",
+        "CHD7 Disorder",
+        "CHD7 mutation"
     ],
     "Coarctation of Aorta": [
         "Aortic coarctation",
@@ -376,46 +408,60 @@
     "Congenital Diaphragmatic Hernia": [
         "Bochdalek Hernia",
         "Congenital Diaphragmatic Hernia",
+        "Congenital diaphragmatic defect",
         "Congenital Hiatus Hernia",
         "Morgagni Hernia"
     ],
     "Congenital Hydrocephalus": [
         "Congenital Hydrocephalus",
-        "Congenital Obstructive Hydrocephalus"
+        "Congenital Obstructive Hydrocephalus",
+        "Fetal hydrocephalus",
+        "Infantile hydrocephalus",
+        "Primary hydrocephalus"
     ],
     "Congenital Hypothyroidism": [
         "Congenital Hypothyroidism",
-        "Congenital Thyroid Hormone Deficiency"
+        "Congenital Thyroid Hormone Deficiency",
+        "Neonatal hypothyroidism",
+        "Thyroid dysgenesis",
+        "Thyroid agenesis"
     ],
     "Congenital Long QT Syndrome": [
         "Congenital LQTS",
         "Congenital Long QT Syndrome",
         "Jervell and Lange Nielsen Syndrome",
         "Jervell and Lange-Nielsen Syndrome",
+        "Inherited Long QT Syndrome",
+        "Primary Long QT Syndrome",
         "KCNQ1 Mutation",
         "KCNQ2 Mutation",
         "Romano Ward Syndrome",
         "Romano-Ward Syndrome",
         "SCN5A Mutation",
         "cLQTS",
-        "kcnq1 gene mutation",
         "kcnq1 pathogenic",
         "kcnq1 variant",
-        "kcnq2 gene mutation",
         "kcnq2 pathogenic",
         "kcnq2 variant",
-        "scn5a gene mutation",
         "scn5a pathogenic",
         "scn5a variant"
     ],
     "Cystic Fibrosis": [
-        "Cystic Fibrosis"
+        "Cystic Fibrosis",
+        "Mucoviscidosis",
+        "CFTR mutation"
     ],
     "Duane Syndrome": [
         "Duane Syndrome",
-        "Duane's Syndrome"
+        "Duane's Syndrome",
+        "Duane Retraction Syndrome",
+        "Congenital retraction syndrome",
+        "Stilling-Turk-Duane syndrome"
     ],
     "Ehlers-Danlos Syndrome": [
+        "Classic EDS",
+        "Vascular EDS",
+        "Hypermobile EDS",
         "Cutis hyperelastica",
         "Danlos disease",
         "Dermatorrhexis",
@@ -426,7 +472,10 @@
         "Hereditary collagen dysplasia",
         "India rubber skin",
         "Meekeren Ehlers Danlos syndrome",
-        "Meekeren-Ehlers-Danlos syndrome"
+        "Meekeren-Ehlers-Danlos syndrome",
+        "COL5A1 mutation",
+        "COL5A2 mutation",
+        "COL3A1 mutation"
     ],
     "Erythropoietic Protoporphyria": [
         "Erythropoietic Protoporphyria",
@@ -434,17 +483,20 @@
         "Ferrochelatase Deficiency",
         "X Linked Protoporphyria",
         "X-Linked Protoporphyria",
-        "fech gene mutation",
         "fech pathogenic",
         "fech variant"
     ],
     "Esophageal Atresia Tracheoesophageal Fistula": [
         "Atresia of esophagus with tracheo esophageal fistula",
         "Atresia of esophagus with tracheo-esophageal fistula",
+        "Esophageal Atresia with Tracheoesophageal Fistula",
         "Congenital Tracheoesophageal Fistula with Esophageal Atresia",
         "Esophageal Atresia Tracheoesophageal Fistula",
+        "Congenital Esophageal Atresia",
+        "Congenital TEF",
         "Esophageal Atresia with TE Fistula",
-        "Tracheoesophageal Fistula with Esophageal Atresia"
+        "Tracheoesophageal Fistula with Esophageal Atresia",
+        "Type C Esophageal Atresia"
     ],
     "Fragile X Syndrome": [
         "FMR1 mutation",
@@ -452,10 +504,10 @@
         "Fragile X Syndrome",
         "Fragile X chromosome",
         "Fragile X mental retardation",
+        "FMR1-related intellectual disability",
         "Marker X syndrome",
         "Martin Bell syndrome",
         "Martin-Bell syndrome",
-        "fmr1 gene mutation",
         "fmr1 pathogenic",
         "fmr1 variant"
     ],
@@ -467,7 +519,8 @@
         "Classical Hemophilia",
         "Factor VIII Deficiency",
         "Hemophilia A",
-        "Hereditary Factor VIII Deficiency"
+        "Hereditary Factor VIII Deficiency",
+        "F8 mutation"
     ],
     "Hereditary Spherocytosis": [
         "Acholuric Familial Jaundice",
@@ -475,10 +528,12 @@
         "Congenital Spherocytic Hemolytic Icterus",
         "Hereditary Spherocytosis",
         "Minkowski Chauffard Syndrome",
-        "Minkowski-Chauffard Syndrome"
+        "Minkowski-Chauffard Syndrome",
+        "Familial Spherocytosis"
     ],
     "Hirschsprung Disease": [
         "Aganglionic Megacolon",
+        "Aganglionosis of the colon",
         "Colonic Aganglionosis",
         "Congenital Aganglionic Megacolon",
         "Congenital Megacolon",
@@ -496,7 +551,8 @@
     "Imperforate Anus": [
         "Congenital Anorectal",
         "Congenital Imperforate Anus",
-        "Imperforate Anus"
+        "Imperforate Anus",
+        "Anal Atresia"
     ],
     "Juvenile Idiopathic Arthritis": [
         "Enthesitis Related Arthritis",
@@ -505,7 +561,8 @@
         "Juvenile Rheumatoid Arthritis",
         "Seronegative Juvenile Arthritis",
         "Stills Disease",
-        "Still\u2019s Disease"
+        "Still's Disease",
+        "Pediatric Inflammatory Arthritis"
     ],
     "Marfan Syndrome": [
         "FBN1 mutation",
@@ -515,10 +572,8 @@
         "Marfan Syndrome",
         "OMIM #154700",
         "OMIM 154700",
-        "fbn1 gene mutation",
         "fbn1 pathogenic",
         "fbn1 variant",
-        "fibrillin-1 gene mutation",
         "fibrillin-1 pathogenic",
         "fibrillin-1 variant"
     ],
@@ -529,16 +584,15 @@
         "Mitochondrial Encephalomyopathy with Lactic Acidosis and Stroke",
         "Mitochondrial Encephalomyopathy with Lactic Acidosis and Stroke like Episodes",
         "Mitochondrial Encephalomyopathy with Lactic Acidosis and Stroke-like Episodes",
-        "dna gene mutation melas",
         "dna pathogenic melas",
         "dna variant melas",
-        "melas gene mutation",
         "melas pathogenic",
         "melas variant",
         "mtDNA Mutation MELAS",
-        "mtdna gene mutation melas",
         "mtdna pathogenic melas",
-        "mtdna variant melas"
+        "mtdna variant melas",
+        "A3243G",
+        "m.3243A>G"
     ],
     "Microtia": [
         "Auricular Hypoplasia",
@@ -551,6 +605,8 @@
         "Neurofibromatosis I",
         "Neurofibromatosis Type 1",
         "Neurofibromatosis Type I",
+        "NF1-related Disorder",
+        "NF1 mutation",
         "Peripheral Neurofibromatosis",
         "Type 1 Neurofibromatosis",
         "Type I Neurofibromatosis",
@@ -564,7 +620,6 @@
         "PTPN11 Mutation",
         "RAS MAPK",
         "RAS-MAPK",
-        "ptpn11 gene mutation",
         "ptpn11 pathogenic",
         "ptpn11 variant"
     ],
@@ -604,7 +659,6 @@
         "Early-Onset Primary Glaucoma",
         "Infantile Glaucoma",
         "Primary Congenital Glaucoma",
-        "cyp1b1 gene mutation",
         "cyp1b1 pathogenic",
         "cyp1b1 variant"
     ],
@@ -613,8 +667,7 @@
         "MECP2 Related Disorder",
         "MECP2-Related Disorder",
         "Rett Syndrome",
-        "Rett\u2019s Disorder",
-        "mecp2 gene mutation",
+        "Rett's Disorder",
         "mecp2 pathogenic",
         "mecp2 variant"
     ],
@@ -623,11 +676,14 @@
         "Hemoglobin SC Disease",
         "Hemoglobin SS Disease",
         "Sickle Cell Disease",
-        "Sickle Cell Disorder"
+        "Sickle Cell Disorder",
+        "Sickle Hemoglobinopathies"
     ],
     "Small Intestinal Atresia": [
         "Small Bowel Atresia",
-        "Small Intestinal Atresia"
+        "Small Intestinal Atresia",
+        "Jejunoileal Atresia",
+        "Neonatal Intestinal Atresia"
     ],
     "Spina Bifida": [
         "Congenital Spinal Cord",
@@ -645,7 +701,6 @@
         "Stargardt Disease",
         "Stargardt Macular Dystrophy",
         "Stargardt's Disease",
-        "abca4 gene mutation",
         "abca4 pathogenic",
         "abca4 variant"
     ],
@@ -656,17 +711,15 @@
         "Hereditary Progressive Arthro ophthalmopathy",
         "Hereditary Progressive Arthro-ophthalmopathy",
         "Stickler Syndrome",
-        "col11a1 gene mutation",
         "col11a1 pathogenic",
         "col11a1 variant",
-        "col11a2 gene mutation",
         "col11a2 pathogenic",
         "col11a2 variant",
-        "col2a1 gene mutation",
         "col2a1 pathogenic",
         "col2a1 variant"
     ],
     "Tetralogy of Fallot": [
+        "22q11.2 Microdeletion",
         "22q11.2 Deletion",
         "22q11.2 deficiency",
         "22q11.2 mutation",
@@ -693,10 +746,8 @@
         "TSC1 Mutation",
         "TSC2 Mutation",
         "Tuberous Sclerosis Complex",
-        "tsc1 gene mutation",
         "tsc1 pathogenic",
         "tsc1 variant",
-        "tsc2 gene mutation",
         "tsc2 pathogenic",
         "tsc2 variant"
     ],
@@ -731,12 +782,10 @@
         "deficiency 7q11.23",
         "deletion 7q11.23",
         "elastin gene deficiency syndrome",
-        "elastin gene mutation syndrome",
         "elastin gene pathogenic syndrome",
         "elastin gene variant syndrome",
         "eln deficiency",
         "eln gene deficiency",
-        "eln gene mutation",
         "eln gene pathogenic",
         "eln gene variant",
         "eln mutation",
@@ -754,7 +803,6 @@
         "Pitt-Hopkin",
         "Pitt-Hopkins",
         "TCF4 mutation",
-        "tcf4 gene mutation",
         "tcf4 pathogenic",
         "tcf4 variant"
     ],
@@ -771,7 +819,6 @@
         "Gaucher\u2019s Disease",
         "Glucocerebrosidase Deficiency",
         "Lysosomal Glucocerebrosidase Deficiency",
-        "gba gene mutation",
         "gba pathogenic",
         "gba variant"
     ],
@@ -786,7 +833,6 @@
         "Lysosomal Alpha Glucosidase Deficiency",
         "Lysosomal Alpha-Glucosidase Deficiency",
         "Pompe disease",
-        "gaa gene mutation",
         "gaa pathogenic",
         "gaa variant"
     ],
@@ -799,7 +845,6 @@
         "Lysosomal Alpha-Mannosidase Deficiency",
         "MAN2B1 Deficiency",
         "MAN2B1 Mutation",
-        "man2b1 gene mutation",
         "man2b1 pathogenic",
         "man2b1 variant",
         "\u03b1 Mannosidosis",
@@ -814,7 +859,6 @@
         "Canavan\u2013van Bogaert\u2013Bertrand Disease",
         "N Acetylaspartic Aciduria",
         "N-Acetylaspartic Aciduria",
-        "aspa gene mutation",
         "aspa pathogenic",
         "aspa variant"
     ],
@@ -827,7 +871,6 @@
         "GFAP mutation",
         "GFAP-Related Leukodystrophy",
         "Glial Fibrillary Acidic Protein",
-        "gfap gene mutation",
         "gfap pathogenic",
         "gfap variant"
     ],
@@ -841,7 +884,6 @@
         "Steely Hair Disease",
         "X Linked Copper Metabolism",
         "X-Linked Copper Metabolism",
-        "atp7a gene mutation",
         "atp7a pathogenic",
         "atp7a variant"
     ],
@@ -855,7 +897,6 @@
         "UDP-Glucuronosyltransferase 1 Deficiency",
         "UGT1A1 Deficiency",
         "UGT1A1 Mutation",
-        "ugt1a1 gene mutation",
         "ugt1a1 pathogenic",
         "ugt1a1 variant"
     ],
@@ -877,10 +918,8 @@
         "PUS1 Mutation",
         "Sideroblastic Anemia with Myopathy and Lactic Acidosis",
         "YARS2 Mutation",
-        "pus1 gene mutation",
         "pus1 pathogenic",
         "pus1 variant",
-        "yars2 gene mutation",
         "yars2 pathogenic",
         "yars2 variant"
     ],
@@ -955,10 +994,8 @@
         "ZEB2 Mutation",
         "Zinc Finger E Box Binding Homeobox 2 Mutation",
         "Zinc Finger E-Box Binding Homeobox 2 Mutation",
-        "zeb2 gene mutation",
         "zeb2 pathogenic",
         "zeb2 variant",
-        "zinc finger e-box binding homeobox 2 gene mutation",
         "zinc finger e-box binding homeobox 2 pathogenic",
         "zinc finger e-box binding homeobox 2 variant"
     ],
@@ -983,7 +1020,6 @@
         "mutation 17p11.2",
         "pathogenic 17p11.2",
         "rai1 deficiency",
-        "rai1 gene mutation",
         "rai1 mutation",
         "rai1 pathogenic",
         "rai1 variant",
@@ -997,11 +1033,9 @@
         "Kabuki syndrome",
         "Niikawa Kuroki",
         "Niikawa-Kuroki",
-        "kdm6a gene mutation",
         "kdm6a mutation",
         "kdm6a pathogenic",
         "kdm6a variant",
-        "kmt2d gene mutation",
         "kmt2d mutation",
         "kmt2d pathogenic",
         "kmt2d variant"
@@ -1011,7 +1045,6 @@
         "Coffin-Lowry syndrome",
         "RPS6KA3 Mutation",
         "RPS6KA3 Variant",
-        "rps6ka3 gene mutation",
         "rps6ka3 mutation",
         "rps6ka3 pathogenic",
         "rps6ka3 variant"
@@ -1025,13 +1058,10 @@
     "Rubinstein-Taybi syndrome": [
         "Broad Thumb Hallux Syndrome",
         "Broad Thumb-Hallux Syndrome",
-        "CREBBP Gene Mutation",
         "CREBBP Mutation",
         "CREBBP Variant",
         "Rubinstein Taybi syndrome",
         "Rubinstein-Taybi syndrome",
-        "crebbp gene gene mutation",
-        "crebbp gene mutation",
         "crebbp gene pathogenic",
         "crebbp gene variant",
         "crebbp mutation",
@@ -1087,7 +1117,6 @@
         "deletion 17p13.3",
         "mutation 17p13.3",
         "pafah1b1 deficiency",
-        "pafah1b1 gene mutation",
         "pafah1b1 mutation",
         "pafah1b1 pathogenic",
         "pafah1b1 variant",
@@ -1102,7 +1131,6 @@
         "Shwachman syndrome",
         "Shwachman-Bodian-Diamond syndrome",
         "Shwachman-Diamond syndrome",
-        "sbds gene mutation",
         "sbds pathogenic",
         "sbds variant"
     ],
@@ -1121,13 +1149,10 @@
         "PDHA1 deficiency",
         "Pyruvate dehydrogenase complex deficiency",
         "Subacute necrotizing encephalomyelopathy",
-        "mt-atp6 gene mutation",
         "mt-atp6 pathogenic",
         "mt-atp6 variant",
-        "ndufs1 gene mutation",
         "ndufs1 pathogenic",
         "ndufs1 variant",
-        "ndufv1 gene mutation",
         "ndufv1 pathogenic",
         "ndufv1 variant"
     ],
@@ -1140,7 +1165,6 @@
         "Salla disease",
         "Salla syndrome",
         "sialic acid storage disorder",
-        "slc17a5 gene mutation",
         "slc17a5 pathogenic",
         "slc17a5 variant"
     ],
@@ -1158,7 +1182,6 @@
         "deficiency 5p13.2",
         "deletion 5p13.2",
         "mutation 5p13.2",
-        "nipbl gene mutation",
         "nipbl pathogenic",
         "nipbl variant",
         "pathogenic 5p13.2",
@@ -1197,19 +1220,14 @@
         "Immotile cilia syndrome",
         "Kartagener syndrome",
         "Primary ciliary dyskinesia",
-        "armc4 gene mutation",
         "armc4 pathogenic",
         "armc4 variant",
-        "ccdc39 gene mutation",
         "ccdc39 pathogenic",
         "ccdc39 variant",
-        "ccdc40 gene mutation",
         "ccdc40 pathogenic",
         "ccdc40 variant",
-        "dnah5 gene mutation",
         "dnah5 pathogenic",
         "dnah5 variant",
-        "dnai1 gene mutation",
         "dnai1 pathogenic",
         "dnai1 variant"
     ],
@@ -1229,13 +1247,10 @@
         "Usher type II",
         "Usher type III",
         "Usher\u2019s syndrome",
-        "ush1 gene mutation",
         "ush1 pathogenic",
         "ush1 variant",
-        "ush2 gene mutation",
         "ush2 pathogenic",
         "ush2 variant",
-        "ush3 gene mutation",
         "ush3 pathogenic",
         "ush3 variant"
     ],
@@ -1352,13 +1367,10 @@
         "COL4A5 mutation",
         "Hereditary glomerulonephritis",
         "Hereditary nephritis with hearing loss",
-        "col4a3 gene mutation",
         "col4a3 pathogenic",
         "col4a3 variant",
-        "col4a4 gene mutation",
         "col4a4 pathogenic",
         "col4a4 variant",
-        "col4a5 gene mutation",
         "col4a5 pathogenic",
         "col4a5 variant"
     ],
@@ -1373,7 +1385,6 @@
         "IGHD II",
         "IGHD type II",
         "Isolated growth hormone deficiency type II",
-        "gh1 gene mutation",
         "gh1 pathogenic",
         "gh1 variant"
     ],
@@ -1388,7 +1399,6 @@
         "Spinocerebellar ataxia type 2",
         "Trinucleotide repeat in ATXN2",
         "expansion in ATXN2",
-        "sca2 gene mutation",
         "sca2 pathogenic",
         "sca2 variant"
     ],
@@ -1399,10 +1409,8 @@
         "Phytanic acid oxidase deficiency",
         "Phytanic acid storage disease",
         "Refsum disease",
-        "pex7 gene mutation",
         "pex7 pathogenic",
         "pex7 variant",
-        "phyh gene mutation",
         "phyh pathogenic",
         "phyh variant"
     ],
@@ -1423,16 +1431,12 @@
         "Dominant-negative COL6A mutation",
         "Ullrich congenital muscular dystrophy",
         "Ullrich muscular dystrophy",
-        "col6a1 gene mutation",
         "col6a1 pathogenic",
         "col6a1 variant",
-        "col6a2 gene mutation",
         "col6a2 pathogenic",
         "col6a2 variant",
-        "col6a3 gene mutation",
         "col6a3 pathogenic",
         "col6a3 variant",
-        "dominant-negative col6a gene mutation",
         "dominant-negative col6a pathogenic",
         "dominant-negative col6a variant"
     ],
@@ -1446,7 +1450,6 @@
         "Glutaryl CoA dehydrogenase deficiency",
         "Glutaryl-CoA dehydrogenase deficiency",
         "Metabolic disorder with glutaric acid accumulation",
-        "gcdh gene mutation",
         "gcdh pathogenic",
         "gcdh variant"
     ],
@@ -1461,19 +1464,14 @@
         "Short rib dysplasia with ectodermal and craniofacial anomalies",
         "Short-rib dysplasia with ectodermal and craniofacial anomalies",
         "WDR35 mutation",
-        "ift122 gene mutation",
         "ift122 pathogenic",
         "ift122 variant",
-        "ift140 gene mutation",
         "ift140 pathogenic",
         "ift140 variant",
-        "ift43 gene mutation",
         "ift43 pathogenic",
         "ift43 variant",
-        "ift52 gene mutation",
         "ift52 pathogenic",
         "ift52 variant",
-        "wdr35 gene mutation",
         "wdr35 pathogenic",
         "wdr35 variant"
     ],
@@ -1485,7 +1483,6 @@
         "Pseudoachondroplasia",
         "Pseudoachondroplastic dwarfism",
         "Pseudoachondroplastic dysplasia",
-        "comp gene mutation",
         "comp pathogenic",
         "comp variant"
     ]

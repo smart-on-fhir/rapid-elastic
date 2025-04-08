@@ -94,8 +94,8 @@ def llm_prompt_synonyms(disease_json: str | Path) -> str:
     out = list()
     for disease in disease_dict.keys():
         # out.append(f'What are the EHR search terms in clinical note text for exact synonyms of "{disease}"?')
-        prompt = f'What are the synonyms of "{disease}"?'
-        prompt += f'Respond with JSON where the key is "exact" or "related" and the values are a list.'
+        prompt = f'What are EHR search terms of "{disease}"? '
+        prompt += f'Respond with JSON where the key is "synonym" or "related" and the values are a list.'
         out.append(prompt)
     out = '\n'.join(out)
     return filetool.write_text(out, filetool.resource(f'{disease_json}.prompts.txt'))
