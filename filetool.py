@@ -3,6 +3,13 @@ from typing import List, Dict, Any
 from pathlib import Path
 import json
 
+######################################################################################
+# CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.
+#
+# "ARPA-H Rare Disease Prioritization via ChatGPT with GIC counts"
+# https://docs.google.com/spreadsheets/d/1lNgKOyt1cK_cTA72WbywsjjrvWCM0HUpv1nMFqKEngM
+#
+#####################################################################################
 CSV_LIST = ["UNIQUE_LT10_PER_100K.csv",
             "UNIQUE_LT50_PER_100K.csv",
             "BROAD_LT10_PER_100K.csv",
@@ -47,7 +54,7 @@ def read_text(text_file: Path | str, encoding: str = 'UTF-8') -> str:
             return t_file.read()
 
 
-def write_text(contents: str, file_path: Path | str, encoding: str = 'UTF-8') -> str:
+def write_text(contents: str, file_path: Path | str, encoding: str = 'UTF-8') -> Path:
     """
     Write file contents
     :param contents: string contents
@@ -58,7 +65,7 @@ def write_text(contents: str, file_path: Path | str, encoding: str = 'UTF-8') ->
     with m_open(file=file_path, mode='w', encoding=encoding) as file_path:
         file_path.write(contents)
         file_path.close()
-        return file_path.name
+        return Path(file_path.name)
 
 def write_bytes(data: str, file_path: str) -> None:
     """

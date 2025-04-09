@@ -11,12 +11,21 @@ def query_string(expression) -> dict:
     return {"query": {"query_string": {"query": expression}}}
 
 def match_phrase_any(keyword_list) -> str:
+    """
+    :param keyword_list: list of keywords that were HUMAN expert curated, assited by GPT suggestions.
+    :return: prepared KQL querysting
+    """
     if not isinstance(keyword_list, list):
         keyword_list = [keyword_list]
     out = [f'note:{_quote(keyword)}' for keyword in keyword_list]
     return ' OR '.join(out)
 
-def return_these(include_list: list, exclude_list: list) -> dict:
+def response_fields(include_list: list, exclude_list: list) -> dict:
+    """
+    :param include_list:
+    :param exclude_list:
+    :return:
+    """
     if include_list and exclude_list:
         return {'_source': {'includes': include_list, 'excludes': exclude_list}}
     if include_list:

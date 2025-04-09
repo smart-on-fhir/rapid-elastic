@@ -99,7 +99,7 @@ def get_hits(disease_query_string: str, scroll_size=1000) -> dict:
     print(f'connecting user "{config.ELASTIC_USER}"')
     client = connect()
     query = kql_syntax.query_string(disease_query_string)
-    query = query | kql_syntax.return_these(FIELD_INCLUDES, FIELD_EXCLUDES)
+    query = query | kql_syntax.response_fields(FIELD_INCLUDES, FIELD_EXCLUDES)
     print(query)
     response = client.search(body=query, scroll='5m', size=scroll_size)
 
