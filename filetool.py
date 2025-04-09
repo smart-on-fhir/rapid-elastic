@@ -3,6 +3,17 @@ from typing import List, Dict, Any
 from pathlib import Path
 import json
 
+CSV_LIST = ["UNIQUE_LT10_PER_100K.csv",
+            "UNIQUE_LT50_PER_100K.csv",
+            "BROAD_LT10_PER_100K.csv",
+            "BROAD_LT50_PER_100K.csv"]
+
+def read_disease_json(filename='disease_names_expanded.json') -> dict:
+    return read_json(resource(filename))
+
+def write_disease_json(filename='disease_names.json') -> dict:
+    return read_json(resource(filename))
+
 def resource(filename) -> Path:
     return Path(os.path.join(os.path.dirname(__file__), 'resources', filename))
 

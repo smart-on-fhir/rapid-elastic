@@ -21,3 +21,12 @@ def match_phrase_any(keyword_list) -> str:
         keyword_list = [keyword_list]
     out = [f'note:{_quote(keyword)}' for keyword in keyword_list]
     return ' OR '.join(out)
+
+def query_string(expression) -> dict:
+    return {"query": {"query_string": {"query": expression}}}
+
+def sort_by(sortable='@timestamp') -> dict:
+    return {"sort": [{sortable: {"order": "desc"}}]}
+
+def return_these() -> dict:
+    return {'_source': {'includes': INCLUDE_COLS, 'excludes': EXCLUDE_COLS}}

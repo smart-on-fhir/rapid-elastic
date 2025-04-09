@@ -1,27 +1,13 @@
 from typing import List
 from pathlib import Path
+from datetime import datetime
 import filetool
 import elastic_helper
 import kql_syntax
+import typesafety
 
-# Class to wrap the response cols
-class Entry:
-    _timestamp: str = ''
-    group_name: str = ''
-    anon_ref: str = ''
-    anon_subject_ref: str = ''
-    anon_encounter_ref: str = ''
-    doc_code_text: str = ''
-    doc_codes: dict = {}
-
-    def to_csv(self):
-        header = 'subject_ref,encounter_ref,document_ref,group_name,document_title\n'
-        out = [self.anon_subject_ref,
-               self.anon_encounter_ref,
-               self.anon_ref,
-               self.group_name,
-               self.doc_code_text]
-        return header + ','.join(out)
+def get_timestamp() -> str:
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 def process(disease, querystring) -> List[Path]:
 
@@ -37,23 +23,12 @@ def process(disease, querystring) -> List[Path]:
     entry_list = list()
 
     for hit in all_hits:
-        _source = hit['_source']
-
-        e = Entry()
-        e.group_name = _source.get('group_name', '')
-        e.anon_ref = _source.get('anon_ref', '')
-        e.anon_subject_ref = _source.get('anon_subject_ref', '')
-        e.anon_encounter_ref = _source.get('anon_encounter_ref', '')
-        e._timestamp = _source.get('@timestamp', '')
-        e.doc_codes = _source.get('codes', dict())
-        if e.doc_codes:
-            e.doc_code_text = _source.get('codes').get('text').replace(',', '|')
-
-        entry_list.append(e)
+        entry_list.append(
+            typesafety.SearchHit(hit['_source']))
 
     print(f'{len(entry_list)} entries processed')
 
-    output_csv = '\n'.join([e.to_csv() for e in entry_list])
+    output_csv = typesafety.SearchHit.list_to_csv(entry_list)
     output_json = {'request': querystring,
                    'total': len(all_hits),
                    'hits': [e.__dict__ for e in entry_list]}
@@ -68,12 +43,16 @@ def process(disease, querystring) -> List[Path]:
 #
 ###############################################################################
 if __name__ == "__main__":
-    disease_json = filetool.read_json(filetool.resource('disease_names_expanded.json'))
+    disease_json = filetool.read_disease_json('disease_names_expanded.json')
 
     print(f'{len(disease_json.keys())} rare-diseases, processing now....')
     print(disease_json)
 
+    print("Started @:", get_timestamp())
+
     for disease, keyword_list in disease_json.items():
-        disease = disease.replace(' ', '_')
+        disease = typesafety.strip_spaces(disease)
         querystring = kql_syntax.match_phrase_any(keyword_list)
         process(disease, querystring)
+
+    print("Finished @:", get_timestamp())
