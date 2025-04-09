@@ -75,4 +75,4 @@ def csv_to_sql(disease_csv: str) -> Path:
     table = naming.name_table(disease_csv.replace('.csv', ''))
     entries = list_entries(disease_csv)
     sql = list_to_sql(table, entries)
-    return Path(filetool.write_text(sql, filetool.output(f'{table}.sql')))
+    return Path(filetool.write_text(sql, filetool.resource(f'{disease_csv}.sql')))
