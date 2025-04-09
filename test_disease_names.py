@@ -8,6 +8,9 @@ class TestDiseaseNames(unittest.TestCase):
         actual = disease_names.expand("ABCD1 mutation", "mutation", ["mutation", "variant", "pathogenic"])
         self.assertEqual(expected, actual)
 
+    def test_prompt_llm_synonyms(self):
+        print(disease_names.prompt_llm_synonyms('disease_names_expanded.json'))
+
     @unittest.skip
     def test_find_duplicates(self):
         disease_names.deprecated_find_duplicates()

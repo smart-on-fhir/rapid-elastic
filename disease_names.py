@@ -9,11 +9,20 @@ import naming
 # Synonyms
 ###############################################################################
 def prompt_llm_synonyms(disease_json: str) -> Path:
+    """
+    LLM prompts tried thus far include
+        "What are the EHR search terms in clinical note text for exact synonyms of "$disease"
+        "What are the EHR search terms in clinical note text for exact synonyms of "$disease""
+        "What are the EHR search terms of "$disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.'
+
+    HUMAN curation by Andy was performed for all diseases, considerable HOURS of careful consideration.
+    DO not change the synonyms list unless you are very sure you are fixing a known false positive or false negative hit!
+    """
     disease_dict = filetool.read_disease_json(disease_json)
     out = list()
     for disease in disease_dict.keys():
         # out.append(f'What are the EHR search terms in clinical note text for exact synonyms of "{disease}"?')
-        prompt = f'What are EHR search terms of "{disease}"? '
+        prompt = f'What are the EHR search terms of "{disease}"? '
         prompt += f'Respond with JSON where the key is "synonym" or "related" and the values are a list.'
         out.append(prompt)
     out = '\n'.join(out)

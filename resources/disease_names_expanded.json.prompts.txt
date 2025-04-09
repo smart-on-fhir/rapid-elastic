@@ -1,117 +1,116 @@
-What are EHR search terms of "Phenylketonuria (PKU)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Primary Congenital Hypothyroidism"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Maple Syrup Urine Disease (MSUD)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Classic Galactosemia (Type I)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Alpha-1 Antitrypsin Deficiency (AATD)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Medium-Chain Acyl-CoA Dehydrogenase Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Congenital Adrenal Hyperplasia (21-hydroxylase)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hurler Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hunter Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Sanfilippo Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Morquio A Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Krabbe Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Metachromatic Leukodystrophy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "X-linked Adrenoleukodystrophy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Tay-Sachs Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Sandhoff Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Niemann-Pick Disease Type C"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "GSD Type Ia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Homocystinuria"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Propionic Acidemia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Methylmalonic Acidemia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Isovaleric Acidemia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "VLCAD Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Biotinidase Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Pyruvate Dehydrogenase Complex Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Spinal Muscular Atrophy Type I"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Dystrophic Epidermolysis Bullosa"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "22q11.2 Deletion Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Alpha-1 Antitrypsin Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Angelman Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Autosomal Recessive Polycystic Kidney Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Beckwith-Wiedemann Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Charcot-Marie-Tooth Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "CHARGE Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Coarctation of Aorta"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Congenital Adrenal Hyperplasia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Congenital Diaphragmatic Hernia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Congenital Hydrocephalus"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Congenital Hypothyroidism"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Congenital Long QT Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Cystic Fibrosis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Duane Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Ehlers-Danlos Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Erythropoietic Protoporphyria"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Esophageal Atresia Tracheoesophageal Fistula"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Fragile X Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Gastroschisis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hemophilia A"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hereditary Spherocytosis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hirschsprung Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hypoplastic Left Heart Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Imperforate Anus"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Juvenile Idiopathic Arthritis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Marfan Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "MELAS Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Microtia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Neurofibromatosis Type 1"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Noonan Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Omphalocele"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Posterior Urethral Valves"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Prader-Willi Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Primary Congenital Glaucoma"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Rett Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Sickle Cell Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Small Intestinal Atresia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Spina Bifida"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Stargardt Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Stickler Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Tetralogy of Fallot"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Transposition of the Great Arteries"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Tuberous Sclerosis Complex"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Turner Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Williams Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Pitt Hopkins"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Gaucher disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Pompe disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Alpha-mannosidosis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Canavan disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Alexander disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Menkes disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Crigler-Najjar syndrome type I"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Carbamoyl phosphate synthetase I deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "MLASA"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "2q37 deletion syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Wolf-Hirschhorn syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Mowat-Wilson syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Smith-Magenis syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Kabuki syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Coffin-Lowry syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Aicardi syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Rubinstein-Taybi syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hallermann-Streiff syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Jacobsen syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Miller-Dieker syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Shwachman-Diamond syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Leigh syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Salla disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Cornelia de Lange syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Pierre Robin sequence"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Goldenhar syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Primary ciliary dyskinesia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Usher syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "1p36 deletion syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "16p11.2 microdeletion syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Heterotaxy syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "VACTERL-VATER association"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Lennox-Gastaut syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Hereditary neuropathy with liability to pressure palsies"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Juvenile myoclonic epilepsy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Alport syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Isolated growth hormone deficiency type II"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Spinocerebellar ataxia type 2"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Refsum disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Ullrich congenital muscular dystrophy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Glutaric aciduria type 1"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Sensenbrenner syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
-What are EHR search terms of "Pseudoachondroplasia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Phenylketonuria (PKU)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Primary Congenital Hypothyroidism"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Maple Syrup Urine Disease (MSUD)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Classic Galactosemia (Type I)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Medium-Chain Acyl-CoA Dehydrogenase Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Congenital Adrenal Hyperplasia (21-hydroxylase)"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hurler Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hunter Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Sanfilippo Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Morquio A Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Krabbe Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Metachromatic Leukodystrophy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "X-linked Adrenoleukodystrophy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Tay-Sachs Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Sandhoff Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Niemann-Pick Disease Type C"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "GSD Type Ia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Homocystinuria"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Propionic Acidemia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Methylmalonic Acidemia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Isovaleric Acidemia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "VLCAD Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Biotinidase Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Pyruvate Dehydrogenase Complex Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Spinal Muscular Atrophy Type I"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Dystrophic Epidermolysis Bullosa"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "22q11.2 Deletion Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Alpha-1 Antitrypsin Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Angelman Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Autosomal Recessive Polycystic Kidney Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Beckwith-Wiedemann Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Charcot-Marie-Tooth Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "CHARGE Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Coarctation of Aorta"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Congenital Adrenal Hyperplasia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Congenital Diaphragmatic Hernia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Congenital Hydrocephalus"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Congenital Hypothyroidism"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Congenital Long QT Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Cystic Fibrosis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Duane Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Ehlers-Danlos Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Erythropoietic Protoporphyria"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Esophageal Atresia Tracheoesophageal Fistula"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Fragile X Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Gastroschisis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hemophilia A"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hereditary Spherocytosis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hirschsprung Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hypoplastic Left Heart Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Imperforate Anus"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Juvenile Idiopathic Arthritis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Marfan Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "MELAS Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Microtia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Neurofibromatosis Type 1"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Noonan Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Omphalocele"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Posterior Urethral Valves"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Prader-Willi Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Primary Congenital Glaucoma"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Rett Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Sickle Cell Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Small Intestinal Atresia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Spina Bifida"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Stargardt Disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Stickler Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Tetralogy of Fallot"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Transposition of the Great Arteries"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Tuberous Sclerosis Complex"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Turner Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Williams Syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Pitt Hopkins"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Gaucher disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Pompe disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Alpha-mannosidosis"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Canavan disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Alexander disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Menkes disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Crigler-Najjar syndrome type I"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Carbamoyl phosphate synthetase I Deficiency"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "MLASA"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "2q37 deletion syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Wolf-Hirschhorn syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Mowat-Wilson syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Smith-Magenis syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Kabuki syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Coffin-Lowry syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Aicardi syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Rubinstein-Taybi syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hallermann-Streiff syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Jacobsen syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Miller-Dieker syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Shwachman-Diamond syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Leigh syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Salla disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Cornelia de Lange syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Pierre Robin sequence"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Goldenhar syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Primary ciliary dyskinesia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Usher syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "1p36 deletion syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "16p11.2 microdeletion syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Heterotaxy syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "VACTERL-VATER association"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Lennox-Gastaut syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Hereditary neuropathy with liability to pressure palsies"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Juvenile myoclonic epilepsy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Alport syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Isolated growth hormone Deficiency type II"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Spinocerebellar ataxia type 2"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Refsum disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Ullrich congenital muscular dystrophy"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Glutaric aciduria type 1"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Sensenbrenner syndrome"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
+What are the EHR search terms of "Pseudoachondroplasia"? Respond with JSON where the key is "synonym" or "related" and the values are a list.
