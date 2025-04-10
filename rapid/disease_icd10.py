@@ -89,16 +89,3 @@ def union_views() -> str:
     select = [f"select '{t}' as sheet, * from {t}" for t in table_list]
     out = create + '\n UNION \n'.join(select)
     return out
-
-
-
-
-
-
-
-
-
-
-
-
-

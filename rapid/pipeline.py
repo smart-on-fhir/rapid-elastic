@@ -12,7 +12,7 @@ import naming
 def pipe_query(disease, query: str | List[str]) -> List[Path]:
     """
     :param disease: example "Sanfilippo syndrome"
-    :param query: str prepared KQL query, List[str] will prepare KQL query for you.   
+    :param query: str prepared KQL query, List[str] synonyms to prepare KQL query for you.
     :return: List of elasticsearch results written to disk, a CSV file and a JSON file
     """
     disease = naming.strip_spaces(disease)
