@@ -17,6 +17,10 @@ class TestDiseaseICD10(unittest.TestCase):
             out = disease_icd10.list_to_sql(table, entries)
             print(out)
 
+    @unittest.skip("write output SQL files to UNION all files")
+    def test_union_views(self):
+        print(disease_icd10.union_views())
+
     @unittest.skip("write output SQL files for each disease.csv file")
     def test_csv_to_sql(self):
         for csv_file in filetool.CSV_LIST:
