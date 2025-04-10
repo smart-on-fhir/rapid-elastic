@@ -17,6 +17,6 @@ class TestElasticFields(unittest.TestCase):
                 print(f'{field.name} field is empty, this is OK if you can link documents to patients and/or encounters.')
 
     def test_optional(self):
-        for field in [ElasticField.group_name, ElasticField.codes]:
+        for field in [ElasticField.group_name, ElasticField.codes, ElasticField.document_title]:
             if not field.value:
                 print(f'{ElasticField.encounter_ref.name} OPTIONAL field is not mapped (OK)')

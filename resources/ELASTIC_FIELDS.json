@@ -4,5 +4,6 @@
   "subject_ref" : "anon_subject_ref",
   "encounter_ref": "anon_encounter_ref",
   "group_name" : "group_name",
-  "codes" : "codes"
+  "codes" : "codes",
+  "document_title": ""
 }

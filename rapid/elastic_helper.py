@@ -33,6 +33,7 @@ class ElasticField(Enum):
     encounter_ref = _ELASTIC_FIELDS_.get('encounter_ref')
     group_name = _ELASTIC_FIELDS_.get('group_name')
     codes = _ELASTIC_FIELDS_.get('codes')
+    document_title = _ELASTIC_FIELDS_.get('document_title')
 
 
 ###############################################################################
@@ -63,23 +64,24 @@ class ElasticHit:
     anon_subject_ref: str = ''
     anon_encounter_ref: str = ''
     codes: dict = {}
-    doc_title: str = ''
+    document_title: str = ''
 
     def __init__(self, source: dict):
         self.anon_ref = source.get(ElasticField.documentreference_ref.value, '')
         self.anon_subject_ref = source.get(ElasticField.subject_ref.value, '')
         self.anon_encounter_ref = source.get(ElasticField.encounter_ref.value, '')
         self.group_name = source.get(ElasticField.group_name.value, '')
+        self.document_title = source.get(ElasticField.document_title.value, '')
         self.codes = source.get(ElasticField.codes.value, dict())
         if self.codes:
-            self.doc_title = self.codes.get('text').replace(',', ';')
+            self.document_title = self.codes.get('text').replace(',', ';')
 
     def as_csv(self) -> str:
         out = [self.anon_subject_ref,
                self.anon_encounter_ref,
                self.anon_ref,
                self.group_name,
-               self.doc_title]
+               self.document_title]
         return ','.join(out)
 
     def as_json(self):
