@@ -11,4 +11,5 @@
    1. default=`disease_names_expanded.json`
 
 ### Elasticsearch server 
-* Link to @mterry server-side documentation 
+* Link to @mterry server-side documentation
+* see `elastic_helper.py` for expected `ElasticField` names. 
