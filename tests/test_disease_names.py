@@ -1,5 +1,6 @@
 import unittest
-import disease_names
+from rapid import disease_names
+
 
 class TestDiseaseNames(unittest.TestCase):
 

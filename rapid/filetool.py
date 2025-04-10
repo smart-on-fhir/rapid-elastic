@@ -22,10 +22,16 @@ def write_disease_json(filename='disease_names.json') -> dict:
     return read_json(resource(filename))
 
 def resource(filename) -> Path:
-    return Path(os.path.join(os.path.dirname(__file__), 'resources', filename))
+    return Path(project_dir(), 'resources', filename)
 
 def output(filename) -> Path:
-    return Path(os.path.join(os.path.dirname(__file__), 'output', filename))
+    _output = Path(project_dir(), 'output')
+    if not _output.exists():
+        _output.mkdir()
+    return Path(_output, filename)
+
+def project_dir() -> Path:
+    return Path(__file__).parent.parent
 
 def list_output(disease) -> List[Path]:
     return [output(f'{disease}.csv'),

@@ -1,6 +1,6 @@
 import unittest
-import kql_syntax
-import filetool
+from rapid import kql_syntax, filetool
+
 
 class TestQuerystring(unittest.TestCase):
 

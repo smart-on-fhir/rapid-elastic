@@ -1,0 +1,31 @@
+[project]
+name = "rapid-elastic"
+requires-python = ">= 3.10"
+dependencies = [
+    "elasticsearch",
+]
+
+readme = "README.md"
+license = { text="Apache License 2.0" }
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dynamic = ["description", "version"]
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+    "pytest-cov",
+]
+dev = [
+    "pre-commit",
+    # Ruff is using minor versions for breaking changes until their 1.0 release.
+    # See https://docs.astral.sh/ruff/versioning/
+    "ruff < 0.12",  # keep in rough sync with pre-commit-config.yaml
+]
+
+[project.urls]
+"Homepage" = "https://github.com/smart-on-fhir/rapid-elastic"

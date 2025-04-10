@@ -30,14 +30,14 @@ class ElasticField(Enum):
 ###############################################################################
 # Include/Exclude these columns in Elasticsearch responses
 ###############################################################################
-FIELD_EXCLUDES = [ElasticField.note]
+FIELD_EXCLUDES = [ElasticField.note.name]
 
-FIELD_INCLUDES = [ElasticField.fhir_ref,
-                  ElasticField.anon_ref,
-                  ElasticField.anon_subject_ref,
-                  ElasticField.anon_encounter_ref,
-                  ElasticField.codes,
-                  ElasticField.group_name]
+FIELD_INCLUDES = [ElasticField.fhir_ref.name,
+                  ElasticField.anon_ref.name,
+                  ElasticField.anon_subject_ref.name,
+                  ElasticField.anon_encounter_ref.name,
+                  ElasticField.codes.name,
+                  ElasticField.group_name.name]
 
 ###############################################################################
 # Elasticsearch "hits"
@@ -76,9 +76,7 @@ class ElasticHit:
         return ','.join(out)
 
     def as_json(self):
-        out = self.__dict__
-        del out['HEADERS_OUT']
-        return out
+        return self.__dict__
 
     @classmethod
     def list_to_csv(cls, entry_list: List) -> str:

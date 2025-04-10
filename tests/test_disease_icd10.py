@@ -1,7 +1,6 @@
 import unittest
-import filetool
-import naming
-import disease_icd10
+from rapid import naming, disease_icd10, filetool
+
 
 class TestDiseaseICD10(unittest.TestCase):
     def test_list_icd10(self):

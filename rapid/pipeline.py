@@ -32,7 +32,7 @@ def pipe_query(disease, query: str | List[str]) -> List[Path]:
     #
     _time2 = timestamp.datetime.now()
 
-    print("Elastic took: ", timestamp.diff_seconds(_time1, _time2))
+    print("Elastic took: ", timestamp.diff_seconds(_time1, _time2), ' seconds')
     print(f'{len(all_hits)} hits to process')
 
     entry_list = list()
