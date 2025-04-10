@@ -1,8 +1,8 @@
 import csv
 from typing import List
 from pathlib import Path
-import filetool
-import naming
+from rapid import filetool
+from rapid import naming
 
 ###############################################################################
 # Synonyms
