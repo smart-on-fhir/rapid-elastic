@@ -1,7 +1,8 @@
 import os
+import json
 from typing import List, Dict, Any
 from pathlib import Path
-import json
+from rapid import timestamp
 
 ######################################################################################
 # CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.
@@ -25,9 +26,10 @@ def resource(filename) -> Path:
     return Path(project_dir(), 'resources', filename)
 
 def output(filename) -> Path:
-    _output = Path(project_dir(), 'output')
+    _output = Path(project_dir(), 'output', timestamp.date_str())
     if not _output.exists():
         _output.mkdir()
+        print(f'{_output} dir created.')
     return Path(_output, filename)
 
 def project_dir() -> Path:

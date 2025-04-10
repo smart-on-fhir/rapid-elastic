@@ -1,6 +1,11 @@
 from datetime import datetime
 
-def to_string(datetime_obj=None) -> str:
+def date_str(datetime_obj=None) -> str:
+    if not datetime_obj:
+        datetime_obj = datetime.now()
+    return datetime_obj.strftime("%Y-%m-%d")
+
+def datetime_str(datetime_obj=None) -> str:
     """
     Timestamp to measure see long Elasticsearch takes
     """

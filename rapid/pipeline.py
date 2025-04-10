@@ -64,13 +64,13 @@ def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]
     file_list = list()
 
     _pipe_begin = timestamp.datetime.now()
-    print("Begin: ", timestamp.to_string(_pipe_begin))
+    print("Begin: ", timestamp.datetime_str(_pipe_begin))
 
     for disease, keyword_list in disease_dict.items():
         file_list += pipe_query(disease, keyword_list)
 
     _pipe_done = timestamp.datetime.now()
-    print("Done: ", timestamp.to_string(_pipe_begin))
+    print("Done: ", timestamp.datetime_str(_pipe_begin))
     print("Took: ", timestamp.diff_seconds(_pipe_begin, _pipe_done))
     return file_list
 
