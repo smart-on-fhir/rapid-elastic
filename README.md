@@ -15,8 +15,7 @@
 2. python3 [pipeline.py](rapid/pipeline.py)
 
 ### Elasticsearch server 
-* Link to @mterry server-side documentation
-* see `elastic_helper.py` for expected `ElasticField` names. 
+Read the [server setup docs](docs/server-setup.md).
 
 ### KQL (Kibana Query Language) 
 * By default, synonyms used to match any "exact phrase" in the note. 
