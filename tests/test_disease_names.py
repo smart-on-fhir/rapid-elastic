@@ -14,8 +14,8 @@ class TestDiseaseNames(unittest.TestCase):
 
     @unittest.skip
     def test_find_duplicates(self):
-        disease_names.deprecated_find_duplicates()
+        disease_names.find_duplicates()
 
     @unittest.skip('Merge curated JSON with names from the CSV spreadsheets')
     def test_deprecated_merge(self):
-        disease_names.deprecated_merge('disease_names.json')
+        disease_names.merge('disease_names.json')

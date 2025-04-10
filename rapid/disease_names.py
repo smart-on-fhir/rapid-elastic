@@ -89,10 +89,10 @@ def csv_to_json(disease_csv: Path | str) -> dict:
 
 ###############################################################################
 #
-# Deprecated
+# Duplicates and Merging curation lists
 #
 ###############################################################################
-def deprecated_find_duplicates() -> Path:
+def find_duplicates() -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
     :return: path to duplicates found
@@ -118,7 +118,7 @@ def deprecated_find_duplicates() -> Path:
     print(f'{len(duplicates.keys())}  "duplicates found"')
     return filetool.write_json(duplicates, filetool.resource('disease_names_duplicates.json'))
 
-def deprecated_merge(filename_json: str) -> Path:
+def merge(filename_json: str) -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
     :param filename_json: JSON to merge with the CSV names.
