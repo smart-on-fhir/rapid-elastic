@@ -17,6 +17,3 @@ ELASTIC_HOST = os.environ.get('ELASTIC_URL', 'http://localhost:9200')
 # HTTP Basic Auth and output destination
 ELASTIC_USER = os.environ.get("ELASTIC_USER")
 ELASTIC_PASS = os.environ.get("ELASTIC_PASS")
-
-# Synchronize output to remote target for LLM processing (optional)
-ELASTIC_SYNC = os.environ.get("ELASTIC_SYNC")

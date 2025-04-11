@@ -6,6 +6,9 @@ while true; do
       [ -e "$csv_file" ] || continue
 
       gzip "$csv_file"
+      # You may define your own sync operation here if you chose to upload the results to a remove location
+      # EXAMPLE :
+      # rsync -azvrh --progress YOUR_OUTPUT_DIR YOUR_UPLOAD_DESTINATION
       $ELASTIC_SYNC
     done
     echo "restarting counter...."

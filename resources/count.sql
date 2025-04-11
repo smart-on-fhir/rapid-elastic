@@ -1,3 +1,6 @@
+-- TODO : 4/10 work in progress.
+-- Andy McMurry (BCH)
+
 create table cohorts__rare__DX as
 select  distinct
         curated.icd10_code,

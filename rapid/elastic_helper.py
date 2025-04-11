@@ -1,43 +1,51 @@
 from enum import Enum
 from typing import List
 from elasticsearch import Elasticsearch
-import config
-import kql_syntax
+from rapid import filetool
+from rapid import config
+from rapid import kql_syntax
+
+
+###############################################################################
+# Elasticsearch Field names to uniquely reference
+# * Document (required)
+# * Patient (required unless your document reference links to the patient)
+# * Encounter (optional)
+# * group_name (optional)
+# * codes (optional, additional document metadata)
+#
+#  (Optional fields can be disabled by setting the entry to None)
+#
+# * note is the default field name that elasticsearch is run against.
+###############################################################################
+_ELASTIC_FIELDS_ = filetool.get_elastic_fields()
 
 class ElasticField(Enum):
     """
+    Provides strong type assertions for the supplied ELASTIC_FIELDS.json
+
     At minimum, these elastic search fields need to be present for this code to work.
     You will either need an ElasticSearch index with these columns or to modify this script.
-     Note that doc_codes are optional metadata to determine "doc_code_text" which is the document title.
-     Example:
-        "codes": {
-            "text": "Neurosurgery Visit",
-            "coding": [
-                {"display": "Neurosurgery Visit",
-                "code": "3817546",
-                "system": "https://fhir.cerner.com/96976f07-eccb-424c-9825-e0d0b887148b/codeSet/72"
-                }]},
     """
-    note = 'raw clinical note text from FHIR DocumentReference'
-    fhir_ref = 'FHIR DocumentReference.id (original).'
-    anon_ref = 'FHIR DocumentReference.id (anon)'
-    anon_subject_ref = 'FHIR Patient.id (anon)'
-    anon_encounter_ref = 'FHIR Encounter.id (anon)'
-    group_name = 'optional, BCH uses this to batch up ETL jobs.'
-    codes = dict()
+    note = _ELASTIC_FIELDS_.get('note')
+    documentreference_ref = _ELASTIC_FIELDS_.get('documentreference_ref')
+    subject_ref = _ELASTIC_FIELDS_.get('subject_ref')
+    encounter_ref = _ELASTIC_FIELDS_.get('encounter_ref')
+    group_name = _ELASTIC_FIELDS_.get('group_name')
+    codes = _ELASTIC_FIELDS_.get('codes')
+    document_title = _ELASTIC_FIELDS_.get('document_title')
 
 
 ###############################################################################
 # Include/Exclude these columns in Elasticsearch responses
 ###############################################################################
-FIELD_EXCLUDES = [ElasticField.note.name]
+FIELD_EXCLUDES = [ElasticField.note.value]
 
-FIELD_INCLUDES = [ElasticField.fhir_ref.name,
-                  ElasticField.anon_ref.name,
-                  ElasticField.anon_subject_ref.name,
-                  ElasticField.anon_encounter_ref.name,
-                  ElasticField.codes.name,
-                  ElasticField.group_name.name]
+FIELD_INCLUDES = [ElasticField.documentreference_ref.value,
+                  ElasticField.subject_ref.value,
+                  ElasticField.encounter_ref.value,
+                  ElasticField.codes.value,
+                  ElasticField.group_name.value]
 
 ###############################################################################
 # Elasticsearch "hits"
@@ -56,23 +64,24 @@ class ElasticHit:
     anon_subject_ref: str = ''
     anon_encounter_ref: str = ''
     codes: dict = {}
-    doc_title: str = ''
+    document_title: str = ''
 
     def __init__(self, source: dict):
-        self.anon_ref = source.get(ElasticField.anon_ref.name, '')
-        self.anon_subject_ref = source.get(ElasticField.anon_subject_ref.name, '')
-        self.anon_encounter_ref = source.get(ElasticField.anon_encounter_ref.name, '')
-        self.group_name = source.get(ElasticField.group_name.name, '')
-        self.codes = source.get(ElasticField.codes.name, dict())
+        self.anon_ref = source.get(ElasticField.documentreference_ref.value, '')
+        self.anon_subject_ref = source.get(ElasticField.subject_ref.value, '')
+        self.anon_encounter_ref = source.get(ElasticField.encounter_ref.value, '')
+        self.group_name = source.get(ElasticField.group_name.value, '')
+        self.document_title = source.get(ElasticField.document_title.value, '')
+        self.codes = source.get(ElasticField.codes.value, dict())
         if self.codes:
-            self.doc_title = self.codes.get('text').replace(',', ';')
+            self.document_title = self.codes.get('text').replace(',', ';')
 
     def as_csv(self) -> str:
         out = [self.anon_subject_ref,
                self.anon_encounter_ref,
                self.anon_ref,
                self.group_name,
-               self.doc_title]
+               self.document_title]
         return ','.join(out)
 
     def as_json(self):

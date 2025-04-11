@@ -16,6 +16,12 @@ CSV_LIST = ["UNIQUE_LT10_PER_100K.csv",
             "BROAD_LT10_PER_100K.csv",
             "BROAD_LT50_PER_100K.csv"]
 
+def get_elastic_fields(override_default=None) -> dict:
+    if not override_default:
+        return read_json(resource('ELASTIC_FIELDS.json'))
+    else:
+        return read_json(override_default)
+
 def read_disease_json(filename='disease_names_expanded.json') -> dict:
     return read_json(resource(filename))
 

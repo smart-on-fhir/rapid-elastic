@@ -1,10 +1,10 @@
 from typing import List
 from pathlib import Path
-import timestamp
-import filetool
-import elastic_helper
-import kql_syntax
-import naming
+from rapid import timestamp
+from rapid import naming
+from rapid import filetool
+from rapid import kql_syntax
+from rapid import elastic_helper
 
 ###############################################################################
 # Pipeline for a single rare-disease disease query
