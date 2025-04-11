@@ -35,7 +35,7 @@ class TestDiseaseNames(unittest.TestCase):
         if len(_diff2) > 0:
             print(len(_diff2), '  .difference() ', 'deprecated?', str(_diff2))
 
-    def test_synonynms_no_intersection(self):
+    def test_synonynms_no_query_intersection(self):
         """
         Test that there are no overlapping search terms between diseases.
         """
@@ -50,17 +50,18 @@ class TestDiseaseNames(unittest.TestCase):
             for disease2, syn_list2 in disease_json.items():
                 if disease1 != disease2:
                     _inter = set(syn_list1).intersection(set(syn_list2))
-                    if len(_inter) > 0:
-                        print(f'warn: search term(s) {_inter} overlap for "{disease1}" and "{disease2}"')
+                    self.assertTrue(
+                        len(_inter) == 0,
+                        f'search term(s) {_inter} overlap for "{disease1}" and "{disease2}"')
 
-    @unittest.skip('resources/disease_names_expanded.json')
+    @unittest.skip('disease_names_expanded.json')
     def test_json_keynames(self):
         out = dict()
         for disease, synonyms in filetool.read_disease_json('disease_names_expanded.json').items():
             out[naming.name_unique(disease)] = synonyms
         filetool.write_json(out, filetool.resource('disease_names_expanded.json'))
 
-    @unittest.skip('resources/disease_names_spelling.json')
+    @unittest.skip('disease_names_spelling.json')
     def test_spelling(self):
         """
         For historical purposes. GPT4o did not consistently name disease names and our outputs sometimes were duplicated.
@@ -70,7 +71,7 @@ class TestDiseaseNames(unittest.TestCase):
             disease_names.map_spellings(),
             filetool.resource('disease_names_spelling.json'))
 
-    @unittest.skip
+    @unittest.skip('disease_names_expanded.json')
     def test_prompt_llm_synonyms(self):
         """
         Enable this test to produce GPT4 suggestions.
@@ -78,10 +79,10 @@ class TestDiseaseNames(unittest.TestCase):
         """
         print(disease_names.prompt_llm_synonyms('disease_names_expanded.json'))
 
-    @unittest.skip
+    @unittest.skip('disease_names_duplicates.json')
     def test_find_duplicates(self):
         """
         Enable this test to list which GPT4 suggested rare diseases might be in multiple spreadsheets.
         HUMAN curation is complete. For historical purposes.
         """
-        disease_names.find_duplicates_across_sheets()
+        print(disease_names.find_duplicates_across_sheets())
