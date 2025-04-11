@@ -1,0 +1,926 @@
+{
+    "Hurler Syndrome": [
+        "Hurler_Syndrome",
+        "hurler_syndrome",
+        "Hurler_Syndrome_(MPS_I-H)",
+        "Hurler_Syndrome",
+        "hurler_syndrome",
+        "Hurler_Syndrome",
+        "hurler_syndrome",
+        "Hurler_syndrome_(MPS_I-H)",
+        "Hurler_syndrome",
+        "hurler_syndrome"
+    ],
+    "Hunter Syndrome": [
+        "Hunter_Syndrome",
+        "hunter_syndrome",
+        "Hunter_Syndrome_(MPS_II)",
+        "Hunter_Syndrome",
+        "hunter_syndrome",
+        "Hunter_Syndrome",
+        "hunter_syndrome",
+        "Hunter_syndrome_(MPS_II)",
+        "Hunter_syndrome",
+        "hunter_syndrome"
+    ],
+    "Sanfilippo Syndrome": [
+        "Sanfilippo_Syndrome",
+        "sanfilippo_syndrome",
+        "Sanfilippo_Syndrome_(MPS_III)",
+        "Sanfilippo_Syndrome",
+        "sanfilippo_syndrome",
+        "Sanfilippo_Syndrome",
+        "sanfilippo_syndrome",
+        "Sanfilippo_syndrome_(MPS_III)",
+        "Sanfilippo_syndrome",
+        "sanfilippo_syndrome"
+    ],
+    "Morquio A Syndrome": [
+        "Morquio_A_Syndrome",
+        "morquio_a_syndrome",
+        "Morquio_A_Syndrome_(MPS_IV-A)",
+        "Morquio_A_Syndrome",
+        "morquio_a_syndrome",
+        "Morquio_A_Syndrome",
+        "morquio_a_syndrome",
+        "Morquio_A_syndrome_(MPS_IV-A)",
+        "Morquio_A_syndrome",
+        "morquio_a_syndrome"
+    ],
+    "Krabbe Disease": [
+        "Krabbe_Disease",
+        "krabbe_disease",
+        "Krabbe_Disease_(Globoid_Cell_Leukodystrophy)",
+        "Krabbe_Disease",
+        "krabbe_disease",
+        "Krabbe_Disease",
+        "krabbe_disease",
+        "Krabbe_disease_(globoid_cell_leukodystrophy)",
+        "Krabbe_disease",
+        "krabbe_disease"
+    ],
+    "Metachromatic Leukodystrophy": [
+        "Metachromatic_Leukodystrophy",
+        "metachromatic_leukodystrophy",
+        "Metachromatic_Leukodystrophy_(MLD)",
+        "Metachromatic_Leukodystrophy",
+        "metachromatic_leukodystrophy",
+        "Metachromatic_Leukodystrophy",
+        "metachromatic_leukodystrophy",
+        "Metachromatic_leukodystrophy_(MLD)",
+        "Metachromatic_leukodystrophy",
+        "metachromatic_leukodystrophy"
+    ],
+    "X-Linked Adrenoleukodystrophy": [
+        "X-Linked_Adrenoleukodystrophy",
+        "x-linked_adrenoleukodystrophy",
+        "X-linked_Adrenoleukodystrophy_(X-ALD)",
+        "X-linked_Adrenoleukodystrophy",
+        "x-linked_adrenoleukodystrophy",
+        "X-Linked_Adrenoleukodystrophy",
+        "x-linked_adrenoleukodystrophy",
+        "X-linked_adrenoleukodystrophy_(childhood_form)",
+        "X-linked_adrenoleukodystrophy",
+        "x-linked_adrenoleukodystrophy"
+    ],
+    "Tay-Sachs Disease": [
+        "Tay-Sachs_Disease",
+        "tay-sachs_disease",
+        "Tay-Sachs_Disease",
+        "Tay-Sachs_Disease",
+        "tay-sachs_disease",
+        "Tay-Sachs_Disease",
+        "tay-sachs_disease",
+        "Tay-Sachs_disease",
+        "Tay-Sachs_disease",
+        "tay-sachs_disease"
+    ],
+    "Sandhoff Disease": [
+        "Sandhoff_Disease",
+        "sandhoff_disease",
+        "Sandhoff_Disease",
+        "Sandhoff_Disease",
+        "sandhoff_disease",
+        "Sandhoff_Disease",
+        "sandhoff_disease",
+        "Sandhoff_disease",
+        "Sandhoff_disease",
+        "sandhoff_disease"
+    ],
+    "Niemann-Pick Disease Type C": [
+        "Niemann-Pick_Disease_Type_C",
+        "niemann-pick_disease_type_c",
+        "Niemann-Pick_Disease_Type_C",
+        "Niemann-Pick_Disease_Type_C",
+        "niemann-pick_disease_type_c",
+        "Niemann-Pick_Disease_Type_C",
+        "niemann-pick_disease_type_c",
+        "Niemann-Pick_disease_type_C",
+        "Niemann-Pick_disease_type_C",
+        "niemann-pick_disease_type_c"
+    ],
+    "GSD Type Ia": [
+        "GSD_Type_Ia",
+        "gsd_type_ia",
+        "GSD_Type_Ia_(Von_Gierke)",
+        "GSD_Type_Ia",
+        "gsd_type_ia"
+    ],
+    "Homocystinuria": [
+        "Homocystinuria",
+        "homocystinuria",
+        "Homocystinuria_(CBS_deficiency)",
+        "Homocystinuria",
+        "homocystinuria"
+    ],
+    "Propionic Acidemia": [
+        "Propionic_Acidemia",
+        "propionic_acidemia",
+        "Propionic_Acidemia",
+        "Propionic_Acidemia",
+        "propionic_acidemia",
+        "Propionic_Acidemia",
+        "propionic_acidemia",
+        "Propionic_acidemia",
+        "Propionic_acidemia",
+        "propionic_acidemia"
+    ],
+    "Methylmalonic Acidemia": [
+        "Methylmalonic_Acidemia",
+        "methylmalonic_acidemia",
+        "Methylmalonic_Acidemia_(MMA)",
+        "Methylmalonic_Acidemia",
+        "methylmalonic_acidemia",
+        "Methylmalonic_Acidemia",
+        "methylmalonic_acidemia",
+        "Methylmalonic_acidemia_(severe)",
+        "Methylmalonic_acidemia",
+        "methylmalonic_acidemia"
+    ],
+    "Isovaleric Acidemia": [
+        "Isovaleric_Acidemia",
+        "isovaleric_acidemia",
+        "Isovaleric_Acidemia",
+        "Isovaleric_Acidemia",
+        "isovaleric_acidemia",
+        "Isovaleric_Acidemia",
+        "isovaleric_acidemia",
+        "Isovaleric_acidemia",
+        "Isovaleric_acidemia",
+        "isovaleric_acidemia"
+    ],
+    "VLCAD Deficiency": [
+        "VLCAD_Deficiency",
+        "vlcad_deficiency",
+        "VLCAD_Deficiency_(VLCADD)",
+        "VLCAD_Deficiency",
+        "vlcad_deficiency"
+    ],
+    "Biotinidase Deficiency": [
+        "Biotinidase_Deficiency",
+        "biotinidase_deficiency",
+        "Biotinidase_Deficiency_(Profound)",
+        "Biotinidase_Deficiency",
+        "biotinidase_deficiency"
+    ],
+    "Pyruvate Dehydrogenase Complex Deficiency": [
+        "Pyruvate_Dehydrogenase_Complex_Deficiency",
+        "pyruvate_dehydrogenase_complex_deficiency",
+        "Pyruvate_Dehydrogenase_Complex_Deficiency_(PDCD)",
+        "Pyruvate_Dehydrogenase_Complex_Deficiency",
+        "pyruvate_dehydrogenase_complex_deficiency"
+    ],
+    "Spinal Muscular Atrophy Type I": [
+        "Spinal_Muscular_Atrophy_Type_I",
+        "spinal_muscular_atrophy_type_i",
+        "Spinal_Muscular_Atrophy_Type_I_(Werdnig-Hoffmann)",
+        "Spinal_Muscular_Atrophy_Type_I",
+        "spinal_muscular_atrophy_type_i",
+        "Spinal_Muscular_Atrophy_Type_I",
+        "spinal_muscular_atrophy_type_i",
+        "Spinal_muscular_atrophy_type_I_(Werdnig-Hoffmann)",
+        "Spinal_muscular_atrophy_type_I",
+        "spinal_muscular_atrophy_type_i"
+    ],
+    "Dystrophic Epidermolysis Bullosa": [
+        "Dystrophic_Epidermolysis_Bullosa",
+        "dystrophic_epidermolysis_bullosa",
+        "Dystrophic_Epidermolysis_Bullosa_(DEB)",
+        "Dystrophic_Epidermolysis_Bullosa",
+        "dystrophic_epidermolysis_bullosa",
+        "Dystrophic_Epidermolysis_Bullosa",
+        "dystrophic_epidermolysis_bullosa",
+        "Dystrophic_epidermolysis_bullosa_(DEB)",
+        "Dystrophic_epidermolysis_bullosa",
+        "dystrophic_epidermolysis_bullosa"
+    ],
+    "Digeorge Syndrome": [
+        "Digeorge_Syndrome",
+        "digeorge_syndrome",
+        "DiGeorge_Syndrome",
+        "DiGeorge_Syndrome",
+        "digeorge_syndrome"
+    ],
+    "Alpha-1 Antitrypsin Deficiency": [
+        "Alpha-1_Antitrypsin_Deficiency",
+        "alpha-1_antitrypsin_deficiency",
+        "Alpha-1_Antitrypsin_Deficiency",
+        "Alpha-1_Antitrypsin_Deficiency",
+        "alpha-1_antitrypsin_deficiency"
+    ],
+    "Angelman Syndrome": [
+        "Angelman_Syndrome",
+        "angelman_syndrome",
+        "Angelman_Syndrome",
+        "Angelman_Syndrome",
+        "angelman_syndrome",
+        "Angelman_Syndrome",
+        "angelman_syndrome",
+        "Angelman_syndrome",
+        "Angelman_syndrome",
+        "angelman_syndrome"
+    ],
+    "Autosomal Recessive Polycystic Kidney Disease": [
+        "Autosomal_Recessive_Polycystic_Kidney_Disease",
+        "autosomal_recessive_polycystic_kidney_disease",
+        "Autosomal_Recessive_Polycystic_Kidney_Disease_(ARPKD)",
+        "Autosomal_Recessive_Polycystic_Kidney_Disease",
+        "autosomal_recessive_polycystic_kidney_disease"
+    ],
+    "Beckwith-Wiedemann Syndrome": [
+        "Beckwith-Wiedemann_Syndrome",
+        "beckwith-wiedemann_syndrome",
+        "Beckwith-Wiedemann_Syndrome",
+        "Beckwith-Wiedemann_Syndrome",
+        "beckwith-wiedemann_syndrome",
+        "Beckwith-Wiedemann_Syndrome",
+        "beckwith-wiedemann_syndrome",
+        "Beckwith-Wiedemann_syndrome_(borderline_8-10?)",
+        "Beckwith-Wiedemann_syndrome",
+        "beckwith-wiedemann_syndrome",
+        "Beckwith-Wiedemann_Syndrome",
+        "beckwith-wiedemann_syndrome",
+        "Beckwith-Wiedemann_syndrome",
+        "Beckwith-Wiedemann_syndrome",
+        "beckwith-wiedemann_syndrome"
+    ],
+    "Charcot-Marie-Tooth Disease": [
+        "Charcot-Marie-Tooth_Disease",
+        "charcot-marie-tooth_disease",
+        "Charcot-Marie-Tooth_Disease",
+        "Charcot-Marie-Tooth_Disease",
+        "charcot-marie-tooth_disease"
+    ],
+    "CHARGE Syndrome": [
+        "CHARGE_Syndrome",
+        "charge_syndrome",
+        "CHARGE_Syndrome",
+        "CHARGE_Syndrome",
+        "charge_syndrome",
+        "CHARGE_Syndrome",
+        "charge_syndrome",
+        "CHARGE_syndrome",
+        "CHARGE_syndrome",
+        "charge_syndrome"
+    ],
+    "Coarctation Of Aorta": [
+        "Coarctation_Of_Aorta",
+        "coarctation_of_aorta",
+        "Coarctation_of_Aorta",
+        "Coarctation_of_Aorta",
+        "coarctation_of_aorta"
+    ],
+    "Congenital Adrenal Hyperplasia": [
+        "Congenital_Adrenal_Hyperplasia",
+        "congenital_adrenal_hyperplasia",
+        "Congenital_Adrenal_Hyperplasia_(21-hydroxylase)",
+        "Congenital_Adrenal_Hyperplasia",
+        "congenital_adrenal_hyperplasia"
+    ],
+    "Congenital Diaphragmatic Hernia": [
+        "Congenital_Diaphragmatic_Hernia",
+        "congenital_diaphragmatic_hernia",
+        "Congenital_Diaphragmatic_Hernia",
+        "Congenital_Diaphragmatic_Hernia",
+        "congenital_diaphragmatic_hernia"
+    ],
+    "Congenital Hydrocephalus": [
+        "Congenital_Hydrocephalus",
+        "congenital_hydrocephalus",
+        "Congenital_Hydrocephalus_(isolated)",
+        "Congenital_Hydrocephalus",
+        "congenital_hydrocephalus"
+    ],
+    "Congenital Hypothyroidism": [
+        "Congenital_Hypothyroidism",
+        "congenital_hypothyroidism",
+        "Congenital_Hypothyroidism_(primary)",
+        "Congenital_Hypothyroidism",
+        "congenital_hypothyroidism"
+    ],
+    "Congenital Long QT Syndrome": [
+        "Congenital_Long_QT_Syndrome",
+        "congenital_long_qt_syndrome",
+        "Congenital_Long_QT_Syndrome",
+        "Congenital_Long_QT_Syndrome",
+        "congenital_long_qt_syndrome"
+    ],
+    "Cystic Fibrosis": [
+        "Cystic_Fibrosis",
+        "cystic_fibrosis",
+        "Cystic_Fibrosis",
+        "Cystic_Fibrosis",
+        "cystic_fibrosis"
+    ],
+    "Duane Syndrome": [
+        "Duane_Syndrome",
+        "duane_syndrome",
+        "Duane_Syndrome",
+        "Duane_Syndrome",
+        "duane_syndrome"
+    ],
+    "Ehlers-Danlos Syndrome": [
+        "Ehlers-Danlos_Syndrome",
+        "ehlers-danlos_syndrome",
+        "Ehlers-Danlos_Syndrome_(Classical_Type)",
+        "Ehlers-Danlos_Syndrome",
+        "ehlers-danlos_syndrome"
+    ],
+    "Erythropoietic Protoporphyria": [
+        "Erythropoietic_Protoporphyria",
+        "erythropoietic_protoporphyria",
+        "Erythropoietic_Protoporphyria_(EPP)",
+        "Erythropoietic_Protoporphyria",
+        "erythropoietic_protoporphyria"
+    ],
+    "Esophageal Atresia Tracheoesophageal Fistula": [
+        "Esophageal_Atresia_Tracheoesophageal_Fistula",
+        "esophageal_atresia_tracheoesophageal_fistula",
+        "Esophageal_Atresia_Tracheoesophageal_Fistula",
+        "Esophageal_Atresia_Tracheoesophageal_Fistula",
+        "esophageal_atresia_tracheoesophageal_fistula"
+    ],
+    "Fragile X Syndrome": [
+        "Fragile_X_Syndrome",
+        "fragile_x_syndrome",
+        "Fragile_X_Syndrome",
+        "Fragile_X_Syndrome",
+        "fragile_x_syndrome"
+    ],
+    "Gastroschisis": [
+        "Gastroschisis",
+        "gastroschisis",
+        "Gastroschisis",
+        "Gastroschisis",
+        "gastroschisis"
+    ],
+    "Hemophilia A": [
+        "Hemophilia_A",
+        "hemophilia_a",
+        "Hemophilia_A",
+        "Hemophilia_A",
+        "hemophilia_a"
+    ],
+    "Hereditary Spherocytosis": [
+        "Hereditary_Spherocytosis",
+        "hereditary_spherocytosis",
+        "Hereditary_Spherocytosis",
+        "Hereditary_Spherocytosis",
+        "hereditary_spherocytosis"
+    ],
+    "Hirschsprung Disease": [
+        "Hirschsprung_Disease",
+        "hirschsprung_disease",
+        "Hirschsprung_Disease",
+        "Hirschsprung_Disease",
+        "hirschsprung_disease"
+    ],
+    "Hypoplastic Left Heart Syndrome": [
+        "Hypoplastic_Left_Heart_Syndrome",
+        "hypoplastic_left_heart_syndrome",
+        "Hypoplastic_Left_Heart_Syndrome",
+        "Hypoplastic_Left_Heart_Syndrome",
+        "hypoplastic_left_heart_syndrome"
+    ],
+    "Imperforate Anus": [
+        "Imperforate_Anus",
+        "imperforate_anus",
+        "Imperforate_Anus_(Anorectal_Malformation)",
+        "Imperforate_Anus",
+        "imperforate_anus"
+    ],
+    "Juvenile Idiopathic Arthritis": [
+        "Juvenile_Idiopathic_Arthritis",
+        "juvenile_idiopathic_arthritis",
+        "Juvenile_Idiopathic_Arthritis",
+        "Juvenile_Idiopathic_Arthritis",
+        "juvenile_idiopathic_arthritis"
+    ],
+    "Marfan Syndrome": [
+        "Marfan_Syndrome",
+        "marfan_syndrome",
+        "Marfan_Syndrome",
+        "Marfan_Syndrome",
+        "marfan_syndrome"
+    ],
+    "Maple Syrup Urine Disease": [
+        "Maple_Syrup_Urine_Disease",
+        "maple_syrup_urine_disease",
+        "Maple_Syrup_Urine_Disease_(MSUD)",
+        "Maple_Syrup_Urine_Disease",
+        "maple_syrup_urine_disease"
+    ],
+    "Medium-Chain Acyl-Coa Dehydrogenase Deficiency": [
+        "Medium-Chain_Acyl-Coa_Dehydrogenase_Deficiency",
+        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium-Chain_Acyl-CoA_Dehydrogenase_Deficiency",
+        "Medium-Chain_Acyl-CoA_Dehydrogenase_Deficiency",
+        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium-Chain_Acyl-Coa_Dehydrogenase_Deficiency",
+        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
+        "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
+        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium-Chain_Acyl-Coa_Dehydrogenase_Deficiency",
+        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
+        "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
+        "medium-chain_acyl-coa_dehydrogenase_deficiency"
+    ],
+    "MELAS Syndrome": [
+        "MELAS_Syndrome",
+        "melas_syndrome",
+        "MELAS_Syndrome",
+        "MELAS_Syndrome",
+        "melas_syndrome"
+    ],
+    "Microtia": [
+        "Microtia",
+        "microtia",
+        "Microtia",
+        "Microtia",
+        "microtia"
+    ],
+    "Neurofibromatosis Type 1": [
+        "Neurofibromatosis_Type_1",
+        "neurofibromatosis_type_1",
+        "Neurofibromatosis_Type_1_(NF1)",
+        "Neurofibromatosis_Type_1",
+        "neurofibromatosis_type_1"
+    ],
+    "Noonan Syndrome": [
+        "Noonan_Syndrome",
+        "noonan_syndrome",
+        "Noonan_Syndrome",
+        "Noonan_Syndrome",
+        "noonan_syndrome",
+        "Noonan_Syndrome",
+        "noonan_syndrome",
+        "Noonan_syndrome_(borderline_data?)",
+        "Noonan_syndrome",
+        "noonan_syndrome",
+        "Noonan_Syndrome",
+        "noonan_syndrome",
+        "Noonan_syndrome",
+        "Noonan_syndrome",
+        "noonan_syndrome"
+    ],
+    "Omphalocele": [
+        "Omphalocele",
+        "omphalocele",
+        "Omphalocele_(Exomphalos)",
+        "Omphalocele",
+        "omphalocele"
+    ],
+    "Phenylketonuria": [
+        "Phenylketonuria",
+        "phenylketonuria",
+        "Phenylketonuria_(PKU)",
+        "Phenylketonuria",
+        "phenylketonuria"
+    ],
+    "Posterior Urethral Valves": [
+        "Posterior_Urethral_Valves",
+        "posterior_urethral_valves",
+        "Posterior_Urethral_Valves",
+        "Posterior_Urethral_Valves",
+        "posterior_urethral_valves"
+    ],
+    "Prader-Willi Syndrome": [
+        "Prader-Willi_Syndrome",
+        "prader-willi_syndrome",
+        "Prader-Willi_Syndrome",
+        "Prader-Willi_Syndrome",
+        "prader-willi_syndrome",
+        "Prader-Willi_Syndrome",
+        "prader-willi_syndrome",
+        "Prader-Willi_syndrome",
+        "Prader-Willi_syndrome",
+        "prader-willi_syndrome"
+    ],
+    "Primary Congenital Glaucoma": [
+        "Primary_Congenital_Glaucoma",
+        "primary_congenital_glaucoma",
+        "Primary_Congenital_Glaucoma",
+        "Primary_Congenital_Glaucoma",
+        "primary_congenital_glaucoma"
+    ],
+    "Rett Syndrome": [
+        "Rett_Syndrome",
+        "rett_syndrome",
+        "Rett_Syndrome",
+        "Rett_Syndrome",
+        "rett_syndrome"
+    ],
+    "Sickle Cell Disease": [
+        "Sickle_Cell_Disease",
+        "sickle_cell_disease",
+        "Sickle_Cell_Disease_(HbSS)",
+        "Sickle_Cell_Disease",
+        "sickle_cell_disease"
+    ],
+    "Small Intestinal Atresia": [
+        "Small_Intestinal_Atresia",
+        "small_intestinal_atresia",
+        "Small_Intestinal_Atresia",
+        "Small_Intestinal_Atresia",
+        "small_intestinal_atresia"
+    ],
+    "Spina Bifida": [
+        "Spina_Bifida",
+        "spina_bifida",
+        "Spina_Bifida",
+        "Spina_Bifida",
+        "spina_bifida"
+    ],
+    "Stargardt Disease": [
+        "Stargardt_Disease",
+        "stargardt_disease",
+        "Stargardt_Disease",
+        "Stargardt_Disease",
+        "stargardt_disease",
+        "Stargardt_Disease",
+        "stargardt_disease",
+        "Stargardt_disease_(juvenile_macular_dystrophy)",
+        "Stargardt_disease",
+        "stargardt_disease"
+    ],
+    "Stickler Syndrome": [
+        "Stickler_Syndrome",
+        "stickler_syndrome",
+        "Stickler_Syndrome",
+        "Stickler_Syndrome",
+        "stickler_syndrome",
+        "Stickler_Syndrome",
+        "stickler_syndrome",
+        "Stickler_syndrome",
+        "Stickler_syndrome",
+        "stickler_syndrome"
+    ],
+    "Tetralogy Of Fallot": [
+        "Tetralogy_Of_Fallot",
+        "tetralogy_of_fallot",
+        "Tetralogy_of_Fallot",
+        "Tetralogy_of_Fallot",
+        "tetralogy_of_fallot"
+    ],
+    "Transposition Of The Great Arteries": [
+        "Transposition_Of_The_Great_Arteries",
+        "transposition_of_the_great_arteries",
+        "Transposition_of_the_Great_Arteries_(TGA)",
+        "Transposition_of_the_Great_Arteries",
+        "transposition_of_the_great_arteries"
+    ],
+    "Tuberous Sclerosis Complex": [
+        "Tuberous_Sclerosis_Complex",
+        "tuberous_sclerosis_complex",
+        "Tuberous_Sclerosis_Complex",
+        "Tuberous_Sclerosis_Complex",
+        "tuberous_sclerosis_complex"
+    ],
+    "Turner Syndrome": [
+        "Turner_Syndrome",
+        "turner_syndrome",
+        "Turner_Syndrome",
+        "Turner_Syndrome",
+        "turner_syndrome"
+    ],
+    "Williams Syndrome": [
+        "Williams_Syndrome",
+        "williams_syndrome",
+        "Williams_Syndrome",
+        "Williams_Syndrome",
+        "williams_syndrome"
+    ],
+    "Gaucher Disease": [
+        "Gaucher_Disease",
+        "gaucher_disease",
+        "Gaucher_disease_(Type_III)",
+        "Gaucher_disease",
+        "gaucher_disease"
+    ],
+    "Pompe Disease": [
+        "Pompe_Disease",
+        "pompe_disease",
+        "Pompe_disease_(infantile)",
+        "Pompe_disease",
+        "pompe_disease"
+    ],
+    "Alpha-Mannosidosis": [
+        "Alpha-Mannosidosis",
+        "alpha-mannosidosis",
+        "Alpha-mannosidosis_(juvenile)",
+        "Alpha-mannosidosis",
+        "alpha-mannosidosis"
+    ],
+    "Canavan Disease": [
+        "Canavan_Disease",
+        "canavan_disease",
+        "Canavan_disease",
+        "Canavan_disease",
+        "canavan_disease"
+    ],
+    "Alexander Disease": [
+        "Alexander_Disease",
+        "alexander_disease",
+        "Alexander_disease",
+        "Alexander_disease",
+        "alexander_disease"
+    ],
+    "Menkes Disease": [
+        "Menkes_Disease",
+        "menkes_disease",
+        "Menkes_disease",
+        "Menkes_disease",
+        "menkes_disease"
+    ],
+    "Crigler-Najjar Syndrome Type I": [
+        "Crigler-Najjar_Syndrome_Type_I",
+        "crigler-najjar_syndrome_type_i",
+        "Crigler-Najjar_syndrome_type_I",
+        "Crigler-Najjar_syndrome_type_I",
+        "crigler-najjar_syndrome_type_i"
+    ],
+    "Carbamoyl Phosphate Synthetase I Deficiency": [
+        "Carbamoyl_Phosphate_Synthetase_I_Deficiency",
+        "carbamoyl_phosphate_synthetase_i_deficiency",
+        "Carbamoyl_phosphate_synthetase_I_deficiency_(CPS1)",
+        "Carbamoyl_phosphate_synthetase_I_deficiency",
+        "carbamoyl_phosphate_synthetase_i_deficiency",
+        "Carbamoyl_Phosphate_Synthetase_I_Deficiency",
+        "carbamoyl_phosphate_synthetase_i_deficiency",
+        "Carbamoyl_phosphate_synthetase_I_deficiency_(CPS1)",
+        "Carbamoyl_phosphate_synthetase_I_deficiency",
+        "carbamoyl_phosphate_synthetase_i_deficiency"
+    ],
+    "MLASA": [
+        "MLASA",
+        "mlasa",
+        "MLASA_(myopathy_lactic_acidosis_sideroblastic_anemia)",
+        "MLASA",
+        "mlasa"
+    ],
+    "2Q37 Deletion Syndrome": [
+        "2Q37_Deletion_Syndrome",
+        "2q37_deletion_syndrome",
+        "2q37_deletion_syndrome",
+        "2q37_deletion_syndrome",
+        "2q37_deletion_syndrome"
+    ],
+    "Wolf-Hirschhorn Syndrome": [
+        "Wolf-Hirschhorn_Syndrome",
+        "wolf-hirschhorn_syndrome",
+        "Wolf-Hirschhorn_syndrome_(4p-)",
+        "Wolf-Hirschhorn_syndrome",
+        "wolf-hirschhorn_syndrome"
+    ],
+    "Mowat-Wilson Syndrome": [
+        "Mowat-Wilson_Syndrome",
+        "mowat-wilson_syndrome",
+        "Mowat-Wilson_syndrome",
+        "Mowat-Wilson_syndrome",
+        "mowat-wilson_syndrome"
+    ],
+    "Smith-Magenis Syndrome": [
+        "Smith-Magenis_Syndrome",
+        "smith-magenis_syndrome",
+        "Smith-Magenis_syndrome_(17p11.2_del)",
+        "Smith-Magenis_syndrome",
+        "smith-magenis_syndrome"
+    ],
+    "Kabuki Syndrome": [
+        "Kabuki_Syndrome",
+        "kabuki_syndrome",
+        "Kabuki_syndrome",
+        "Kabuki_syndrome",
+        "kabuki_syndrome"
+    ],
+    "Coffin-Lowry Syndrome": [
+        "Coffin-Lowry_Syndrome",
+        "coffin-lowry_syndrome",
+        "Coffin-Lowry_syndrome",
+        "Coffin-Lowry_syndrome",
+        "coffin-lowry_syndrome"
+    ],
+    "Aicardi Syndrome": [
+        "Aicardi_Syndrome",
+        "aicardi_syndrome",
+        "Aicardi_syndrome",
+        "Aicardi_syndrome",
+        "aicardi_syndrome"
+    ],
+    "Rubinstein-Taybi Syndrome": [
+        "Rubinstein-Taybi_Syndrome",
+        "rubinstein-taybi_syndrome",
+        "Rubinstein-Taybi_syndrome",
+        "Rubinstein-Taybi_syndrome",
+        "rubinstein-taybi_syndrome"
+    ],
+    "Hallermann-Streiff Syndrome": [
+        "Hallermann-Streiff_Syndrome",
+        "hallermann-streiff_syndrome",
+        "Hallermann-Streiff_syndrome",
+        "Hallermann-Streiff_syndrome",
+        "hallermann-streiff_syndrome"
+    ],
+    "Jacobsen Syndrome": [
+        "Jacobsen_Syndrome",
+        "jacobsen_syndrome",
+        "Jacobsen_syndrome_(11q_deletion)",
+        "Jacobsen_syndrome",
+        "jacobsen_syndrome"
+    ],
+    "Miller-Dieker Syndrome": [
+        "Miller-Dieker_Syndrome",
+        "miller-dieker_syndrome",
+        "Miller-Dieker_syndrome_(17p13.3_lissencephaly)",
+        "Miller-Dieker_syndrome",
+        "miller-dieker_syndrome"
+    ],
+    "Shwachman-Diamond Syndrome": [
+        "Shwachman-Diamond_Syndrome",
+        "shwachman-diamond_syndrome",
+        "Shwachman-Diamond_syndrome",
+        "Shwachman-Diamond_syndrome",
+        "shwachman-diamond_syndrome"
+    ],
+    "Leigh Syndrome": [
+        "Leigh_Syndrome",
+        "leigh_syndrome",
+        "Leigh_syndrome",
+        "Leigh_syndrome",
+        "leigh_syndrome"
+    ],
+    "Salla Disease": [
+        "Salla_Disease",
+        "salla_disease",
+        "Salla_disease_(Finnish_free_sialic_acid)",
+        "Salla_disease",
+        "salla_disease",
+        "Salla_Disease",
+        "salla_disease",
+        "Salla_disease_(free_sialic_acid_storage)",
+        "Salla_disease",
+        "salla_disease"
+    ],
+    "Cornelia De Lange Syndrome": [
+        "Cornelia_De_Lange_Syndrome",
+        "cornelia_de_lange_syndrome",
+        "Cornelia_de_Lange_syndrome",
+        "Cornelia_de_Lange_syndrome",
+        "cornelia_de_lange_syndrome"
+    ],
+    "Pierre Robin Sequence": [
+        "Pierre_Robin_Sequence",
+        "pierre_robin_sequence",
+        "Pierre_Robin_sequence_(isolated)",
+        "Pierre_Robin_sequence",
+        "pierre_robin_sequence"
+    ],
+    "Goldenhar Syndrome": [
+        "Goldenhar_Syndrome",
+        "goldenhar_syndrome",
+        "Goldenhar_syndrome_(Oculo-auriculo-vertebral_spectrum)",
+        "Goldenhar_syndrome",
+        "goldenhar_syndrome"
+    ],
+    "Primary Ciliary Dyskinesia": [
+        "Primary_Ciliary_Dyskinesia",
+        "primary_ciliary_dyskinesia",
+        "Primary_ciliary_dyskinesia_(PCD)",
+        "Primary_ciliary_dyskinesia",
+        "primary_ciliary_dyskinesia"
+    ],
+    "Usher Syndrome": [
+        "Usher_Syndrome",
+        "usher_syndrome",
+        "Usher_syndrome_(types_1-3)",
+        "Usher_syndrome",
+        "usher_syndrome"
+    ],
+    "1P36 Deletion Syndrome": [
+        "1P36_Deletion_Syndrome",
+        "1p36_deletion_syndrome",
+        "1p36_deletion_syndrome",
+        "1p36_deletion_syndrome",
+        "1p36_deletion_syndrome"
+    ],
+    "16P11.2 Microdeletion Syndrome": [
+        "16P11.2_Microdeletion_Syndrome",
+        "16p11.2_microdeletion_syndrome",
+        "16p11.2_microdeletion_syndrome",
+        "16p11.2_microdeletion_syndrome",
+        "16p11.2_microdeletion_syndrome"
+    ],
+    "Heterotaxy Syndrome": [
+        "Heterotaxy_Syndrome",
+        "heterotaxy_syndrome",
+        "Heterotaxy_syndrome_(situs_ambiguus)",
+        "Heterotaxy_syndrome",
+        "heterotaxy_syndrome"
+    ],
+    "VACTERL/VATER Association": [
+        "VACTERL/VATER_Association",
+        "vacterl/vater_association",
+        "VACTERL-VATER_association",
+        "VACTERL-VATER_association",
+        "vacterl-vater_association"
+    ],
+    "Lennox-Gastaut Syndrome": [
+        "Lennox-Gastaut_Syndrome",
+        "lennox-gastaut_syndrome",
+        "Lennox-Gastaut_syndrome",
+        "Lennox-Gastaut_syndrome",
+        "lennox-gastaut_syndrome"
+    ],
+    "Hereditary Neuropathy With Liability To Pressure Palsies": [
+        "Hereditary_Neuropathy_With_Liability_To_Pressure_Palsies",
+        "hereditary_neuropathy_with_liability_to_pressure_palsies",
+        "Hereditary_neuropathy_with_liability_to_pressure_palsies_(HNPP)",
+        "Hereditary_neuropathy_with_liability_to_pressure_palsies",
+        "hereditary_neuropathy_with_liability_to_pressure_palsies"
+    ],
+    "Juvenile Myoclonic Epilepsy": [
+        "Juvenile_Myoclonic_Epilepsy",
+        "juvenile_myoclonic_epilepsy",
+        "Juvenile_myoclonic_epilepsy_(JME)",
+        "Juvenile_myoclonic_epilepsy",
+        "juvenile_myoclonic_epilepsy"
+    ],
+    "Alport Syndrome": [
+        "Alport_Syndrome",
+        "alport_syndrome",
+        "Alport_syndrome",
+        "Alport_syndrome",
+        "alport_syndrome"
+    ],
+    "Isolated Growth Hormone Deficiency Type II": [
+        "Isolated_Growth_Hormone_Deficiency_Type_II",
+        "isolated_growth_hormone_deficiency_type_ii",
+        "Isolated_growth_hormone_deficiency_(IGHD)_type_II",
+        "Isolated_growth_hormone_deficiency_type_II",
+        "isolated_growth_hormone_deficiency_type_ii"
+    ],
+    "Spinocerebellar Ataxia Type 2": [
+        "Spinocerebellar_Ataxia_Type_2",
+        "spinocerebellar_ataxia_type_2",
+        "Spinocerebellar_ataxia_type_2_(SCA2_juvenile_form)",
+        "Spinocerebellar_ataxia_type_2",
+        "spinocerebellar_ataxia_type_2"
+    ],
+    "Refsum Disease": [
+        "Refsum_Disease",
+        "refsum_disease",
+        "Refsum_disease_(heredopathia_atactica_polyneuritiformis)",
+        "Refsum_disease",
+        "refsum_disease"
+    ],
+    "Ullrich Congenital Muscular Dystrophy": [
+        "Ullrich_Congenital_Muscular_Dystrophy",
+        "ullrich_congenital_muscular_dystrophy",
+        "Ullrich_congenital_muscular_dystrophy",
+        "Ullrich_congenital_muscular_dystrophy",
+        "ullrich_congenital_muscular_dystrophy"
+    ],
+    "Glutaric Aciduria Type 1": [
+        "Glutaric_Aciduria_Type_1",
+        "glutaric_aciduria_type_1",
+        "Glutaric_aciduria_type_1_(GA1)",
+        "Glutaric_aciduria_type_1",
+        "glutaric_aciduria_type_1"
+    ],
+    "Sensenbrenner Syndrome": [
+        "Sensenbrenner_Syndrome",
+        "sensenbrenner_syndrome",
+        "Sensenbrenner_syndrome_(ciliary_chondrodysplasia)",
+        "Sensenbrenner_syndrome",
+        "sensenbrenner_syndrome"
+    ],
+    "Pseudoachondroplasia": [
+        "Pseudoachondroplasia",
+        "pseudoachondroplasia",
+        "Pseudoachondroplasia",
+        "Pseudoachondroplasia",
+        "pseudoachondroplasia"
+    ]
+}

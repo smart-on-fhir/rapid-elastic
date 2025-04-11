@@ -5,13 +5,6 @@
         "phenylketonuria",
         "PAH Deficiency"
     ],
-    "Primary Congenital Hypothyroidism": [
-        "Congenital Hypothyroidism",
-        "Congenital Primary Hypothyroidism",
-        "Congenital Thyroid Hormone Deficiency",
-        "Neonatal Hypothyroidism",
-        "Thyroid Dysgenesis"
-    ],
     "Maple Syrup Urine Disease (MSUD)": [
         "Branched Chain Ketoaciduria",
         "Branched-Chain Ketoaciduria",
@@ -37,18 +30,6 @@
         "Medium-Chain Acyl-CoA Dehydrogenase Deficiency",
         "Medium-Chain Acyl-Coenzyme A Dehydrogenase Deficiency",
         "ACADM Mutation"
-    ],
-    "Congenital Adrenal Hyperplasia (21-hydroxylase)": [
-        "21 Hydroxylase Deficiency",
-        "21-Hydroxylase Deficiency",
-        "CAH due to 21 Hydroxylase Deficiency",
-        "CAH due to 21-Hydroxylase Deficiency",
-        "Classic Congenital Adrenal Hyperplasia",
-        "Classic CAH",
-        "Congenital Adrenal Hyperplasia",
-        "Congenital Adrenal Hyperplasia due to 21 Hydroxylase Deficiency",
-        "Congenital Adrenal Hyperplasia due to 21-Hydroxylase Deficiency",
-        "CYP21A2 Deficiency"
     ],
     "Hurler Syndrome": [
         "Hurler Syndrome",
@@ -352,7 +333,8 @@
         "Peroneal Muscular Atrophy",
         "Roussy Levy",
         "Roussy-Levy",
-        "PMP22 Mutation",
+        "PMP22 duplication",
+        "PMP22 duplicated",
         "MPZ Mutation",
         "GJB1 Mutation",
         "MFN2 Mutation"
@@ -388,7 +370,13 @@
         "3\u03b2-Hydroxysteroid Dehydrogenase Deficiency",
         "Adrenogenital Syndrome",
         "Congenital Adrenal Hyperplasia",
-        "Congenital Adrenogenital Disorder"
+        "Congenital Adrenogenital Disorder",
+        "CAH due to 21 Hydroxylase Deficiency",
+        "CAH due to 21-Hydroxylase Deficiency",
+        "CYP21A2 Deficiency",
+        "CYP21A2 Deletion",
+        "CYP21A2 Mutation",
+        "CYP21A2 Variant"
     ],
     "Congenital Diaphragmatic Hernia": [
         "Bochdalek Hernia",
@@ -406,6 +394,7 @@
     ],
     "Congenital Hypothyroidism": [
         "Congenital Hypothyroidism",
+        "Congenital Primary Hypothyroidism",
         "Congenital Thyroid Hormone Deficiency",
         "Neonatal hypothyroidism",
         "Thyroid dysgenesis",
@@ -702,12 +691,6 @@
         "COL2A1 Variant"
     ],
     "Tetralogy of Fallot": [
-        "22q11.2 Microdeletion",
-        "22q11.2 Deletion",
-        "22q11.2 Deficiency",
-        "22q11.2 Mutation",
-        "22q11.2 Pathogenic",
-        "22q11.2 Variant",
         "Cyanotic Congenital Heart Disease",
         "Fallot Tetralogy",
         "Fallot's Tetralogy",
@@ -986,29 +969,13 @@
         "zinc finger e-box binding homeobox 2 Variant"
     ],
     "Smith-Magenis syndrome": [
-        "17p11.2 Deletion",
-        "17p11.2 Deficiency",
-        "17p11.2 deletion",
-        "17p11.2 microdeletion",
-        "17p11.2 Mutation",
-        "17p11.2 Pathogenic",
-        "17p11.2 Variant",
-        "Deletion 17p11.2",
-        "Microdeletion 17p11.2",
-        "RAI1 deletion",
-        "RAI1 Mutation",
-        "RAI1 Variant",
-        "Smith Magenis",
-        "Smith-Magenis",
-        "Deficiency 17p11.2",
-        "deletion 17p11.2",
-        "Mutation 17p11.2",
-        "Pathogenic 17p11.2",
         "RAI1 Deficiency",
+        "RAI1 Deletion",
         "RAI1 Mutation",
         "RAI1 Pathogenic",
         "RAI1 Variant",
-        "Variant 17p11.2"
+        "Smith Magenis",
+        "Smith-Magenis"
     ],
     "Kabuki syndrome": [
         "KDM6A Mutation",
@@ -1134,7 +1101,6 @@
         "NDUFS1 Mutation",
         "NDUFV1 Mutation",
         "PDHA1 Deficiency",
-        "Pyruvate dehydrogenase complex Deficiency",
         "Subacute necrotizing encephalomyelopathy",
         "MT-ATP6 Pathogenic",
         "MT-ATP6 Variant",
@@ -1298,7 +1264,7 @@
         "Situs ambiguous",
         "Situs ambiguous"
     ],
-    "VACTERL-VATER association": [
+    "VACTERL/VATER association": [
         "VACTERL abnormalities",
         "VACTERL abnormality",
         "VACTERL anomalies",
@@ -1319,11 +1285,6 @@
         "Lennox Syndrome"
     ],
     "Hereditary neuropathy with liability to pressure palsies": [
-        "17p11.2 Deficiency",
-        "17p11.2 deletion",
-        "17p11.2 Mutation",
-        "17p11.2 Pathogenic",
-        "17p11.2 Variant",
         "Adom hereditary neuropathy",
         "Autosomal dominant hereditary neuropathy",
         "Compression sensitive hereditary neuropathy",
