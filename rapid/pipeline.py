@@ -15,7 +15,7 @@ def pipe_query(disease, query: str | List[str]) -> List[Path]:
     :param query: str prepared KQL query, List[str] synonyms to prepare KQL query for you.
     :return: List of elasticsearch results written to disk, a CSV file and a JSON file
     """
-    disease = naming.name_unique(disease)
+    disease = naming.name_file(disease)
 
     if filetool.output(f'{disease}.csv').exists() or filetool.output(f'{disease}.csv.gz').exists():
         print(f'"{disease}" already processed')

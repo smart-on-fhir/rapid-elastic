@@ -53,6 +53,13 @@ class TestDiseaseNames(unittest.TestCase):
                     if len(_inter) > 0:
                         print(f'warn: search term(s) {_inter} overlap for "{disease1}" and "{disease2}"')
 
+    @unittest.skip('resources/disease_names_expanded.json')
+    def test_json_keynames(self):
+        out = dict()
+        for disease, synonyms in filetool.read_disease_json('disease_names_expanded.json').items():
+            out[naming.name_unique(disease)] = synonyms
+        filetool.write_json(out, filetool.resource('disease_names_expanded.json'))
+
     @unittest.skip('resources/disease_names_spelling.json')
     def test_spelling(self):
         """
