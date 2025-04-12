@@ -128,6 +128,7 @@ def get_hits(disease_query_string: str, scroll_size=1000) -> dict:
 
         print(f"count hits: {len(all_hits)}")
 
+    client.clear_scroll(scroll_id=scroll_id)
     print(f"Total documents retrieved: {len(all_hits)}")
 
     return all_hits
