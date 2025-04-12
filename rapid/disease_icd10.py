@@ -26,7 +26,8 @@ class DiseaseICD10:
     def to_sql(self) -> List[str]:
         out = list()
         for icd10 in self.icd10_list:
-            out.append(f"('{self.disease_name}', '{self.orpha_code}', '{icd10}')")
+            disease_alias = naming.name_table_alias(self.disease_name)
+            out.append(f"('{self.disease_name}', '{self.orpha_code}', '{icd10}', '{disease_alias}')")
         return out
 
 def list_icd10(snippet: str) -> List:
@@ -59,7 +60,7 @@ def list_to_sql(table: str, entry_list: List[DiseaseICD10]) -> str:
     :return: str SQL of disease_name, orpha_code, icd10_code
     """
     header = f"create or replace view {table} as select * from (values"
-    footer = ") AS t (disease_name, orpha_code, icd10_code) ;"
+    footer = ") AS t (disease_name, orpha_code, icd10_code, disease_alias) ;"
     rows = list()
     for entry in entry_list:
         rows += entry.to_sql()
@@ -71,20 +72,8 @@ def csv_to_sql(filename_csv: str) -> Path:
     :param filename_csv: read disease_csv: downloaded spreadsheet.csv file
     :return: Path to SQL file
     """
-    table = naming.name_table(filename_csv.replace('.csv', ''))
+    table = 'codeset_' + filename_csv.replace('.csv', '')
+    table = naming.name_table(table)
     entries = list_entries(filename_csv)
     sql = list_to_sql(table, entries)
-    return Path(filetool.write_text(sql, filetool.resource(f'{filename_csv}.sql')))
-
-def union_views() -> str:
-    table_list = list()
-    sheet_list = [f.replace('.csv', '') for f in filetool.CSV_LIST]
-
-    for sheet in sheet_list:
-        table_name = naming.name_table(sheet)
-        table_list.append(table_name)
-
-    create = f"create or replace view {naming.name_table('CODES')} AS \n"
-    select = [f"select '{t}' as sheet, * from {t}" for t in table_list]
-    out = create + '\n UNION \n'.join(select)
-    return out
+    return Path(filetool.write_text(sql, filetool.resource(f'{table}.sql')))

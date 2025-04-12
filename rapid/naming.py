@@ -10,6 +10,13 @@ def name_table(table: list | str) -> list | str:
     else:
         return f'cohorts__rare_{table}'
 
+def name_table_alias(table: list | str) -> list | str:
+    table = name_file(table).lower()
+    if isinstance(table, list):
+        return [table for table in list(set(table))]
+    else:
+        return table
+
 ###############################################################################
 # Disease Names
 ###############################################################################
