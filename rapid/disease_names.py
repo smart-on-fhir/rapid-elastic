@@ -11,6 +11,7 @@ def map_spellings() -> dict:
             unique = naming.name_unique(original)
             file = naming.name_file(original)
             file_lower = naming.name_file(original).lower()
+            table = naming.name_table(original)
             spaces = naming.strip_spaces(original)
             spaces_paren = naming.strip_spaces(naming.strip_paren(original))
             spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
