@@ -3,6 +3,7 @@ from typing import List
 from pathlib import Path
 from rapid import filetool
 from rapid import naming
+from rapid.filetool import DISEASES_CSV
 
 def list_tables() -> List[str]:
     return [naming.name_table(disease) for disease in list_unique()]
@@ -22,24 +23,23 @@ def list_unique() -> List[str]:
 
 def map_spellings() -> dict:
     mapping = {}
-    for file_csv in filetool.CSV_LIST:
-        for original in csv_to_list(file_csv):
-            unique = naming.name_unique(original)
-            file = naming.name_file(original)
-            file_lower = naming.name_file(original).lower()
-            table = naming.name_table(original)
-            spaces = naming.strip_spaces(original)
-            spaces_paren = naming.strip_spaces(naming.strip_paren(original))
-            spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
+    for original in csv_to_list(DISEASES_CSV):
+        unique = naming.name_unique(original)
+        file = naming.name_file(original)
+        file_lower = naming.name_file(original).lower()
+        table = naming.name_cohort(original)
+        spaces = naming.strip_spaces(original)
+        spaces_paren = naming.strip_spaces(naming.strip_paren(original))
+        spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
 
-            mapping_list = mapping.setdefault(unique, [])
-            mapping_list += [
-                file,
-                file_lower,
-                spaces,
-                spaces_paren,
-                spaces_paren_lower,
-            ]
+        mapping_list = mapping.setdefault(unique, [])
+        mapping_list += [
+            file,
+            file_lower,
+            spaces,
+            spaces_paren,
+            spaces_paren_lower,
+        ]
     return mapping
 
 
