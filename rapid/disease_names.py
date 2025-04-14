@@ -14,11 +14,10 @@ def list_files() -> List[str]:
 def list_files_csv() -> List[str]:
     return [naming.name_file(disease, 'csv') for disease in list_unique()]
 
-def list_unique() -> List[str]:
+def list_unique(file_csv=DISEASES_CSV) -> List[str]:
     unique_list = list()
-    for file_csv in filetool.CSV_LIST:
-        for original in csv_to_list(file_csv):
-            unique_list.append(naming.name_unique(original))
+    for original in csv_to_list(file_csv):
+        unique_list.append(naming.name_unique(original))
     return unique_list
 
 def map_spellings() -> dict:
@@ -103,9 +102,7 @@ def expand_all(disease_json: str | Path) -> Path:
 ###############################################################################
 # Convert CSV to JSON
 ###############################################################################
-def csv_to_json_file(disease_csv=None) -> Path | List[Path]:
-    if not disease_csv:
-        return [csv_to_json_file(i) for i in filetool.CSV_LIST]
+def csv_to_json_file(disease_csv=DISEASES_CSV) -> Path:
 
     print(f'reading .... {disease_csv}')
     out = csv_to_json(disease_csv)
@@ -138,7 +135,7 @@ def csv_to_json(disease_csv: Path | str) -> dict:
 # Duplicates and Merging curation lists
 #
 ###############################################################################
-def find_duplicates_across_sheets() -> Path:
+def deprecated_find_duplicates_across_sheets() -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
     :return: path to duplicates found
@@ -146,7 +143,7 @@ def find_duplicates_across_sheets() -> Path:
     merged = dict()
     duplicates = dict()
 
-    for filename_csv in filetool.CSV_LIST:
+    for filename_csv in filetool.DEPRECATED_CSV_LIST:
         from_json = filetool.read_disease_json(f'{filename_csv}.json')
         for disease, _ in from_json.items():
             disease = naming.name_unique(disease)
@@ -164,22 +161,22 @@ def find_duplicates_across_sheets() -> Path:
     print(f'{len(duplicates.keys())}  "duplicates found"')
     return filetool.write_json(duplicates, filetool.resource('disease_names_duplicates.json'))
 
-def merge(filename_json: str) -> Path:
+def deprecated_merge(filename_json: str) -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
-    :param filename_json: JSON to merge with the CSV names.
+    :param filename_json: JSON to deprecated_merge with the CSV names.
     :return: Path to merged file
     """
     original = filetool.read_disease_json(filename_json)
     original_keys = [key.lower() for key in original.keys()]
     merged = original
 
-    for filename_csv in filetool.CSV_LIST:
+    for filename_csv in filetool.DEPRECATED_CSV_LIST:
         from_json = filetool.read_json(filetool.resource(f'{filename_csv}.json'))
         for disease, synonyms in from_json.items():
             disease.lower()
             if disease.lower() not in original_keys:
-                print(f'merge: {disease}')
+                print(f'deprecated_merge: {disease}')
                 merged[disease] = synonyms
 
     return filetool.write_json(merged, filetool.resource('disease_names_merged.json'))
