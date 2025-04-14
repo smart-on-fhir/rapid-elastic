@@ -2,7 +2,7 @@ import os
 import json
 from typing import List, Dict, Any
 from pathlib import Path
-from rapid import timestamp
+from rapid_elastic import timestamp
 
 ######################################################################################
 # CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.

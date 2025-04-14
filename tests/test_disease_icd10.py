@@ -1,5 +1,5 @@
 import unittest
-from rapid import disease_icd10, filetool
+from rapid_elastic import disease_icd10, filetool
 
 
 class TestDiseaseICD10(unittest.TestCase):

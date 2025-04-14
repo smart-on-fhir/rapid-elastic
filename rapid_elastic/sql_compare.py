@@ -1,6 +1,6 @@
 from typing import List
 from pathlib import Path
-from rapid import filetool
+from rapid_elastic import filetool
 
 def union_views(create: str, table_list: List[str], create_table=False, alias_col='alias', sample_size=0) -> str:
     if create_table:

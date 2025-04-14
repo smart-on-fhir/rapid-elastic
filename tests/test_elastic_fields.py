@@ -1,6 +1,6 @@
 import unittest
-from rapid import filetool
-from rapid import elastic_helper
+from rapid_elastic import filetool
+from rapid_elastic import elastic_helper
 from rapid.elastic_helper import ElasticField
 
 class TestElasticFields(unittest.TestCase):

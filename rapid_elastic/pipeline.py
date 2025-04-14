@@ -1,10 +1,10 @@
 from typing import List
 from pathlib import Path
-from rapid import timestamp
-from rapid import naming
-from rapid import filetool
-from rapid import kql_syntax
-from rapid import elastic_helper
+from rapid_elastic import timestamp
+from rapid_elastic import naming
+from rapid_elastic import filetool
+from rapid_elastic import kql_syntax
+from rapid_elastic import elastic_helper
 
 ###############################################################################
 # Pipeline for a single rare-disease disease query
@@ -60,7 +60,7 @@ def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]
 
     num_disease = len(disease_dict.keys())
 
-    print(f'{num_disease} rare-diseases, processing now....')
+    print(f'{num_disease} diseases, processing now....')
     print(disease_dict)
 
     file_list = list()
@@ -84,4 +84,4 @@ def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]
 #
 ###############################################################################
 if __name__ == "__main__":
-    pipe_file('disease_names_expanded.json')
+    pipe_file(filetool.resource('disease_names_expanded.json'))

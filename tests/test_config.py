@@ -1,5 +1,5 @@
 import unittest
-from rapid import config
+from rapid_elastic import config
 
 class TestElasticConfig(unittest.TestCase):
     def test_not_null(self):

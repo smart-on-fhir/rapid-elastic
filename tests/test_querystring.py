@@ -1,12 +1,12 @@
 import unittest
-from rapid import kql_syntax, filetool
+from rapid_elastic import kql_syntax, filetool
 
 
 class TestQuerystring(unittest.TestCase):
 
     @unittest.skip('query.json, query.txt')
     def test_generator(self, filename_json='disease_names_expanded.json'):
-        disease_json = filetool.read_disease_json(filename_json)
+        disease_json = filetool.read_disease_json(filetool.resource(filename_json))
         query_json = dict()
         query_list = list()
 

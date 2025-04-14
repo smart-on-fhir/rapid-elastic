@@ -1,9 +1,9 @@
 from enum import Enum
 from typing import List
 from elasticsearch import Elasticsearch
-from rapid import filetool
-from rapid import config
-from rapid import kql_syntax
+from rapid_elastic import filetool
+from rapid_elastic import config
+from rapid_elastic import kql_syntax
 
 
 ###############################################################################

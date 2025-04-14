@@ -3,6 +3,7 @@ name = "rapid-elastic"
 requires-python = ">= 3.10"
 dependencies = [
     "elasticsearch",
+    "rich",
 ]
 
 readme = "README.md"
@@ -20,12 +21,23 @@ tests = [
     "pytest",
     "pytest-cov",
 ]
-dev = [
-    "pre-commit",
-    # Ruff is using minor versions for breaking changes until their 1.0 release.
-    # See https://docs.astral.sh/ruff/versioning/
-    "ruff < 0.12",  # keep in rough sync with pre-commit-config.yaml
-]
 
 [project.urls]
 "Homepage" = "https://github.com/smart-on-fhir/rapid-elastic"
+
+[project.scripts]
+rapid-elastic = "rapid_elastic.cli:main_cli"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.sdist]
+include = [
+    "docs/",
+    "tests/",
+    "LICENSE",
+]
+exclude = [
+    "**/.pytest_cache",
+]
