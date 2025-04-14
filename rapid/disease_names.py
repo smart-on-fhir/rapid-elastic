@@ -5,29 +5,24 @@ from rapid import filetool
 from rapid import naming
 
 def map_spellings() -> dict:
-    """
-    :param deduplicate: deduplicate potential alternate spellings
-    :return:
-    """
-    mapping = dict()
+    mapping = {}
     for file_csv in filetool.CSV_LIST:
         for original in csv_to_list(file_csv):
-            _unique = naming.name_unique(original)
-            _file = naming.name_file(original)
-            _file_lower = naming.name_file(original).lower()
-            _spaces = naming.strip_spaces(original)
-            _spaces_paren = naming.strip_spaces(naming.strip_paren(original))
-            _spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
+            unique = naming.name_unique(original)
+            file = naming.name_file(original)
+            file_lower = naming.name_file(original).lower()
+            spaces = naming.strip_spaces(original)
+            spaces_paren = naming.strip_spaces(naming.strip_paren(original))
+            spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
 
-            if _unique not in mapping.keys():
-                mapping[_unique] = list()
-
-            mapping[_unique] += [
-                naming.name_file(original),
-                naming.name_file(original).lower(),
-                naming.strip_spaces(original),
-                naming.strip_spaces(naming.strip_paren(original)),
-                naming.strip_spaces(naming.strip_paren(original)).lower()]
+            mapping_list = mapping.setdefault(unique, [])
+            mapping_list += [
+                file,
+                file_lower,
+                spaces,
+                spaces_paren,
+                spaces_paren_lower,
+            ]
     return mapping
 
 
@@ -102,14 +97,11 @@ def csv_to_json_file(disease_csv=None) -> Path | List[Path]:
 
 def csv_to_list(disease_csv: Path | str) -> List[str]:
     """
-    :return: dict with simple identity pair of {disease:disease}
+    :return: list with disease names
     """
     with open(filetool.resource(disease_csv), newline='') as csvfile:
         reader = csv.DictReader(csvfile)
-        out = list()
-        for row in reader:
-            out.append(row['Disease Name'])
-        return out
+        return [row['Disease Name'] for row in reader]
 
 def csv_to_json(disease_csv: Path | str) -> dict:
     """

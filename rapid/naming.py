@@ -1,4 +1,3 @@
-from typing import List
 import re
 
 ###############################################################################
@@ -16,11 +15,11 @@ def name_table(table: list | str) -> list | str:
 ###############################################################################
 # Disease Names
 ###############################################################################
-def name_unique(disease: str | List[str]) -> str | List[str]:
+def name_unique(disease: str | list[str]) -> str | list[str]:
     if isinstance(disease, list):
         return [name_unique(entry) for entry in disease]
     unique = list()
-    for token in strip_paren(disease).strip().split():
+    for token in strip_paren(disease).split():
         if token == token.upper():
             unique.append(token)
         else:
