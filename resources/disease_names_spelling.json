@@ -72,25 +72,25 @@
         "metachromatic_leukodystrophy"
     ],
     "X-Linked Adrenoleukodystrophy": [
-        "X-Linked_Adrenoleukodystrophy",
-        "x-linked_adrenoleukodystrophy",
+        "X_Linked_Adrenoleukodystrophy",
+        "x_linked_adrenoleukodystrophy",
         "X-linked_Adrenoleukodystrophy_(X-ALD)",
         "X-linked_Adrenoleukodystrophy",
         "x-linked_adrenoleukodystrophy",
-        "X-Linked_Adrenoleukodystrophy",
-        "x-linked_adrenoleukodystrophy",
+        "X_Linked_Adrenoleukodystrophy",
+        "x_linked_adrenoleukodystrophy",
         "X-linked_adrenoleukodystrophy_(childhood_form)",
         "X-linked_adrenoleukodystrophy",
         "x-linked_adrenoleukodystrophy"
     ],
     "Tay-Sachs Disease": [
+        "Tay_Sachs_Disease",
+        "tay_sachs_disease",
+        "Tay-Sachs_Disease",
         "Tay-Sachs_Disease",
         "tay-sachs_disease",
-        "Tay-Sachs_Disease",
-        "Tay-Sachs_Disease",
-        "tay-sachs_disease",
-        "Tay-Sachs_Disease",
-        "tay-sachs_disease",
+        "Tay_Sachs_Disease",
+        "tay_sachs_disease",
         "Tay-Sachs_disease",
         "Tay-Sachs_disease",
         "tay-sachs_disease"
@@ -108,13 +108,13 @@
         "sandhoff_disease"
     ],
     "Niemann-Pick Disease Type C": [
+        "Niemann_Pick_Disease_Type_C",
+        "niemann_pick_disease_type_c",
+        "Niemann-Pick_Disease_Type_C",
         "Niemann-Pick_Disease_Type_C",
         "niemann-pick_disease_type_c",
-        "Niemann-Pick_Disease_Type_C",
-        "Niemann-Pick_Disease_Type_C",
-        "niemann-pick_disease_type_c",
-        "Niemann-Pick_Disease_Type_C",
-        "niemann-pick_disease_type_c",
+        "Niemann_Pick_Disease_Type_C",
+        "niemann_pick_disease_type_c",
         "Niemann-Pick_disease_type_C",
         "Niemann-Pick_disease_type_C",
         "niemann-pick_disease_type_c"
@@ -214,16 +214,16 @@
         "Dystrophic_epidermolysis_bullosa",
         "dystrophic_epidermolysis_bullosa"
     ],
-    "Digeorge Syndrome": [
-        "Digeorge_Syndrome",
-        "digeorge_syndrome",
-        "DiGeorge_Syndrome",
-        "DiGeorge_Syndrome",
-        "digeorge_syndrome"
+    "22Q11.2 Deletion Syndrome": [
+        "22Q11_2_Deletion_Syndrome",
+        "22q11_2_deletion_syndrome",
+        "22q11.2_Deletion_Syndrome_(DiGeorge)",
+        "22q11.2_Deletion_Syndrome",
+        "22q11.2_deletion_syndrome"
     ],
     "Alpha-1 Antitrypsin Deficiency": [
-        "Alpha-1_Antitrypsin_Deficiency",
-        "alpha-1_antitrypsin_deficiency",
+        "Alpha_1_Antitrypsin_Deficiency",
+        "alpha_1_antitrypsin_deficiency",
         "Alpha-1_Antitrypsin_Deficiency",
         "Alpha-1_Antitrypsin_Deficiency",
         "alpha-1_antitrypsin_deficiency"
@@ -248,25 +248,25 @@
         "autosomal_recessive_polycystic_kidney_disease"
     ],
     "Beckwith-Wiedemann Syndrome": [
+        "Beckwith_Wiedemann_Syndrome",
+        "beckwith_wiedemann_syndrome",
+        "Beckwith-Wiedemann_Syndrome",
         "Beckwith-Wiedemann_Syndrome",
         "beckwith-wiedemann_syndrome",
-        "Beckwith-Wiedemann_Syndrome",
-        "Beckwith-Wiedemann_Syndrome",
-        "beckwith-wiedemann_syndrome",
-        "Beckwith-Wiedemann_Syndrome",
-        "beckwith-wiedemann_syndrome",
+        "Beckwith_Wiedemann_Syndrome",
+        "beckwith_wiedemann_syndrome",
         "Beckwith-Wiedemann_syndrome_(borderline_8-10?)",
         "Beckwith-Wiedemann_syndrome",
         "beckwith-wiedemann_syndrome",
-        "Beckwith-Wiedemann_Syndrome",
-        "beckwith-wiedemann_syndrome",
+        "Beckwith_Wiedemann_Syndrome",
+        "beckwith_wiedemann_syndrome",
         "Beckwith-Wiedemann_syndrome",
         "Beckwith-Wiedemann_syndrome",
         "beckwith-wiedemann_syndrome"
     ],
     "Charcot-Marie-Tooth Disease": [
-        "Charcot-Marie-Tooth_Disease",
-        "charcot-marie-tooth_disease",
+        "Charcot_Marie_Tooth_Disease",
+        "charcot_marie_tooth_disease",
         "Charcot-Marie-Tooth_Disease",
         "Charcot-Marie-Tooth_Disease",
         "charcot-marie-tooth_disease"
@@ -340,8 +340,8 @@
         "duane_syndrome"
     ],
     "Ehlers-Danlos Syndrome": [
-        "Ehlers-Danlos_Syndrome",
-        "ehlers-danlos_syndrome",
+        "Ehlers_Danlos_Syndrome",
+        "ehlers_danlos_syndrome",
         "Ehlers-Danlos_Syndrome_(Classical_Type)",
         "Ehlers-Danlos_Syndrome",
         "ehlers-danlos_syndrome"
@@ -431,18 +431,18 @@
         "maple_syrup_urine_disease"
     ],
     "Medium-Chain Acyl-Coa Dehydrogenase Deficiency": [
-        "Medium-Chain_Acyl-Coa_Dehydrogenase_Deficiency",
-        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium_Chain_Acyl_Coa_Dehydrogenase_Deficiency",
+        "medium_chain_acyl_coa_dehydrogenase_deficiency",
         "Medium-Chain_Acyl-CoA_Dehydrogenase_Deficiency",
         "Medium-Chain_Acyl-CoA_Dehydrogenase_Deficiency",
         "medium-chain_acyl-coa_dehydrogenase_deficiency",
-        "Medium-Chain_Acyl-Coa_Dehydrogenase_Deficiency",
-        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium_Chain_Acyl_Coa_Dehydrogenase_Deficiency",
+        "medium_chain_acyl_coa_dehydrogenase_deficiency",
         "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
         "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
         "medium-chain_acyl-coa_dehydrogenase_deficiency",
-        "Medium-Chain_Acyl-Coa_Dehydrogenase_Deficiency",
-        "medium-chain_acyl-coa_dehydrogenase_deficiency",
+        "Medium_Chain_Acyl_Coa_Dehydrogenase_Deficiency",
+        "medium_chain_acyl_coa_dehydrogenase_deficiency",
         "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
         "Medium-chain_acyl-CoA_dehydrogenase_deficiency",
         "medium-chain_acyl-coa_dehydrogenase_deficiency"
@@ -507,13 +507,13 @@
         "posterior_urethral_valves"
     ],
     "Prader-Willi Syndrome": [
+        "Prader_Willi_Syndrome",
+        "prader_willi_syndrome",
+        "Prader-Willi_Syndrome",
         "Prader-Willi_Syndrome",
         "prader-willi_syndrome",
-        "Prader-Willi_Syndrome",
-        "Prader-Willi_Syndrome",
-        "prader-willi_syndrome",
-        "Prader-Willi_Syndrome",
-        "prader-willi_syndrome",
+        "Prader_Willi_Syndrome",
+        "prader_willi_syndrome",
         "Prader-Willi_syndrome",
         "Prader-Willi_syndrome",
         "prader-willi_syndrome"
@@ -627,8 +627,8 @@
         "pompe_disease"
     ],
     "Alpha-Mannosidosis": [
-        "Alpha-Mannosidosis",
-        "alpha-mannosidosis",
+        "Alpha_Mannosidosis",
+        "alpha_mannosidosis",
         "Alpha-mannosidosis_(juvenile)",
         "Alpha-mannosidosis",
         "alpha-mannosidosis"
@@ -655,8 +655,8 @@
         "menkes_disease"
     ],
     "Crigler-Najjar Syndrome Type I": [
-        "Crigler-Najjar_Syndrome_Type_I",
-        "crigler-najjar_syndrome_type_i",
+        "Crigler_Najjar_Syndrome_Type_I",
+        "crigler_najjar_syndrome_type_i",
         "Crigler-Najjar_syndrome_type_I",
         "Crigler-Najjar_syndrome_type_I",
         "crigler-najjar_syndrome_type_i"
@@ -688,22 +688,22 @@
         "2q37_deletion_syndrome"
     ],
     "Wolf-Hirschhorn Syndrome": [
-        "Wolf-Hirschhorn_Syndrome",
-        "wolf-hirschhorn_syndrome",
+        "Wolf_Hirschhorn_Syndrome",
+        "wolf_hirschhorn_syndrome",
         "Wolf-Hirschhorn_syndrome_(4p-)",
         "Wolf-Hirschhorn_syndrome",
         "wolf-hirschhorn_syndrome"
     ],
     "Mowat-Wilson Syndrome": [
-        "Mowat-Wilson_Syndrome",
-        "mowat-wilson_syndrome",
+        "Mowat_Wilson_Syndrome",
+        "mowat_wilson_syndrome",
         "Mowat-Wilson_syndrome",
         "Mowat-Wilson_syndrome",
         "mowat-wilson_syndrome"
     ],
     "Smith-Magenis Syndrome": [
-        "Smith-Magenis_Syndrome",
-        "smith-magenis_syndrome",
+        "Smith_Magenis_Syndrome",
+        "smith_magenis_syndrome",
         "Smith-Magenis_syndrome_(17p11.2_del)",
         "Smith-Magenis_syndrome",
         "smith-magenis_syndrome"
@@ -716,8 +716,8 @@
         "kabuki_syndrome"
     ],
     "Coffin-Lowry Syndrome": [
-        "Coffin-Lowry_Syndrome",
-        "coffin-lowry_syndrome",
+        "Coffin_Lowry_Syndrome",
+        "coffin_lowry_syndrome",
         "Coffin-Lowry_syndrome",
         "Coffin-Lowry_syndrome",
         "coffin-lowry_syndrome"
@@ -730,15 +730,15 @@
         "aicardi_syndrome"
     ],
     "Rubinstein-Taybi Syndrome": [
-        "Rubinstein-Taybi_Syndrome",
-        "rubinstein-taybi_syndrome",
+        "Rubinstein_Taybi_Syndrome",
+        "rubinstein_taybi_syndrome",
         "Rubinstein-Taybi_syndrome",
         "Rubinstein-Taybi_syndrome",
         "rubinstein-taybi_syndrome"
     ],
     "Hallermann-Streiff Syndrome": [
-        "Hallermann-Streiff_Syndrome",
-        "hallermann-streiff_syndrome",
+        "Hallermann_Streiff_Syndrome",
+        "hallermann_streiff_syndrome",
         "Hallermann-Streiff_syndrome",
         "Hallermann-Streiff_syndrome",
         "hallermann-streiff_syndrome"
@@ -751,15 +751,15 @@
         "jacobsen_syndrome"
     ],
     "Miller-Dieker Syndrome": [
-        "Miller-Dieker_Syndrome",
-        "miller-dieker_syndrome",
+        "Miller_Dieker_Syndrome",
+        "miller_dieker_syndrome",
         "Miller-Dieker_syndrome_(17p13.3_lissencephaly)",
         "Miller-Dieker_syndrome",
         "miller-dieker_syndrome"
     ],
     "Shwachman-Diamond Syndrome": [
-        "Shwachman-Diamond_Syndrome",
-        "shwachman-diamond_syndrome",
+        "Shwachman_Diamond_Syndrome",
+        "shwachman_diamond_syndrome",
         "Shwachman-Diamond_syndrome",
         "Shwachman-Diamond_syndrome",
         "shwachman-diamond_syndrome"
@@ -826,8 +826,8 @@
         "1p36_deletion_syndrome"
     ],
     "16P11.2 Microdeletion Syndrome": [
-        "16P11.2_Microdeletion_Syndrome",
-        "16p11.2_microdeletion_syndrome",
+        "16P11_2_Microdeletion_Syndrome",
+        "16p11_2_microdeletion_syndrome",
         "16p11.2_microdeletion_syndrome",
         "16p11.2_microdeletion_syndrome",
         "16p11.2_microdeletion_syndrome"
@@ -840,15 +840,15 @@
         "heterotaxy_syndrome"
     ],
     "VACTERL/VATER Association": [
-        "VACTERL/VATER_Association",
-        "vacterl/vater_association",
-        "VACTERL-VATER_association",
-        "VACTERL-VATER_association",
-        "vacterl-vater_association"
+        "VACTERL_VATER_Association",
+        "vacterl_vater_association",
+        "VACTERL/VATER_association",
+        "VACTERL/VATER_association",
+        "vacterl/vater_association"
     ],
     "Lennox-Gastaut Syndrome": [
-        "Lennox-Gastaut_Syndrome",
-        "lennox-gastaut_syndrome",
+        "Lennox_Gastaut_Syndrome",
+        "lennox_gastaut_syndrome",
         "Lennox-Gastaut_syndrome",
         "Lennox-Gastaut_syndrome",
         "lennox-gastaut_syndrome"

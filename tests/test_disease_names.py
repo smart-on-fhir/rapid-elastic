@@ -20,18 +20,18 @@ class TestDiseaseNames(unittest.TestCase):
         """
         Test that CSV input sheets are mapped in `disease_names_expanded.json`
         """
-        spellings = disease_names.map_spellings()
+        spellings = disease_names.list_unique()
         disease_json = filetool.read_disease_json()
         disease_list = naming.name_unique(list(disease_json.keys()))
 
-        _inter = set(spellings.keys()).intersection(set(disease_list))
+        _inter = set(spellings).intersection(set(disease_list))
         # print(len(_inter), ' .intersect() ')
 
-        _diff1 = set(spellings.keys()).difference(set(disease_list))
+        _diff1 = set(spellings).difference(set(disease_list))
         if len(_diff1) > 0:
             print(len(_diff1), '  .difference() ', 'missing?', str(_diff1))
 
-        _diff2 = set(disease_list).difference(set(spellings.keys()))
+        _diff2 = set(disease_list).difference(set(spellings))
         if len(_diff2) > 0:
             print(len(_diff2), '  .difference() ', 'deprecated?', str(_diff2))
 

@@ -4,6 +4,22 @@ from pathlib import Path
 from rapid import filetool
 from rapid import naming
 
+def list_tables() -> List[str]:
+    return [naming.name_table(disease) for disease in list_unique()]
+
+def list_files() -> List[str]:
+    return [naming.name_file(disease) for disease in list_unique()]
+
+def list_files_csv() -> List[str]:
+    return [naming.name_file(disease, 'csv') for disease in list_unique()]
+
+def list_unique() -> List[str]:
+    unique_list = list()
+    for file_csv in filetool.CSV_LIST:
+        for original in csv_to_list(file_csv):
+            unique_list.append(naming.name_unique(original))
+    return unique_list
+
 def map_spellings() -> dict:
     mapping = {}
     for file_csv in filetool.CSV_LIST:
@@ -11,6 +27,7 @@ def map_spellings() -> dict:
             unique = naming.name_unique(original)
             file = naming.name_file(original)
             file_lower = naming.name_file(original).lower()
+            table = naming.name_table(original)
             spaces = naming.strip_spaces(original)
             spaces_paren = naming.strip_spaces(naming.strip_paren(original))
             spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
