@@ -43,10 +43,9 @@ def list_entries(disease_csv: Path | str) -> List[DiseaseICD10]:
     """
     with open(filetool.resource(disease_csv), newline='') as csvfile:
         reader = csv.DictReader(csvfile)
-        next(reader)  # skip header
         out = list()
         for row in reader:
-            disease_name = naming.strip_paren(row['Disease Name'])
+            disease_name = naming.name_unique(row['Disease Name'])
             orpha_code = row['Orpha Code(s)']
             icd10_list = list_icd10(row['ICD-10 Code(s)'])
 

@@ -16,7 +16,7 @@ Cystic Fibrosis,ORPHA:586,"E84.0,E84.1 (and related E84 subcodes)",~10,Infancy,C
 Duane Syndrome,ORPHA:233,H50.811,~10,Infancy,Rare congenital eye movement disorder (~10/100k). Restriction of lateral gaze from infancy. H50.811 is for Duane�s.,Ophthalmology,
 Ehlers-Danlos Syndrome (Classical Type),ORPHA:287,Q79.6,~20,Childhood,"Connective tissue disorder (~20/100k). Presents with skin hyperextensibility, joint hypermobility. Q79.6 is EDS-specific.","Genetics, Musculoskeletal",
 Erythropoietic Protoporphyria (EPP),ORPHA:79278,E80.0,~50,Early Childhood,AR porphyrin defect (~50/100k). Photosensitivity appears in childhood. E80.0 is specific to hereditary porphyrias.,"Metabolic, Dermatology, Hematology",
-Esophageal Atresia � Tracheoesophageal Fistula,ORPHA:1199,Q39.0�Q39.4,~25,Neonatal,Foregut malformation (~25/100k). Presents at birth with feeding issues. Q39.x codes are specific for esophageal atresia/TEF.,Gastroenterology,Surgery
+Esophageal Atresia Tracheoesophageal Fistula,ORPHA:1199,Q39.0�Q39.4,~25,Neonatal,Foregut malformation (~25/100k). Presents at birth with feeding issues. Q39.x codes are specific for esophageal atresia/TEF.,Gastroenterology,Surgery
 Fragile X Syndrome,ORPHA:908,Q99.2,~14,Childhood,FMR1 expansion (~14/100k overall). Presents with developmental delay in early childhood. Q99.2 is specific for Fragile X.,"Neurology, Genetics",
 Gastroschisis,ORPHA:2368,Q79.3,~12,Neonatal,Abdominal wall defect (~12/100k). Bowels herniate at birth. Q79.3 is specific for gastroschisis.,"Surgery, Gastroenterology",
 Hemophilia A,ORPHA:98878,D66,~7�10,Infancy,Factor VIII deficiency (~7�10/100k). Presents with early bleeding. D66 = Hemophilia A only.,"Hematology, Genetics",

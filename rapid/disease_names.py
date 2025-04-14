@@ -4,6 +4,28 @@ from pathlib import Path
 from rapid import filetool
 from rapid import naming
 
+def map_spellings() -> dict:
+    mapping = {}
+    for file_csv in filetool.CSV_LIST:
+        for original in csv_to_list(file_csv):
+            unique = naming.name_unique(original)
+            file = naming.name_file(original)
+            file_lower = naming.name_file(original).lower()
+            spaces = naming.strip_spaces(original)
+            spaces_paren = naming.strip_spaces(naming.strip_paren(original))
+            spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
+
+            mapping_list = mapping.setdefault(unique, [])
+            mapping_list += [
+                file,
+                file_lower,
+                spaces,
+                spaces_paren,
+                spaces_paren_lower,
+            ]
+    return mapping
+
+
 ###############################################################################
 # Synonyms
 ###############################################################################
@@ -73,17 +95,24 @@ def csv_to_json_file(disease_csv=None) -> Path | List[Path]:
     print(f"{len(out.keys())} disease names")
     return filetool.write_json(out, filetool.resource(f'{disease_csv}.json'))
 
+def csv_to_list(disease_csv: Path | str) -> List[str]:
+    """
+    :return: list with disease names
+    """
+    with open(filetool.resource(disease_csv), newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        return [row['Disease Name'] for row in reader]
+
 def csv_to_json(disease_csv: Path | str) -> dict:
     """
     :return: dict with simple identity pair of {disease:disease}
     """
     with open(filetool.resource(disease_csv), newline='') as csvfile:
-        reader = csv.reader(csvfile)
+        reader = csv.DictReader(csvfile)
         out = {}
-        next(reader)
         for row in reader:
-            disease_name = row[0]
-            disease_name = naming.strip_paren(disease_name)
+            disease_name = row['Disease Name']
+            disease_name = naming.name_unique(disease_name)
             out[disease_name] = [disease_name]
         return out
 
@@ -92,7 +121,7 @@ def csv_to_json(disease_csv: Path | str) -> dict:
 # Duplicates and Merging curation lists
 #
 ###############################################################################
-def find_duplicates() -> Path:
+def find_duplicates_across_sheets() -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
     :return: path to duplicates found
@@ -103,7 +132,7 @@ def find_duplicates() -> Path:
     for filename_csv in filetool.CSV_LIST:
         from_json = filetool.read_disease_json(f'{filename_csv}.json')
         for disease, _ in from_json.items():
-            disease = naming.strip_paren(disease)
+            disease = naming.name_unique(disease)
             disease = disease.lower()
             disease = disease.replace('-', ' ')
 
