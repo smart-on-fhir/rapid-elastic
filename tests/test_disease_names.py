@@ -1,6 +1,4 @@
 import unittest
-from collections import OrderedDict
-
 from rapid import filetool
 from rapid import naming
 from rapid import disease_names
@@ -34,6 +32,37 @@ class TestDiseaseNames(unittest.TestCase):
         _diff2 = set(disease_list).difference(set(spellings))
         if len(_diff2) > 0:
             print(len(_diff2), '  .difference() ', 'deprecated?', str(_diff2))
+
+    @unittest.skip('disease_names_legacy.json')
+    def test_deprecated_differences(self):
+        disease_list = disease_names.list_unique(filetool.DISEASES_CSV)
+        disease_json = filetool.read_json(filetool.deprecated('disease_names_expanded.json'))
+        legacy = dict()
+
+        for key, synonyms in disease_json.items():
+            curated = naming.name_unique(key)
+            if curated in disease_list:
+                legacy[curated] = synonyms
+            else:
+                print(f'{curated} (not found!)')
+        print(f'{len(legacy.keys())} matches found')
+        filetool.write_json(legacy, filetool.resource('disease_names_legacy.json'))
+
+    # @unittest.skip('disease_names.json')
+    def test_update(self):
+        disease_list = disease_names.list_unique(filetool.DISEASES_CSV)
+        legacy_json = filetool.read_json(filetool.deprecated('disease_names_expanded.json'))
+        merged = dict()
+
+        for disease in disease_list:
+            if disease in legacy_json.keys():
+                merged[disease] = legacy_json[disease]
+                print(f'{disease} (matched)')
+            else:
+                merged[disease] = [disease]
+                print(f'{disease} (?missing?)')
+
+        filetool.write_json(merged, filetool.resource('disease_names.json'))
 
     def test_synonynms_no_query_intersection(self):
         """
@@ -71,13 +100,13 @@ class TestDiseaseNames(unittest.TestCase):
             disease_names.map_spellings(),
             filetool.resource('disease_names_spelling.json'))
 
-    @unittest.skip('disease_names_expanded.json')
-    def test_prompt_llm_synonyms(self):
+    # @unittest.skip('prompts.txt')
+    def test_prompt_llm_synonyms(self, diseases_csv=filetool.DISEASES_CSV):
         """
         Enable this test to produce GPT4 suggestions.
         HUMAN curation is complete. For historical purposes.
         """
-        print(disease_names.prompt_llm_synonyms('disease_names_expanded.json'))
+        print(disease_names.prompt_llm_synonyms(diseases_csv))
 
     @unittest.skip('disease_names_duplicates.json')
     def test_find_duplicates(self):
@@ -85,4 +114,4 @@ class TestDiseaseNames(unittest.TestCase):
         Enable this test to list which GPT4 suggested rare diseases might be in multiple spreadsheets.
         HUMAN curation is complete. For historical purposes.
         """
-        print(disease_names.find_duplicates_across_sheets())
+        print(disease_names.deprecated_find_duplicates_across_sheets())

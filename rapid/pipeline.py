@@ -58,7 +58,9 @@ def pipe_query(disease, query: str | List[str]) -> List[Path]:
 def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]:
     disease_dict = filetool.read_disease_json(disease_filename_json)
 
-    print(f'{len(disease_dict.keys())} rare-diseases, processing now....')
+    num_disease = len(disease_dict.keys())
+
+    print(f'{num_disease} rare-diseases, processing now....')
     print(disease_dict)
 
     file_list = list()
@@ -68,10 +70,11 @@ def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]
 
     for disease, keyword_list in disease_dict.items():
         file_list += pipe_query(disease, keyword_list)
+        print(f'Progress= {len(file_list)} / {num_disease}')
 
     _pipe_done = timestamp.datetime.now()
-    print("Done: ", timestamp.datetime_str(_pipe_begin))
-    print("Took: ", timestamp.diff_seconds(_pipe_begin, _pipe_done))
+    print("Done: ", timestamp.datetime_str(_pipe_begin), 'seconds')
+    print("Took: ", timestamp.diff_seconds(_pipe_begin, _pipe_done), 'seconds')
     return file_list
 
 
@@ -81,4 +84,4 @@ def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]
 #
 ###############################################################################
 if __name__ == "__main__":
-    pipe_file('disease_names_expanded.json')
+    pipe_file('disease_names_legacy.json')

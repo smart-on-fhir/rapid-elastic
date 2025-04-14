@@ -10,7 +10,7 @@ class TestDiseaseICD10(unittest.TestCase):
         self.assertEqual(expected, disease_icd10.list_icd10(text))
 
     def test_entries(self):
-        for csv_file in filetool.CSV_LIST:
+        for csv_file in filetool.DEPRECATED_CSV_LIST:
             entries = disease_icd10.list_entries(csv_file)
             table = naming.name_table(csv_file.replace('.csv', ''))
             out = disease_icd10.list_to_sql(table, entries)
@@ -18,6 +18,6 @@ class TestDiseaseICD10(unittest.TestCase):
 
     # @unittest.skip("write output SQL files for each disease.csv file")
     def test_csv_to_sql(self):
-        for csv_file in filetool.CSV_LIST:
+        for csv_file in filetool.DEPRECATED_CSV_LIST:
             file_sql = disease_icd10.csv_to_sql(csv_file)
             print(file_sql)

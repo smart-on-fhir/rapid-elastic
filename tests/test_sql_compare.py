@@ -15,7 +15,7 @@ class TestSQLCompare(unittest.TestCase):
 
     @unittest.skip('cohorts__rare_match_codeset.sql')
     def test_union_views_codeset_icd10(self):
-        tables_list = [t.replace('.csv', '') for t in filetool.CSV_LIST]
+        tables_list = [t.replace('.csv', '') for t in filetool.DEPRECATED_CSV_LIST]
         tables_list = [naming.name_table(f'codeset_{t}') for t in tables_list]
         print(sql_compare.union_views_file(
             create='cohorts__rare_codeset',

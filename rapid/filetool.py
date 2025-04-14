@@ -11,10 +11,13 @@ from rapid import timestamp
 # https://docs.google.com/spreadsheets/d/1lNgKOyt1cK_cTA72WbywsjjrvWCM0HUpv1nMFqKEngM
 #
 #####################################################################################
-CSV_LIST = ["UNIQUE_LT10_PER_100K.csv",
-            "UNIQUE_LT50_PER_100K.csv",
-            "BROAD_LT10_PER_100K.csv",
-            "BROAD_LT50_PER_100K.csv"]
+DEPRECATED_CSV_LIST = [
+    "UNIQUE_LT10_PER_100K.csv",
+    "UNIQUE_LT50_PER_100K.csv",
+    "BROAD_LT10_PER_100K.csv",
+    "BROAD_LT50_PER_100K.csv"]
+
+DISEASES_CSV = "NEW_MASTER_04-13-2025.csv"
 
 def get_elastic_fields(override_default=None) -> dict:
     if not override_default:
@@ -30,6 +33,9 @@ def write_disease_json(filename='disease_names.json') -> dict:
 
 def resource(filename) -> Path:
     return Path(project_dir(), 'resources', filename)
+
+def deprecated(filename) -> Path:
+    return Path(project_dir(), 'resources', 'deprecated', filename)
 
 def output(filename) -> Path:
     _output = Path(project_dir(), 'output', timestamp.date_str())
