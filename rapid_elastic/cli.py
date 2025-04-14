@@ -19,9 +19,11 @@ async def main(argv: list[str]) -> None:
     parser.add_argument("config", metavar="diseases.json")
     parser.add_argument(
         "--output", "-o",
+        metavar="DIR",
         help="output folder (default is ./output/)",
         default="output",
     )
+    parser.add_argument("--es-config", metavar="FILE", help="elasticsearch field config")
     args = parser.parse_args(argv)
 
     if not config.ELASTIC_USER or not config.ELASTIC_PASS:

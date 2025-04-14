@@ -22,7 +22,7 @@ _ELASTIC_FIELDS_ = filetool.get_elastic_fields()
 
 class ElasticField(Enum):
     """
-    Provides strong type assertions for the supplied ELASTIC_FIELDS.json
+    Provides strong type assertions for the supplied elastic fields config
 
     At minimum, these elastic search fields need to be present for this code to work.
     You will either need an ElasticSearch index with these columns or to modify this script.

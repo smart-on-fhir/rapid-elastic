@@ -4,9 +4,6 @@ from rapid_elastic import elastic_helper
 from rapid.elastic_helper import ElasticField
 
 class TestElasticFields(unittest.TestCase):
-    def test_json_exists(self):
-        filetool.resource('ELASTIC_FIELDS.json')
-
     def test_required(self):
         self.assertIsNotNone(elastic_helper.ElasticField.note)
         self.assertIsNotNone(elastic_helper.ElasticField.documentreference_ref)
