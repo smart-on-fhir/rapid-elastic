@@ -1,4 +1,4 @@
-from enum import Enum
+import dataclasses
 from typing import List
 from elasticsearch import Elasticsearch
 from rapid_elastic import filetool
@@ -18,34 +18,48 @@ from rapid_elastic import kql_syntax
 #
 # * note is the default field name that elasticsearch is run against.
 ###############################################################################
-_ELASTIC_FIELDS_ = filetool.get_elastic_fields()
-
-class ElasticField(Enum):
+@dataclasses.dataclass
+class ElasticFields:
     """
     Provides strong type assertions for the supplied elastic fields config
 
     At minimum, these elastic search fields need to be present for this code to work.
-    You will either need an ElasticSearch index with these columns or to modify this script.
+    You will either need an ElasticSearch index with these columns or to pass a config with
+    the names you use in your index.
     """
-    note = _ELASTIC_FIELDS_.get('note')
-    documentreference_ref = _ELASTIC_FIELDS_.get('documentreference_ref')
-    subject_ref = _ELASTIC_FIELDS_.get('subject_ref')
-    encounter_ref = _ELASTIC_FIELDS_.get('encounter_ref')
-    group_name = _ELASTIC_FIELDS_.get('group_name')
-    codes = _ELASTIC_FIELDS_.get('codes')
-    document_title = _ELASTIC_FIELDS_.get('document_title')
+    config_path: dataclasses.InitVar[str | None] = None
 
+    note: str = "note"
+    note_ref: str = "anon_ref"
+    subject_ref: str = "anon_subject_ref"
+    encounter_ref: str = "anon_encounter_ref"
+    group_name: str = "group_name"
+    codes: str = "codes"
+    document_title: str = ""
 
-###############################################################################
-# Include/Exclude these columns in Elasticsearch responses
-###############################################################################
-FIELD_EXCLUDES = [ElasticField.note.value]
+    def __post_init__(self, config_path: str | None):
+        if config_path:
+            mappings = filetool.read_json(config_path)
+            for field in dataclasses.fields(self):
+                if field.name in mappings:
+                    setattr(self, field.name, mappings[field.name])
 
-FIELD_INCLUDES = [ElasticField.documentreference_ref.value,
-                  ElasticField.subject_ref.value,
-                  ElasticField.encounter_ref.value,
-                  ElasticField.codes.value,
-                  ElasticField.group_name.value]
+    # Exclude these columns from Elasticsearch responses
+    @property
+    def excludes(self) -> list[str]:
+        return [self.note]
+
+    # Include these columns in Elasticsearch responses
+    @property
+    def includes(self) -> list[str]:
+        return [
+            self.note_ref,
+            self.subject_ref,
+            self.encounter_ref,
+            self.codes,
+            self.group_name,
+        ]
+
 
 ###############################################################################
 # Elasticsearch "hits"
@@ -66,14 +80,14 @@ class ElasticHit:
     codes: dict = {}
     document_title: str = ''
 
-    def __init__(self, source: dict):
-        self.anon_ref = source.get(ElasticField.documentreference_ref.value, '')
-        self.anon_subject_ref = source.get(ElasticField.subject_ref.value, '')
-        self.anon_encounter_ref = source.get(ElasticField.encounter_ref.value, '')
-        self.group_name = source.get(ElasticField.group_name.value, '')
-        self.document_title = source.get(ElasticField.document_title.value, '')
-        self.codes = source.get(ElasticField.codes.value, dict())
-        if self.codes:
+    def __init__(self, source: dict, *, fields: ElasticFields):
+        self.anon_ref = source.get(fields.note_ref, '')
+        self.anon_subject_ref = source.get(fields.subject_ref, '')
+        self.anon_encounter_ref = source.get(fields.encounter_ref, '')
+        self.group_name = source.get(fields.group_name, '')
+        self.document_title = source.get(fields.document_title, '')
+        self.codes = source.get(fields.codes, {})
+        if self.codes and not self.document_title:
             self.document_title = self.codes.get('text').replace(',', ';')
 
     def as_csv(self) -> str:
@@ -102,11 +116,11 @@ def connect() -> Elasticsearch:
     return Elasticsearch(hosts=config.ELASTIC_HOST,
                          basic_auth=(config.ELASTIC_USER, config.ELASTIC_PASS))
 
-def get_hits(disease_query_string: str, scroll_size=1000) -> dict:
+def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFields) -> dict:
     print(f'connecting user "{config.ELASTIC_USER}"')
     client = connect()
     query = kql_syntax.query_string(disease_query_string)
-    query = query | kql_syntax.response_fields(FIELD_INCLUDES, FIELD_EXCLUDES)
+    query = query | kql_syntax.response_fields(fields.includes, fields.excludes)
     print(query)
     response = client.search(body=query, scroll='10m', size=scroll_size)
 

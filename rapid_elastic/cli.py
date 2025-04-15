@@ -23,13 +23,13 @@ async def main(argv: list[str]) -> None:
         help="output folder (default is ./output/)",
         default="output",
     )
-    parser.add_argument("--es-config", metavar="FILE", help="elasticsearch field config")
+    parser.add_argument("--field-config", metavar="FILE", help="elasticsearch field config")
     args = parser.parse_args(argv)
 
     if not config.ELASTIC_USER or not config.ELASTIC_PASS:
         fatal_error("You must first set the ELASTIC_USER and ELASTIC_PASS environment variables.")
 
-    pipeline.pipe_file(args.config, output_base=args.output)
+    pipeline.pipe_file(args.config, output_base=args.output, fields_config=args.field_config)
 
 
 def main_cli():

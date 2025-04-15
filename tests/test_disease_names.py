@@ -1,14 +1,8 @@
 import unittest
-<<<<<<< HEAD
-from rapid import filetool
-from rapid import naming
-from rapid import disease_names
-=======
 
 from rapid_elastic import filetool
 from rapid_elastic import naming
 from rapid_elastic import disease_names
->>>>>>> 2c62022 (Initial work, renaming)
 
 
 class TestDiseaseNames(unittest.TestCase):
@@ -104,4 +98,4 @@ class TestDiseaseNames(unittest.TestCase):
         Enable this test to produce GPT4 suggestions.
         HUMAN curation is complete. For historical purposes.
         """
-        print(disease_names.prompt_llm_synonyms('disease_names_expanded.json'))
+        print(disease_names.prompt_llm_synonyms(diseases_csv))

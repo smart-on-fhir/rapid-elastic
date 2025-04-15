@@ -19,20 +19,6 @@ DEPRECATED_CSV_LIST = [
 
 DISEASES_CSV = "NEW_MASTER_04-13-2025.csv"
 
-def get_elastic_fields(override_default: Path | str = None) -> dict:
-    if override_default:
-        return read_json(override_default)
-
-    return {
-      "note": "note",
-      "documentreference_ref": "anon_ref",
-      "subject_ref" : "anon_subject_ref",
-      "encounter_ref": "anon_encounter_ref",
-      "group_name" : "group_name",
-      "codes" : "codes",
-      "document_title": ""
-    }
-
 def read_disease_json(filename: Path | str) -> dict:
     return read_json(filename)
 
