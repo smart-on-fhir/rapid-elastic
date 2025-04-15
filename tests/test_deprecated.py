@@ -11,6 +11,10 @@ class TestDeprecated(unittest.TestCase):
     Will delete these methods, these are temporary for ability to look backwards before
     "New Master 04-13-2025.csv"
     """
+    def test_curated_csv_exists(self):
+        for curated_csv in filetool.DEPRECATED_CSV_LIST:
+            self.assertTrue(filetool.deprecated(curated_csv).exists())
+
     @unittest.skip('disease_names_duplicates.json')
     def test_find_duplicates(self):
         """
@@ -53,3 +57,4 @@ class TestDeprecated(unittest.TestCase):
             table_list=tables_list,
             create_table=True,
             alias_col='source_csv'))
+
