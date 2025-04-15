@@ -47,7 +47,7 @@ def output(filename) -> Path:
 def project_dir() -> Path:
     return Path(__file__).parent.parent
 
-def list_output(disease) -> List[Path]:
+def list_output_deprecated(disease) -> List[Path]:
     return [output(f'{disease}.csv'),
             output(f'{disease}.json')]
 

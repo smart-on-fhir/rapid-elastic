@@ -1144,8 +1144,18 @@
         "Aicardi's syndrome",
         "corpus callosum agenesis"
     ],
-    "Neuronal Ceroid Lipofuscinosis : CLN3 Is The Most Common": [
-        "Neuronal Ceroid Lipofuscinosis : CLN3 Is The Most Common"
+    "Neuronal Ceroid Lipofuscinosis": [
+        "Neuronal Ceroid Lipofuscinosis",
+        "Batten disease",
+        "Batten-Mayou disease",
+        "Batten Mayou disease",
+        "Ceroid lipofuscinosis, neuronal",
+        "Batten-Spielmeyer-Vogt disease",
+        "Batten Spielmeyer Vogt disease",
+        "neuronal ceroid-lipofuscinosis",
+        "Juvenile cerebroretinal degeneration",
+        "Spielmeyer-Vogt disease",
+        "Lipid storage myoclonus syndrome"
     ],
     "Fragile X Syndrome": [
         "FMR1 Mutation",
@@ -1517,15 +1527,11 @@
         "gnas variant"
     ],
     "Mccune Albright Syndrome": [
-        "GNAS Mutation",
         "McCune Albright syndrome",
         "McCune-Albright syndrome",
         "Mccune Albright Syndrome",
-        "Polyostotic fibrous dysplasia with endocrine dysfunction and caf\u00e9 au lait spots",
-        "Polyostotic fibrous dysplasia with endocrine dysfunction and caf\u00e9-au-lait spots",
-        "gnas gene mutation",
-        "gnas pathogenic",
-        "gnas variant"
+        "Polyostotic fibrous dysplasia with endocrine dysfunction and cafe au lait spots",
+        "Polyostotic fibrous dysplasia with endocrine dysfunction and cafe-au-lait spots"
     ],
     "Flna-Related X-Linked Myxomatous Valvular Dysplasia": [
         "FLNA related X linked myxomatous valvular dysplasia",

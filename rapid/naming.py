@@ -3,12 +3,25 @@ import re
 ###############################################################################
 # Athena table names
 ###############################################################################
-def name_table(table: list | str) -> list | str:
+def name_cohort(table: list | str) -> list | str:
+    """
+    Mike terry "cohort__" tables.
+    """
     table = name_file(table).lower()
     if isinstance(table, list):
         return [f'cohorts__rare_{table}' for table in list(set(table))]
     else:
         return f'cohorts__rare_{table}'
+
+def name_rapid(table: list | str) -> list | str:
+    """
+    Created to avoid namespace collisions with mike terry "cohort__" tables.
+    """
+    table = name_file(table).lower()
+    if isinstance(table, list):
+        return [f'rapid__{table}' for table in list(set(table))]
+    else:
+        return f'rapid__{table}'
 
 def name_table_alias(table: list | str) -> list | str:
     table = name_file(table).lower()
@@ -21,6 +34,10 @@ def name_table_alias(table: list | str) -> list | str:
 # Disease Names
 ###############################################################################
 def name_unique(disease: str | list[str]) -> str | list[str]:
+    """
+    :param disease: str with any capitalization and common punctuation
+    :return: clean human readable name
+    """
     if isinstance(disease, list):
         return [name_unique(entry) for entry in disease]
     unique = list()

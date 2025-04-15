@@ -489,10 +489,10 @@
             }
         }
     },
-    "Neuronal Ceroid Lipofuscinosis : CLN3 Is The Most Common": {
+    "Neuronal Ceroid Lipofuscinosis": {
         "query": {
             "query_string": {
-                "query": "note:\"Neuronal Ceroid Lipofuscinosis : CLN3 Is The Most Common\""
+                "query": "note:\"Neuronal Ceroid Lipofuscinosis\" OR note:\"Batten disease\" OR note:\"Batten-Mayou disease\" OR note:\"Batten Mayou disease\" OR note:\"Ceroid lipofuscinosis, neuronal\" OR note:\"Batten-Spielmeyer-Vogt disease\" OR note:\"Batten Spielmeyer Vogt disease\" OR note:\"neuronal ceroid-lipofuscinosis\" OR note:\"Juvenile cerebroretinal degeneration\" OR note:\"Spielmeyer-Vogt disease\" OR note:\"Lipid storage myoclonus syndrome\""
             }
         }
     },
@@ -674,7 +674,7 @@
     "Mccune Albright Syndrome": {
         "query": {
             "query_string": {
-                "query": "note:\"GNAS Mutation\" OR note:\"McCune Albright syndrome\" OR note:\"McCune-Albright syndrome\" OR note:\"Mccune Albright Syndrome\" OR note:\"Polyostotic fibrous dysplasia with endocrine dysfunction and caf\u00e9 au lait spots\" OR note:\"Polyostotic fibrous dysplasia with endocrine dysfunction and caf\u00e9-au-lait spots\" OR note:\"gnas gene mutation\" OR note:\"gnas pathogenic\" OR note:\"gnas variant\""
+                "query": "note:\"McCune Albright syndrome\" OR note:\"McCune-Albright syndrome\" OR note:\"Mccune Albright Syndrome\" OR note:\"Polyostotic fibrous dysplasia with endocrine dysfunction and cafe au lait spots\" OR note:\"Polyostotic fibrous dysplasia with endocrine dysfunction and cafe-au-lait spots\""
             }
         }
     },

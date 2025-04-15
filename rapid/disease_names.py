@@ -5,8 +5,8 @@ from rapid import filetool
 from rapid import naming
 from rapid.filetool import DISEASES_CSV
 
-def list_tables() -> List[str]:
-    return [naming.name_table(disease) for disease in list_unique()]
+def list_cohorts() -> List[str]:
+    return [naming.name_cohort(disease) for disease in list_unique()]
 
 def list_files() -> List[str]:
     return [naming.name_file(disease) for disease in list_unique()]

@@ -9,7 +9,7 @@ from rapid import elastic_helper
 ###############################################################################
 # Pipeline for a single rare-disease disease query
 ###############################################################################
-def pipe_query(disease, query: str | List[str]) -> List[Path]:
+def pipe_query(disease, query: str | List[str]) -> Path:
     """
     :param disease: example "Sanfilippo syndrome"
     :param query: str prepared KQL query, List[str] synonyms to prepare KQL query for you.
@@ -19,7 +19,7 @@ def pipe_query(disease, query: str | List[str]) -> List[Path]:
 
     if filetool.output(f'{disease}.csv').exists() or filetool.output(f'{disease}.csv.gz').exists():
         print(f'"{disease}" already processed')
-        return filetool.list_output(disease)
+        return filetool.output(f'{disease}.csv')
     else:
         print(f'"{disease}" processing')
 
@@ -44,12 +44,12 @@ def pipe_query(disease, query: str | List[str]) -> List[Path]:
     print(f'{len(entry_list)} entries processed')
 
     output_csv = elastic_helper.ElasticHit.list_to_csv(entry_list)
-    output_json = {'request': query,
-                   'total': len(all_hits),
-                   'hits': [e.as_json() for e in entry_list]}
+    # output_json = {'request': query,
+    #                'total': len(all_hits),
+    #                'hits': [e.as_json() for e in entry_list]}
 
-    return [filetool.write_json(output_json, filetool.output(f'{disease}.json')),
-            filetool.write_text(output_csv, filetool.output(f'{disease}.csv'))]
+    return filetool.write_text(output_csv,
+                               filetool.output(f'{disease}.csv'))
 
 ###############################################################################
 # Pipeline using file of saved disease names
@@ -69,7 +69,7 @@ def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]
     print("Begin: ", timestamp.datetime_str(_pipe_begin))
 
     for disease, keyword_list in disease_dict.items():
-        file_list += pipe_query(disease, keyword_list)
+        file_list.append(pipe_query(disease, keyword_list))
         print(f'Progress= {len(file_list)} / {num_disease}')
 
     _pipe_done = timestamp.datetime.now()
@@ -84,4 +84,4 @@ def pipe_file(disease_filename_json='disease_names_expanded.json') -> List[Path]
 #
 ###############################################################################
 if __name__ == "__main__":
-    pipe_file('disease_names_legacy.json')
+    pipe_file('disease_names_expanded.json')
