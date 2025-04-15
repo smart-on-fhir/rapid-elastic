@@ -6,6 +6,26 @@ from rapid import disease_names
 
 class TestDiseaseNames(unittest.TestCase):
 
+    def test_table_alias(self):
+        """
+        Testing LLM initial selection
+        """
+        expected = sorted([
+            'noonan_syndrome',
+            'carbamoyl_phosphate_synthetase_i_deficiency',
+            'beckwith_wiedemann_syndrome',
+            'pompe_disease',
+            'angelman_syndrome'])
+
+        actual = naming.name_table_alias([
+            'Noonan syndrome',
+            'Carbamoyl phosphate synthetase I deficiency(CPS1)',
+            'Beckwith-Wiedemann syndrome',
+            'Pompe disease(infantile)',
+            'Angelman syndrome'])
+
+        self.assertEqual(sorted(expected), sorted(actual))
+
     def test_unique(self):
         """
         Test that CSV input sheets are mapped in `disease_names_expanded.json`

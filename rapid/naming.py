@@ -24,11 +24,10 @@ def name_rapid(table: list | str) -> list | str:
         return f'rapid__{table}'
 
 def name_table_alias(table: list | str) -> list | str:
-    table = name_file(table).lower()
     if isinstance(table, list):
-        return [table for table in list(set(table))]
+        return sorted([name_table_alias(t) for t in table])
     else:
-        return table
+        return name_file(table).lower()
 
 ###############################################################################
 # Disease Names
@@ -54,7 +53,7 @@ def name_file(disease: str, extension=None):
     :param extension: optional file extension
     :return: str filename prepared
     """
-    disease = name_unique(disease).strip()
+    disease = name_unique(disease)
     for sep in [' ', '/', '-', '.']:
         disease = disease.replace(sep, '_')
     if extension:
