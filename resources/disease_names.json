@@ -194,20 +194,9 @@
         "Leigh like syndrome",
         "Leigh syndrome",
         "Leigh's disease",
-        "MT ATP6 Mutation",
-        "MT-ATP6 Mutation",
         "Mitochondrial complex I/IV Deficiency",
         "Mitochondrial encephalopathy with basal ganglia lesions",
-        "NDUFS1 Mutation",
-        "NDUFV1 Mutation",
-        "PDHA1 Deficiency",
-        "Subacute necrotizing encephalomyelopathy",
-        "MT-ATP6 Pathogenic",
-        "MT-ATP6 Variant",
-        "NDUFS1 Pathogenic",
-        "NDUFS1 Variant",
-        "NDUFV1 Pathogenic",
-        "NDUFV1 Variant"
+        "Subacute necrotizing encephalomyelopathy"
     ],
     "Pompe Disease": [
         "Acid Alpha Glucosidase Deficiency",
@@ -875,10 +864,19 @@
         "USH3 Variant"
     ],
     "Leber Congenital Amaurosis": [
-        "Leber Congenital Amaurosis"
+        "Leber congenital amaurosis",
+        "LCA",
+        "Congenital amaurosis of Leber",
+        "Early-onset severe retinal dystrophy",
+        "EOSRD"
     ],
     "Achromatopsia": [
-        "Achromatopsia"
+        "Achromatopsia",
+        "Total color blindness",
+        "Rod monochromacy",
+        "Complete achromatopsia",
+        "CNGA3 mutation",
+        "CNGB3 mutation"
     ],
     "Primary Ciliary Dyskinesia": [
         "ARMC4 Mutation",
@@ -909,16 +907,41 @@
         "CFTR Mutation"
     ],
     "Pediatric Bronchiectasis": [
-        "Pediatric Bronchiectasis"
+        "Pediatric Bronchiectasis",
+        "Bronchiectasis in childhood",
+        "Childhood-onset bronchiectasis",
+        "Bronchiectasis in children",
+        "Recurrent wet cough with airway dilation",
+        "Chronic suppurative lung disease"
     ],
     "Childhood Interstitial Lung Disease": [
-        "Childhood Interstitial Lung Disease"
+        "Childhood Interstitial Lung Disease",
+        "Childhood ILD",
+        "Pediatric ILD",
+        "Pediatric interstitial lung disease",
+        "Interstitial lung disease of childhood",
+        "Interstitial lung disease in childhood",
+        "Pediatric interstitial lung disease"
     ],
     "Pediatric Pulmonary Hypertension": [
-        "Pediatric Pulmonary Hypertension"
+        "Pediatric pulmonary hypertension",
+        "Childhood pulmonary hypertension",
+        "Pulmonary arterial hypertension in infancy",
+        "Pulmonary hypertension of the newborn",
+        "Persistent pulmonary hypertension of the newborn",
+        "PPHN",
+        "BMPR2 mutation"
     ],
     "Surfactant Protein Deficiencies": [
-        "Surfactant Protein Deficiencies"
+        "Surfactant protein deficiency",
+        "Surfactant dysfunction disorder",
+        "Congenital surfactant metabolism dysfunction",
+        "Hereditary surfactant deficiency",
+        "Neonatal surfactant deficiency",
+        "Surfactant metabolism dysfunction",
+        "Interstitial lung disease due to surfactant",
+        "ILD due to surfactant",
+        "ABCA3 deficiency"
     ],
     "Alport Syndrome": [
         "Alport syndrome",
@@ -938,6 +961,9 @@
     "Autosomal Recessive Polycystic Kidney Disease": [
         "Autosomal Recessive Polycystic Kidney Disease",
         "ARPKD",
+        "ARPKD1",
+        "AR-PKD",
+        "AR-PKD1",
         "Infantile Polycystic Kidney Disease",
         "PKHD1 Mutation",
         "Polycystic Kidney and Hepatic Disease Type 1",
@@ -946,49 +972,123 @@
         "PKHD1 Variant"
     ],
     "Nephronophthisis": [
-        "Nephronophthisis"
+        "Autosomal dominant tubulointerstitial kidney disease\n",
+        "Juvenile Nephronophthisis",
+        "Familial juvenile hyperuricemic nephropathy",
+        "ADTKD",
+        "MCKD",
+        "Medullary cystic kidney disease",
+        "NPHP"
     ],
     "Gitelman Syndrome": [
-        "Gitelman Syndrome"
+        "Gitelman syndrome",
+        "Gitelman’s syndrome",
+        "Familial hypokalemia-hypomagnesemia",
+        "Salt-losing tubulopathy, Gitelman",
+        "Hypokalemic metabolic alkalosis with hypomagnesemia and hypocalciuria",
+        "SLC12A3 Mutation"
     ],
     "Cystinuria": [
-        "Cystinuria"
+        "Cystinuria",
+        "Cystinuria-lysinuria",
+        "Cystine stone disease",
+        "Hereditary cystine urolithiasis",
+        "Inherited cystinuria",
+        "SLC3A1 Mutation",
+        "SLC7A9 Mutation"
     ],
     "Systemic-Onset Juvenile Idiopathic Arthritis": [
-        "Systemic-Onset Juvenile Idiopathic Arthritis"
+        "Systemic-Onset Juvenile Idiopathic Arthritis",
+        "Systemic-onset JIA",
+        "Still disease",
+        "Still’s disease",
+        "Systemic-onset juvenile idiopathic arthritis",
+        "Systemic juvenile idiopathic arthritis",
+        "SJIA",
+        "Systemic JIA",
+        "Juvenile rheumatoid arthritis, systemic onset",
+        "Systemic juvenile chronic arthritis"
     ],
     "Opsoclonus-Myoclonus Syndrome": [
-        "Opsoclonus-Myoclonus Syndrome"
+        "Opsoclonus-Myoclonus Syndrome",
+        "Ataxo-opso-myoclonus syndrome",
+        "Dancing eye syndrome",
+        "Dancing eye-dancing feet syndrome",
+        "Kinsbourne syndrome",
+        "OMA syndrome",
+        "Opsoclonus-myoclonus-ataxia syndrome",
+        "POMA syndrome",
+        "Paraneoplastic opsoclonus-myoclonus",
+        "Paraneoplastic opsoclonus-myoclonus-ataxia syndrome"
     ],
     "Neurodegeneration-Spasticity-Cerebellar Atrophy-Cortical Visual Impairment Syndrome": [
-        "Neurodegeneration-Spasticity-Cerebellar Atrophy-Cortical Visual Impairment Syndrome"
+        "Neurodegeneration-Spasticity-Cerebellar Atrophy-Cortical Visual Impairment Syndrome",
+        "NESCAV syndrome",
+        "NESCAV"
     ],
     "Hereditary Hemorrhagic Telangiectasia": [
-        "Hereditary Hemorrhagic Telangiectasia"
+        "Hereditary Hemorrhagic Telangiectasia",
+        "Rendu-Osler disease",
+        "Rendu-Osler-Weber disease",
+        "Osler-Weber-Rendu syndrome",
+        "Osler-Rendu-Weber disease"
     ],
     "Loeys-Dietz Syndrome": [
-        "Loeys-Dietz Syndrome"
+        "Loeys-Dietz Syndrome",
+        "LDS type 1",
+        "LDS type 2",
+        "Aneurysm-osteoarthritis syndrome",
+        "LDS with craniosynostosis"
     ],
     "Pseudohypoparathyroidism Type 1A": [
-        "Pseudohypoparathyroidism Type 1A"
+        "Pseudohypoparathyroidism Type 1A",
+        "AHO-PHP syndrome Ia",
+        "Albright hereditary osteodystrophy-PHP syndrome Ia",
+        "PHP1A",
+        "Pseudohypoparathyroidism Ia",
+        "Pseudohypoparathyroidism 1a",
+        "Albright hereditary osteodystrophy with hormone resistance",
+        "AHO with multihormone resistance",
+        "GNAS Mutation"
     ],
     "Mccune Albright Syndrome": [
-        "Mccune Albright Syndrome"
+        "Mccune Albright Syndrome",
+        "McCune-Albright syndrome",
+        "Polyostotic fibrous dysplasia with endocrine dysfunction and café-au-lait spots",
+        "GNAS Mutation"
     ],
     "Flna-Related X-Linked Myxomatous Valvular Dysplasia": [
-        "Flna-Related X-Linked Myxomatous Valvular Dysplasia"
+        "FLNA-related X-linked myxomatous valvular dysplasia",
+        "X-linked myxomatous valvular dysplasia",
+        "Familial valvular dysplasia due to FLNA mutation"
     ],
     "Melnick-Needles Osteodysplasty": [
-        "Melnick-Needles Osteodysplasty"
+        "Melnick-Needles Osteodysplasty",
+        "Melnick-Needles syndrome",
+        "Melnick–Needles dysostosis",
+        "Melnick-Needles type osteodysplasia"
     ],
     "Otopalataldigital Syndrome Type 1": [
-        "Otopalataldigital Syndrome Type 1"
+        "Otopalataldigital Syndrome Type 1",
+        "OPD1",
+        "Oto-palato-digital syndrome type I",
+        "Otopalatodigital dysplasia type 1"
     ],
     "Otopalataldigital Syndrome Type 2": [
-        "Otopalataldigital Syndrome Type 2"
+        "Otopalataldigital Syndrome Type 2",
+        "OPD II syndrome",
+        "OPD syndrome II",
+        "OPD syndrome 2",
+        "Otopalatodigital syndrome type 2",
+        "OPD2",
+        "Oto-palato-digital syndrome type II",
+        "Otopalatodigital dysplasia type 2",
+        "X-linked otopalatodigital syndrome 2"
     ],
     "Bannayan-Riley-Ruvalcaba Syndrome": [
-        "Bannayan-Riley-Ruvalcaba Syndrome"
+        "Bannayan-Riley-Ruvalcaba Syndrome",
+        "Bannayan-Zonana syndrome",
+        "Bannayan-Ruvalcaba-Riley syndrome"
     ],
     "Cowden Syndrome/Multiple Hamartoma Syndrome": [
         "Cowden Syndrome/Multiple Hamartoma Syndrome"
