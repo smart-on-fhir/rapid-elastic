@@ -1091,6 +1091,49 @@
         "Bannayan-Ruvalcaba-Riley syndrome"
     ],
     "Cowden Syndrome/Multiple Hamartoma Syndrome": [
-        "Cowden Syndrome/Multiple Hamartoma Syndrome"
+        "Multiple Hamartoma Syndrome",
+        "Cowden syndrome",
+        "Cowden disease",
+        "Cowden type"
+    ],
+    "Steinert myotonic dystrophy": [
+        "Steinert myotonic dystrophy",
+        "Steinert disease",
+        "Congenital-onset Steinert",
+        "Congenital-onset Steinert",
+        "Congenital-onset myotonic dystrophy type 1",
+        "Childhood-onset Steinert",
+        "Juvenile-onset Steinert",
+        "Myotonic dystrophy type 1",
+        "DM1",
+        "Dystrophia myotonica type 1",
+        "Classic myotonic dystrophy",
+        "Congenital myotonic dystrophy"
+    ],
+    "Smith-Magenis syndrome": [
+        "Smith-Magenis syndrome",
+        "17p11.2 microdeletion",
+        "RAI1 mutation"
+    ],
+    "Barth syndrome": [
+        "Barth syndrome",
+        "3-methylglutaconic aciduria type 2",
+        "3-methylglutaconic aciduria, type II",
+        "BTHS",
+        "Cardioskeletal myopathy with neutropenia",
+        "Tafazzin deficiency",
+        "TAFAZZIN Mutation",
+        "TAZ Mutation"
+    ],
+    "Rubinstein-Taybi Syndrome": [
+        "Broad Thumb Hallux Syndrome",
+        "Broad Thumb-Hallux Syndrome",
+        "CREBBP Mutation",
+        "CREBBP Variant",
+        "Rubinstein Taybi syndrome",
+        "Rubinstein-Taybi syndrome",
+        "CREBBP Mutation",
+        "CREBBP Pathogenic",
+        "CREBBP Variant"
     ]
 }

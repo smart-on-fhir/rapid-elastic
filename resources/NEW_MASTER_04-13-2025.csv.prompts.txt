@@ -10,15 +10,15 @@ What are the EHR search terms of "Moebius Syndrome"?
 What are the EHR search terms of "Epidermolysis Bullosa"? 
 What are the EHR search terms of "Medium-Chain Acyl-Coa Dehydrogenase Deficiency"? 
 What are the EHR search terms of "Carbamoyl Phosphate Synthetase I Deficiency"? 
-What are the EHR search terms of "Glutaric Aciduria Type¬†I"? 
+What are the EHR search terms of "Glutaric Aciduria Type"? 
 What are the EHR search terms of "Salla Disease"? 
 What are the EHR search terms of "Wilson Disease"? 
 What are the EHR search terms of "Menkes Disease"? 
 What are the EHR search terms of "X-Linked Adrenoleukodystrophy"? 
 What are the EHR search terms of "Leigh Syndrome"? 
 What are the EHR search terms of "Pompe Disease"? 
-What are the EHR search terms of "Hurler Syndrome"? 
-What are the EHR search terms of "Sanfilippo Syndrome"? 
+What are the EHR search terms of "Mucopolysaccharidosis Type1"? 
+What are the EHR search terms of "Mucopolysaccharidosis Type III"? 
 What are the EHR search terms of "Smith-Lemli-Opitz Syndrome"? 
 What are the EHR search terms of "Cystinosis"? 
 What are the EHR search terms of "Isolated Growth Hormone Deficiency"? 
@@ -42,7 +42,7 @@ What are the EHR search terms of "X-Linked Agammaglobulinemia"?
 What are the EHR search terms of "Familial Hemophagocytic Lymphohistiocytosis"? 
 What are the EHR search terms of "Severe Combined Immunodeficiency"? 
 What are the EHR search terms of "CHARGE Syndrome"? 
-What are the EHR search terms of "VACTERL/VATER Association Association"? 
+What are the EHR search terms of "VACTERL/VATER Association"? 
 What are the EHR search terms of "Bardet-Biedl Syndrome"? 
 What are the EHR search terms of "Stickler Syndrome"? 
 What are the EHR search terms of "Sensenbrenner Syndrome"? 
@@ -52,7 +52,7 @@ What are the EHR search terms of "Ehlers-Danlos Syndrome"?
 What are the EHR search terms of "Ullrich Congenital Muscular Dystrophy"? 
 What are the EHR search terms of "Cleidocranial Dysplasia"? 
 What are the EHR search terms of "Pompe Disease"? 
-What are the EHR search terms of "Pitt Hopkins Syndrome"? 
+What are the EHR search terms of "Pitt-Hopkins Syndrome"? 
 What are the EHR search terms of "Rett Syndrome"? 
 What are the EHR search terms of "Angelman Syndrome"? 
 What are the EHR search terms of "Dravet Syndrome"? 
@@ -105,3 +105,8 @@ What are the EHR search terms of "Otopalataldigital Syndrome Type 1"?
 What are the EHR search terms of "Otopalataldigital Syndrome Type 2"? 
 What are the EHR search terms of "Bannayan-Riley-Ruvalcaba Syndrome"? 
 What are the EHR search terms of "Cowden Syndrome/Multiple Hamartoma Syndrome"? 
+What are the EHR search terms of "Steinert Myotonic Dystrophy"? 
+What are the EHR search terms of "Smith-Magenis Syndrome"? 
+What are the EHR search terms of "Barth Syndrome"? 
+What are the EHR search terms of "Alport Syndrome"? 
+What are the EHR search terms of "Rubinstein-Taybi Syndrome"? 
