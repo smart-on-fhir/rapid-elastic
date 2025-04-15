@@ -1,9 +1,9 @@
 import unittest
-import unittest
 from rapid import filetool
 from rapid import naming
 from rapid import disease_icd10
 from rapid import disease_names
+from rapid import sql_compare
 
 
 class TestDeprecated(unittest.TestCase):
@@ -43,3 +43,13 @@ class TestDeprecated(unittest.TestCase):
                 print(f'{curated} (not found!)')
         print(f'{len(legacy.keys())} matches found')
         filetool.write_json(legacy, filetool.resource('disease_names_legacy.json'))
+
+    @unittest.skip('rapid__codeset.sql')
+    def test_union_views_codeset_icd10(self):
+        tables_list = [t.replace('.csv', '') for t in filetool.DEPRECATED_CSV_LIST]
+        tables_list = [naming.name_cohort(f'codeset_{t}') for t in tables_list]
+        print(sql_compare.union_views_file(
+            create='rapid__codeset',
+            table_list=tables_list,
+            create_table=True,
+            alias_col='source_csv'))

@@ -89,8 +89,7 @@ def csv_to_sql(filename_csv: str) -> Path:
     :param filename_csv: read disease_csv: downloaded spreadsheet.csv file
     :return: Path to SQL file
     """
-    table = 'codeset_' + filename_csv.replace('.csv', '')
-    table = naming.name_rapid(table)
+    table = 'rapid__codeset'
     entries = list_entries(filename_csv)
     sql = list_to_sql(table, entries)
     return Path(filetool.write_text(sql, filetool.resource(f'{table}.sql')))
