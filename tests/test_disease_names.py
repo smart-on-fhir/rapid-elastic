@@ -48,7 +48,7 @@ class TestDiseaseNames(unittest.TestCase):
         print(f'{len(legacy.keys())} matches found')
         filetool.write_json(legacy, filetool.resource('disease_names_legacy.json'))
 
-    # @unittest.skip('disease_names.json')
+    @unittest.skip('disease_names.json')
     def test_update(self):
         disease_list = disease_names.list_unique(filetool.DISEASES_CSV)
         legacy_json = filetool.read_json(filetool.deprecated('disease_names_expanded.json'))

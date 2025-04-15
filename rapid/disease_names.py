@@ -44,6 +44,15 @@ def map_spellings() -> dict:
 
 ###############################################################################
 # Synonyms
+#
+# You are a helpful assistant curating a list of synonyms of rare diseases to search for in electronic health records.
+# I will ask you about synonyms of rare disease names.
+# Please use synonyms names from trusted biomedical knowledge sources,
+# especially OrphaNet, Mondo Disease Ontology,
+# US National Library of medicine sources (such as GeneReviews, ClinVar, and MedGen medical genetics),
+# or the Unified Medical Language system.
+# Please also list any genetic mutation search terms that definitively cause the disease.
+#
 ###############################################################################
 def prompt_llm_synonyms(diseases_csv=DISEASES_CSV) -> Path:
     """
@@ -51,6 +60,7 @@ def prompt_llm_synonyms(diseases_csv=DISEASES_CSV) -> Path:
         "What are the EHR search terms in clinical note text for exact synonyms of "$disease"
         "What are the EHR search terms in clinical note text for exact synonyms of "$disease""
         "What are the EHR search terms of "$disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.'
+        "What are the EHR search terms for
 
     HUMAN curation by Andy was performed for all diseases, considerable HOURS of careful consideration.
     DO not change the synonyms list unless you are very sure you are fixing a known false positive or false negative hit!
@@ -59,7 +69,7 @@ def prompt_llm_synonyms(diseases_csv=DISEASES_CSV) -> Path:
     for disease in list_unique(diseases_csv):
         # out.append(f'What are the EHR search terms in clinical note text for exact synonyms of "{disease}"?')
         prompt = f'What are the EHR search terms of "{disease}"? '
-        prompt += f'Respond with JSON where the key is "synonym" or "related" and the values are a list.'
+        # prompt += f'Respond with JSON where the key is "synonym" or "related" and the values are a list.'
         out.append(prompt)
     out = '\n'.join(out)
     return filetool.write_text(out, filetool.resource(f'{diseases_csv}.prompts.txt'))

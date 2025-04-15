@@ -1,0 +1,107 @@
+What are the EHR search terms of "Noonan Syndrome"? 
+What are the EHR search terms of "Williams Syndrome"? 
+What are the EHR search terms of "22Q11.2 Deletion Syndrome"? 
+What are the EHR search terms of "Heterotaxy Syndrome"? 
+What are the EHR search terms of "Marfan Syndrome"? 
+What are the EHR search terms of "Arterial Tortuosity Syndrome"? 
+What are the EHR search terms of "Alagille Syndrome"? 
+What are the EHR search terms of "Treacher Collins Syndrome"? 
+What are the EHR search terms of "Moebius Syndrome"? 
+What are the EHR search terms of "Epidermolysis Bullosa"? 
+What are the EHR search terms of "Medium-Chain Acyl-Coa Dehydrogenase Deficiency"? 
+What are the EHR search terms of "Carbamoyl Phosphate Synthetase I Deficiency"? 
+What are the EHR search terms of "Glutaric Aciduria Type¬†I"? 
+What are the EHR search terms of "Salla Disease"? 
+What are the EHR search terms of "Wilson Disease"? 
+What are the EHR search terms of "Menkes Disease"? 
+What are the EHR search terms of "X-Linked Adrenoleukodystrophy"? 
+What are the EHR search terms of "Leigh Syndrome"? 
+What are the EHR search terms of "Pompe Disease"? 
+What are the EHR search terms of "Hurler Syndrome"? 
+What are the EHR search terms of "Sanfilippo Syndrome"? 
+What are the EHR search terms of "Smith-Lemli-Opitz Syndrome"? 
+What are the EHR search terms of "Cystinosis"? 
+What are the EHR search terms of "Isolated Growth Hormone Deficiency"? 
+What are the EHR search terms of "Beckwith-Wiedemann Syndrome"? 
+What are the EHR search terms of "Prader-Willi Syndrome"? 
+What are the EHR search terms of "Russell-Silver Syndrome"? 
+What are the EHR search terms of "Congenital Hyperinsulinism"? 
+What are the EHR search terms of "Hirschsprung Disease"? 
+What are the EHR search terms of "Biliary Atresia"? 
+What are the EHR search terms of "Alagille Syndrome"? 
+What are the EHR search terms of "Shwachman-Diamond Syndrome"? 
+What are the EHR search terms of "Alpha-1 Antitrypsin Deficiency"? 
+What are the EHR search terms of "Chronic Intestinal Pseudo-Obstruction"? 
+What are the EHR search terms of "Fanconi Anemia"? 
+What are the EHR search terms of "Diamond-Blackfan Anemia"? 
+What are the EHR search terms of "Hemophilia A"? 
+What are the EHR search terms of "Beta Thalassemia Major"? 
+What are the EHR search terms of "Chronic Granulomatous Disease"? 
+What are the EHR search terms of "Wiskott-Aldrich Syndrome"? 
+What are the EHR search terms of "X-Linked Agammaglobulinemia"? 
+What are the EHR search terms of "Familial Hemophagocytic Lymphohistiocytosis"? 
+What are the EHR search terms of "Severe Combined Immunodeficiency"? 
+What are the EHR search terms of "CHARGE Syndrome"? 
+What are the EHR search terms of "VACTERL/VATER Association Association"? 
+What are the EHR search terms of "Bardet-Biedl Syndrome"? 
+What are the EHR search terms of "Stickler Syndrome"? 
+What are the EHR search terms of "Sensenbrenner Syndrome"? 
+What are the EHR search terms of "Pseudoachondroplasia"? 
+What are the EHR search terms of "Osteogenesis Imperfecta"? 
+What are the EHR search terms of "Ehlers-Danlos Syndrome"? 
+What are the EHR search terms of "Ullrich Congenital Muscular Dystrophy"? 
+What are the EHR search terms of "Cleidocranial Dysplasia"? 
+What are the EHR search terms of "Pompe Disease"? 
+What are the EHR search terms of "Pitt Hopkins Syndrome"? 
+What are the EHR search terms of "Rett Syndrome"? 
+What are the EHR search terms of "Angelman Syndrome"? 
+What are the EHR search terms of "Dravet Syndrome"? 
+What are the EHR search terms of "Lennox-Gastaut Syndrome"? 
+What are the EHR search terms of "Juvenile Myoclonic Epilepsy"? 
+What are the EHR search terms of "1P36 Deletion Syndrome"? 
+What are the EHR search terms of "16P11.2 Microdeletion Syndrome"? 
+What are the EHR search terms of "Kabuki Syndrome"? 
+What are the EHR search terms of "Tuberous Sclerosis Complex"? 
+What are the EHR search terms of "Neurofibromatosis Type 1"? 
+What are the EHR search terms of "Friedreich Ataxia"? 
+What are the EHR search terms of "Ataxia-Telangiectasia"? 
+What are the EHR search terms of "Spinal Muscular Atrophy"? 
+What are the EHR search terms of "Duchenne Muscular Dystrophy"? 
+What are the EHR search terms of "Sturge-Weber Syndrome"? 
+What are the EHR search terms of "Hereditary Neuropathy With Liability To Pressure Palsies"? 
+What are the EHR search terms of "Aicardi Syndrome"? 
+What are the EHR search terms of "Neuronal Ceroid Lipofuscinosis : CLN3 Is The Most Common"? 
+What are the EHR search terms of "Fragile X Syndrome"? 
+What are the EHR search terms of "Joubert Syndrome"? 
+What are the EHR search terms of "X-Linked Adrenoleukodystrophy"? 
+What are the EHR search terms of "Prader-Willi Syndrome"? 
+What are the EHR search terms of "Cog8-Congenital Disorders Of Glycosylation"? 
+What are the EHR search terms of "Transaldolase Deficiency"? 
+What are the EHR search terms of "Stargardt Disease"? 
+What are the EHR search terms of "Usher Syndrome"? 
+What are the EHR search terms of "Leber Congenital Amaurosis"? 
+What are the EHR search terms of "Achromatopsia"? 
+What are the EHR search terms of "Primary Ciliary Dyskinesia"? 
+What are the EHR search terms of "Cystic Fibrosis"? 
+What are the EHR search terms of "Pediatric Bronchiectasis"? 
+What are the EHR search terms of "Childhood Interstitial Lung Disease"? 
+What are the EHR search terms of "Pediatric Pulmonary Hypertension"? 
+What are the EHR search terms of "Surfactant Protein Deficiencies"? 
+What are the EHR search terms of "Alport Syndrome"? 
+What are the EHR search terms of "Autosomal Recessive Polycystic Kidney Disease"? 
+What are the EHR search terms of "Nephronophthisis"? 
+What are the EHR search terms of "Gitelman Syndrome"? 
+What are the EHR search terms of "Cystinuria"? 
+What are the EHR search terms of "Systemic-Onset Juvenile Idiopathic Arthritis"? 
+What are the EHR search terms of "Opsoclonus-Myoclonus Syndrome"? 
+What are the EHR search terms of "Neurodegeneration-Spasticity-Cerebellar Atrophy-Cortical Visual Impairment Syndrome"? 
+What are the EHR search terms of "Hereditary Hemorrhagic Telangiectasia"? 
+What are the EHR search terms of "Loeys-Dietz Syndrome"? 
+What are the EHR search terms of "Pseudohypoparathyroidism Type 1A"? 
+What are the EHR search terms of "Mccune Albright Syndrome"? 
+What are the EHR search terms of "Flna-Related X-Linked Myxomatous Valvular Dysplasia"? 
+What are the EHR search terms of "Melnick-Needles Osteodysplasty"? 
+What are the EHR search terms of "Otopalataldigital Syndrome Type 1"? 
+What are the EHR search terms of "Otopalataldigital Syndrome Type 2"? 
+What are the EHR search terms of "Bannayan-Riley-Ruvalcaba Syndrome"? 
+What are the EHR search terms of "Cowden Syndrome/Multiple Hamartoma Syndrome"? 

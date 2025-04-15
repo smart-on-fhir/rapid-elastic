@@ -1,6 +1,7 @@
 {
     "Noonan Syndrome": [
         "Noonan Syndrome",
+        "Male Turner syndrome",
         "RAS MAPK",
         "RAS-MAPK",
         "PTPN11 Mutation",
@@ -43,7 +44,7 @@
         "22q11.2 Mutation",
         "22q11.2 Pathogenic",
         "22q11.2DS",
-        "CATCH22",
+        "CATCH22 syndrome",
         "Conotruncal Anomaly Face Syndrome",
         "Deletion 22q11.2 Syndrome",
         "DiGeorge Syndrome",
@@ -64,7 +65,7 @@
         "Polysplenia syndrome",
         "Right atrial isomerism",
         "Situs ambiguous",
-        "Situs ambiguous"
+        "Situs ambiguus"
     ],
     "Marfan Syndrome": [
         "FBN1 Mutation",
@@ -78,40 +79,70 @@
         "fibrillin-1 Variant"
     ],
     "Arterial Tortuosity Syndrome": [
-        "Arterial Tortuosity Syndrome"
+        "Arterial Tortuosity Syndrome",
+        "SLC2A10 mutation"
     ],
     "Alagille Syndrome": [
-        "Alagille Syndrome"
+        "Alagille Syndrome",
+        "Arteriohepatic dysplasia",
+        "Watson-Miller syndrome",
+        "Syndromic bile duct paucity",
+        "JAG1 mutation"
     ],
     "Treacher Collins Syndrome": [
-        "Treacher Collins Syndrome"
+        "Treacher Collins Syndrome",
+        "Mandibulofacial dysostosis",
+        "Franceschetti-Zwahlen-Klein syndrome",
+        "Treacher Collins-Franceschetti syndrome",
+        "Franceschetti-Klein syndrome",
+        "TCOF1 mutation"
     ],
     "Moebius Syndrome": [
-        "Moebius Syndrome"
+        "Moebius Syndrome",
+        "Möbius syndrome",
+        "Congenital facial diplegia",
+        "Congenital facial palsy-abducens palsy syndrome"
     ],
     "Epidermolysis Bullosa": [
-        "Epidermolysis Bullosa"
+        "Epidermolysis Bullosa",
+        "Junctional EB",
+        "EB simplex",
+        "Dystrophic EB",
+        "Kindler EB",
+        "Kindler syndrome",
+        "Poikiloderma of Kindler",
+        "Congenital bullous poikiloderma"
     ],
     "Medium-Chain Acyl-Coa Dehydrogenase Deficiency": [
         "ACADM Deficiency",
         "MCAD Deficiency",
         "MCADD",
+        "Carnitine deficiency secondary to medium-chain acyl-CoA dehydrogenase deficiency",
         "Medium Chain Acyl CoA Dehydrogenase Deficiency",
         "Medium Chain Acyl Coenzyme A Dehydrogenase Deficiency",
         "Medium-Chain Acyl-CoA Dehydrogenase Deficiency",
         "Medium-Chain Acyl-Coenzyme A Dehydrogenase Deficiency",
-        "ACADM Mutation"
+        "ACADM Mutation",
+        "c.985A>G (K304E)"
     ],
     "Carbamoyl Phosphate Synthetase I Deficiency": [
         "CPS1 Deficiency",
+        "CPS1D",
         "Carbamoyl Phosphate Synthase 1 Deficiency",
         "Carbamoyl Phosphate Synthase I Deficiency",
         "Carbamoyl phosphate synthetase I Deficiency",
         "Carbamoyl-Phosphate Synthase 1 Deficiency",
         "Carbamoylphosphate Synthetase I Deficiency"
     ],
-    "Glutaric Aciduria Type\u00ac\u2020I": [
-        "Glutaric Aciduria Type\u00ac\u2020I"
+    "Glutaric Aciduria Type I": [
+        "Glutaric aciduria type I",
+        "Glutaric acidemia type I",
+        "GA-I",
+        "Glutaricaciduria type I",
+        "Glutaricaciduria I",
+        "Glutaric acidemia I",
+        "Glutaric aciduria, type I",
+        "GCDH Mutation"
     ],
     "Salla Disease": [
         "Elevated free sialic acid",
@@ -123,10 +154,14 @@
         "Salla syndrome",
         "sialic acid storage disorder",
         "SLC17A5 Pathogenic",
-        "SLC17A5 Variant"
+        "SLC17A5 Variant",
+        "c.115C>T (p.R39C)"
     ],
     "Wilson Disease": [
-        "Wilson Disease"
+        "Wilson Disease",
+        "Wilson's Disease",
+        "Hepatolenticular degeneration",
+        "c.3207C>A (p.H1069Q)"
     ],
     "Menkes Disease": [
         "Trichopoliodystrophy",
@@ -159,7 +194,6 @@
         "Leigh like syndrome",
         "Leigh syndrome",
         "Leigh's disease",
-        "Leigh-like syndrome",
         "MT ATP6 Mutation",
         "MT-ATP6 Mutation",
         "Mitochondrial complex I/IV Deficiency",
@@ -193,15 +227,30 @@
     "Hurler Syndrome": [
         "Hurler Syndrome",
         "Mucopolysaccharidosis Type I H",
+        "Mucopolysaccharidosis Type IH",
         "Alpha-L-iduronidase Deficiency",
         "IDUA Deficiency",
         "MPS I H",
-        "MPS I-H"
+        "MPS I-H",
+        "MPS1H",
+        "MPSIH",
+        "p.W402X",
+        "p.Q70X"
     ],
     "Sanfilippo Syndrome": [
         "Sanfilippo Syndrome",
         "Heparan sulfate degradation disorder",
+        "Heparan sulfamidase deficiency",
         "Mucopolysaccharidosis Type III",
+        "Mucopolysaccharidosis Type IIIA",
+        "Mucopolysaccharidosis Type IIID",
+        "Mucopolysaccharidosis Type 3",
+        "Mucopolysaccharidosis Type 3A",
+        "Mucopolysaccharidosis Type 3D",
+        "MPS3A",
+        "MPS 3A",
+        "MPS3D",
+        "MPS 3D",
         "MPS III",
         "MPS IIIA",
         "MPS IIIB",
@@ -209,13 +258,29 @@
         "MPS IIID"
     ],
     "Smith-Lemli-Opitz Syndrome": [
-        "Smith-Lemli-Opitz Syndrome"
+        "Smith-Lemli-Opitz Syndrome",
+        "7-dehydrocholesterol reductase deficiency",
+        "RSH syndrome",
+        "SLOS",
+        "DHCR7 deficiency",
+        "c.964-1G>C"
     ],
     "Cystinosis": [
-        "Cystinosis"
+        "Cystinosis",
+        "Cystinosin, Lysosomal Cystine Transporter",
+        "Cystinosin Lysosomal Cystine Transporter",
+        "Cystine storage disease",
+        "Protein defect of cystin transport",
+        "CTNS mutation",
+        "c.57_58delCT"
     ],
     "Isolated Growth Hormone Deficiency": [
-        "Isolated Growth Hormone Deficiency"
+        "Isolated Growth Hormone Deficiency",
+        "Growth hormone deficiency, isolated",
+        "Isolated GH deficiency",
+        "Isolated somatotropin deficiency",
+        "IGHD",
+        "Growth delay due to insulin-like growth factor type 1 deficiency"
     ],
     "Beckwith-Wiedemann Syndrome": [
         "Beckwith-Wiedemann Syndrome",
@@ -246,13 +311,20 @@
         "15q11.2-q13 Variant",
         "Hypothalamic Obesity Syndrome",
         "Prader Willi Syndrome",
-        "Prader-Willi Syndrome"
+        "Prader-Willi Syndrome",
+        "Prader-Willi-Labhart syndrome"
     ],
     "Russell-Silver Syndrome": [
-        "Russell-Silver Syndrome"
+        "Russell-Silver Syndrome",
+        "Silver-Russell dwarfism"
     ],
     "Congenital Hyperinsulinism": [
-        "Congenital Hyperinsulinism"
+        "Congenital Hyperinsulinism",
+        "Persistent hyperinsulinemic hypoglycemia of infancy",
+        "PHHI",
+        "Hyperinsulinemic hypoglycemia of infancy",
+        "Familial hyperinsulinism",
+        "Persistent neonatal hyperinsulinism"
     ],
     "Hirschsprung Disease": [
         "Aganglionic Megacolon",
@@ -268,10 +340,15 @@
         "Ruysch Disease"
     ],
     "Biliary Atresia": [
-        "Biliary Atresia"
+        "Biliary Atresia",
+        "Non-syndromic biliary atresia",
+        "Isolated atresia of bile ducts",
+        "Progressive obliterative cholangiopathy",
+        "Atresia of the bile ducts"
     ],
     "Shwachman-Diamond Syndrome": [
         "Neutropenia and pancreatic insufficiency",
+        "Pancreatic insufficiency and bone marrow dysfunction",
         "SBDS Mutation",
         "Shwachman Bodian Diamond syndrome",
         "Shwachman Diamond syndrome",
@@ -283,6 +360,7 @@
     ],
     "Alpha-1 Antitrypsin Deficiency": [
         "AATD",
+        "A1AT deficiency",
         "Alpha 1 Antitrypsin Deficiency",
         "Alpha 1 Proteinase Inhibitor Deficiency",
         "Alpha-1 Antitrypsin Deficiency",
@@ -294,18 +372,32 @@
         "PiZZ Genotype",
         "SERPINA1 Mutation",
         "serpina1 Pathogenic",
-        "serpina1 Variant"
+        "serpina1 Variant",
+        "Glu342Lys",
+        "Glu264Val"
     ],
     "Chronic Intestinal Pseudo-Obstruction": [
-        "Chronic Intestinal Pseudo-Obstruction"
+        "Chronic Intestinal Pseudo-Obstruction",
+        "Primary chronic intestinal pseudo-obstruction",
+        "Idiopathic intestinal pseudo-obstruction",
+        "Intestinal pseudo-obstruction syndrome"
     ],
     "Fanconi Anemia": [
-        "Fanconi Anemia"
+        "Fanconi anemia",
+        "Fanconi's anemia",
+        "Fanconi pancytopenia"
     ],
     "Diamond-Blackfan Anemia": [
-        "Diamond-Blackfan Anemia"
+        "Diamond-Blackfan Anemia",
+        "Congenital PRCA",
+        "Congenital pure red cell aplasia",
+        "Congenital pure red cell aplasia",
+        "Inherited pure red cell aplasia",
+        "Erythrogenesis imperfecta"
     ],
     "Hemophilia A": [
+        "Hemophilia A",
+        "Haemophilia A",
         "Classic Hemophilia",
         "Classical Hemophilia",
         "Factor VIII Deficiency",
@@ -314,22 +406,50 @@
         "F8 Mutation"
     ],
     "Beta Thalassemia Major": [
-        "Beta Thalassemia Major"
+        "Beta Thalassemia Major",
+        "Beta thalassemia major",
+        "β-thalassemia major",
+        "Cooley anemia",
+        "Cooley's anemia",
+        "Mediterranean anemia",
+        "Thalassemia major",
+        "Homozygous beta thalassemia"
     ],
     "Chronic Granulomatous Disease": [
-        "Chronic Granulomatous Disease"
+        "Chronic granulomatous disease",
+        "Granulomatous disease, chronic",
+        "Chronic granulomatous disorder",
+        "CYBB mutation"
     ],
     "Wiskott-Aldrich Syndrome": [
-        "Wiskott-Aldrich Syndrome"
+        "Wiskott-Aldrich Syndrome",
+        "Eczema-thrombocytopenia-immunodeficiency syndrome",
+        "Thrombocytopenia with eczema and immunodeficiency",
+        "X-linked thrombocytopenia with immunodeficiency"
     ],
     "X-Linked Agammaglobulinemia": [
-        "X-Linked Agammaglobulinemia"
+        "X-linked agammaglobulinemia",
+        "Bruton agammaglobulinemia",
+        "Bruton's agammaglobulinemia",
+        "Congenital agammaglobulinemia",
+        "Agammaglobulinemia, X-linked",
+        "BTK Deficiency"
     ],
     "Familial Hemophagocytic Lymphohistiocytosis": [
-        "Familial Hemophagocytic Lymphohistiocytosis"
+        "Familial hemophagocytic lymphohistiocytosis",
+        "Familial HLH",
+        "Genetic hemophagocytic lymphohistiocytosis",
+        "Familial hemophagocytic syndrome"
     ],
     "Severe Combined Immunodeficiency": [
-        "Severe Combined Immunodeficiency"
+        "Severe Combined Immunodeficiency",
+        "SCID",
+        "Severe combined immune deficiency",
+        "Severe combined immunodeficiency syndrome",
+        "T-cell-negative B-cell-negative SCID",
+        "T-cell-negative B-cell-positive SCID",
+        "T− B− SCID",
+        "T− B+ SCID"
     ],
     "CHARGE Syndrome": [
         "CHARGE Syndrome",
@@ -338,11 +458,19 @@
         "CHD7 Disorder",
         "CHD7 Mutation"
     ],
-    "VACTERL/VATER Association Association": [
-        "VACTERL/VATER Association Association"
+    "VACTERL/VATER Association": [
+        "VACTERL/VATER",
+        "VACTERL association",
+        "VATER association",
+        "VATER complex",
+        "VATER syndrome",
+        "Vertebral defects-anal atresia-cardiac defects-tracheo-esophageal fistula-renal anomalies-limb abnormalities association"
     ],
     "Bardet-Biedl Syndrome": [
-        "Bardet-Biedl Syndrome"
+        "Bardet-Biedl Syndrome",
+        "Laurence-Moon-Biedl syndrome",
+        "BBS1 mutation",
+        "BBS10 mutation"
     ],
     "Stickler Syndrome": [
         "Hereditary Progressive Arthro ophthalmopathy",
@@ -364,21 +492,12 @@
         "Ciliopathy with cranioectodermal features",
         "Cranioectodermal dysplasia",
         "IFT122 Mutation",
-        "IFT140 Mutation",
-        "IFT43 Mutation",
-        "IFT52 Mutation",
         "Sensenbrenner syndrome",
         "Short rib dysplasia with ectodermal and craniofacial anomalies",
         "Short-rib dysplasia with ectodermal and craniofacial anomalies",
         "WDR35 Mutation",
         "IFT122 Pathogenic",
         "IFT122 Variant",
-        "IFT140 Pathogenic",
-        "IFT140 Variant",
-        "IFT43 Pathogenic",
-        "IFT43 Variant",
-        "IFT52 Pathogenic",
-        "IFT52 Variant",
         "WDR35 Pathogenic",
         "WDR35 Variant"
     ],
@@ -390,14 +509,22 @@
         "Pseudoachondroplasia",
         "Pseudoachondroplastic dwarfism",
         "Pseudoachondroplastic dysplasia",
+        "Pseudoachondroplastic spondyloepiphyseal dysplasia",
         "COMP Pathogenic",
         "COMP Variant"
     ],
     "Osteogenesis Imperfecta": [
-        "Osteogenesis Imperfecta"
+        "Osteogenesis Imperfecta",
+        "Brittle bone disease",
+        "Glass bone disease",
+        "Lobstein disease",
+        "Fragilitas ossium",
+        "COL1A1 Mutation",
+        "COL1A2 Mutation"
     ],
     "Ehlers-Danlos Syndrome": [
         "Classic EDS",
+        "Classical EDS",
         "Vascular EDS",
         "Hypermobile EDS",
         "Cutis hyperelastica",
@@ -443,10 +570,22 @@
         "dominant-negative COL6A Variant"
     ],
     "Cleidocranial Dysplasia": [
-        "Cleidocranial Dysplasia"
+        "Cleidocranial dysostosis",
+        "Mutational dysostosis",
+        "Marie-Sainton syndrome",
+        "RUNX2 Mutation"
     ],
-    "Pitt Hopkins Syndrome": [
-        "Pitt Hopkins Syndrome"
+    "Pitt-Hopkins Syndrome": [
+        "PTHS",
+        "Pitt Hopkin",
+        "Pitt Hopkin's",
+        "Pitt Hopkins",
+        "Pitt-Hopkin",
+        "Pitt-Hopkins",
+        "TCF4 Deletion",
+        "TCF4 Mutation",
+        "TCF4 Pathogenic",
+        "TCF4 Variant"
     ],
     "Rett Syndrome": [
         "MECP2 Mutation",
@@ -455,7 +594,8 @@
         "Rett Syndrome",
         "Rett's Disorder",
         "MECP2 Pathogenic",
-        "MECP2 Variant"
+        "MECP2 Variant",
+        "FOXG1 Mutation"
     ],
     "Angelman Syndrome": [
         "15q11 q13 Deletion Syndrome",
@@ -471,14 +611,22 @@
         "UBE3A Variant"
     ],
     "Dravet Syndrome": [
-        "Dravet Syndrome"
+        "Dravet syndrome",
+        "Severe myoclonic epilepsy of infancy",
+        "Severe myoclonus epilepsy of infancy",
+        "SMEI",
+        "Severe myoclonic epileptic encephalopathy",
+        "Epileptic encephalopathy, early infantile, 6",
+        "SCN1A nmutation"
     ],
     "Lennox-Gastaut Syndrome": [
         "Lennox Gastaut",
         "Lennox Gastaut syndrome",
         "Lennox-Gastaut",
         "Lennox-Gastaut syndrome",
-        "Lennox Syndrome"
+        "Lennox Syndrome",
+        "Epileptic encephalopathy with slow spike-and-wave EEG",
+        "Childhood-onset epileptic encephalopathy with multiple seizure types"
     ],
     "Juvenile Myoclonic Epilepsy": [
         "Epilepsy with juvenile myoclonic seizures",
@@ -495,12 +643,17 @@
         "1p36 Mutation",
         "1p36 Pathogenic",
         "1p36 Variant",
+        "Deletion 1pter",
         "Deletion 1p36",
         "Monosomy 1p36",
+        "Monosomy 1pter",
         "Terminal 1p36 deletion",
         "Deficiency 1p36",
+        "Del(1)(p36)",
         "Mutation 1p36",
         "Pathogenic 1p36",
+        "haploinsufficiency of 1p36",
+        "1p36 haploinsufficiency",
         "terminal 1p36 Deficiency",
         "terminal 1p36 Mutation",
         "terminal 1p36 Pathogenic",
@@ -512,7 +665,6 @@
         "16p11.2 Deficiency",
         "16p11.2 Deficiency syndrome",
         "16p11.2 deletion",
-        "16p11.2 deletion syndrome",
         "16p11.2 microdeletion",
         "16p11.2 microdeletion syndrome",
         "16p11.2 Mutation",
@@ -526,6 +678,7 @@
         "16p11.2 recurrent Variant",
         "16p11.2 Variant",
         "16p11.2 Variant syndrome",
+        "Del(16)(p11.2) syndrome",
         "Deletion 16p11.2",
         "Microdeletion 16p11.2",
         "Deficiency 16p11.2",
@@ -554,6 +707,10 @@
         "Bourneville Pringle Disease",
         "Bourneville-Pringle Disease",
         "Epiloia",
+        "TSC1 loss",
+        "TSC1 loss-of-function",
+        "TSC2 loss",
+        "TSC2 loss-of-function",
         "TSC1 Mutation",
         "TSC2 Mutation",
         "Tuberous Sclerosis Complex",
@@ -569,9 +726,11 @@
         "Neurofibromatosis Type I",
         "NF1-related Disorder",
         "NF1 Mutation",
+        "Neurofibromin 1",
         "Peripheral Neurofibromatosis",
         "Type 1 Neurofibromatosis",
         "Type I Neurofibromatosis",
+        "17q11.2 microdeletion",
         "Von Recklinghausen Disease",
         "Von Recklinghausen Neurofibromatosis",
         "Von Recklinghausen's Neurofibromatosis",
