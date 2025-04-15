@@ -737,19 +737,45 @@
         "Von-Recklinghausen Disease"
     ],
     "Friedreich Ataxia": [
-        "Friedreich Ataxia"
+        "Friedreich ataxia",
+        "FRDA",
+        "Hereditary spinal ataxia",
+        "Frataxin deficiency",
+        "FXN mutation"
     ],
     "Ataxia-Telangiectasia": [
-        "Ataxia-Telangiectasia"
+        "Ataxia-telangiectasia",
+        "Louis-Bar syndrome",
+        "Ataxia telangiectasia syndrome",
+        "Boder-Sedgwick syndrome"
     ],
     "Spinal Muscular Atrophy": [
-        "Spinal Muscular Atrophy"
+        "Spinal Muscular Atrophy",
+        "SMA type 1",
+        "SMA type 2",
+        "SMA type 3",
+        "SMA type 4",
+        "Werdnig-Hoffmann disease",
+        "Kugelberg-Welander disease"
     ],
     "Duchenne Muscular Dystrophy": [
-        "Duchenne Muscular Dystrophy"
+        "Duchenne Muscular Dystrophy",
+        "Duchenne dystrophy",
+        "Dystrophinopathy, Duchenne type",
+        "Dystrophin gene",
+        "DMD mutation"
     ],
     "Sturge-Weber Syndrome": [
-        "Sturge-Weber Syndrome"
+        "Sturge-Weber syndrome",
+        "Encephalotrigeminal angiomatosis",
+        "Sturge-Weber disease",
+        "Encephalofacial angiomatosis",
+        "Encephalotrigeminal angiomatosis",
+        "Sturge-Weber-Dimitri syndrome",
+        "Sturge-Weber-Krabbe angiomatosis",
+        "Sturge-Weber-Krabbe syndrome",
+        "GNAQ Mutation",
+        "c.548G>A (p.Arg183Gln)"
     ],
     "Hereditary Neuropathy With Liability To Pressure Palsies": [
         "Adom hereditary neuropathy",
@@ -768,8 +794,9 @@
     ],
     "Aicardi Syndrome": [
         "Aicardi Disorder",
-        "Aicardi Phenotype",
         "Aicardi syndrome",
+        "Aicardi's syndrome",
+        "Aicardi Phenotype",
         "corpus callosum agenesis"
     ],
     "Neuronal Ceroid Lipofuscinosis : CLN3 Is The Most Common": [
@@ -789,19 +816,34 @@
         "FMR1 Variant"
     ],
     "Joubert Syndrome": [
-        "Joubert Syndrome"
+        "Joubert Syndrome",
+        "Cerebello-oculo-renal syndrome",
+        "Molar tooth sign syndrome"
     ],
     "Cog8-Congenital Disorders Of Glycosylation": [
-        "Cog8-Congenital Disorders Of Glycosylation"
+        "Cog8-Congenital Disorders Of Glycosylation",
+        "COG8-CDG",
+        "Congenital disorder of glycosylation type IIh",
+        "Congenital disorder of glycosylation type 2H",
+        "Carbohydrate deficient glycoprotein syndrome type IIh",
+        "CDG-IIh",
+        "CDG-2H"
     ],
     "Transaldolase Deficiency": [
-        "Transaldolase Deficiency"
+        "Transaldolase Deficiency",
+        "TALDO deficiency",
+        "Transaldolase deficiency",
+        "TALDO deficiency",
+        "TALDO1 deficiency",
+        "Transaldolase 1 deficiency",
+        "Pentose phosphate pathway disorder, transaldolase type"
     ],
     "Stargardt Disease": [
         "ABCA4 Mutation",
         "Fundus Flavimaculatus",
         "Juvenile Macular Degeneration",
         "STGD1",
+        "Stargardt 1",
         "Stargardt Disease",
         "Stargardt Macular Dystrophy",
         "Stargardt's Disease",
