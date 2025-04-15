@@ -14,6 +14,10 @@ class TestDiseaseNames(unittest.TestCase):
         actual = disease_names.expand("ABCD1 mutation", "mutation", ["mutation", "variant", "pathogenic"])
         self.assertEqual(expected, actual)
 
+    @unittest.skip
+    def test_expand_all(self):
+        print(disease_names.expand_all('disease_names.json'))
+
     def test_unique(self):
         """
         Test that CSV input sheets are mapped in `disease_names_expanded.json`
@@ -83,13 +87,6 @@ class TestDiseaseNames(unittest.TestCase):
                         len(_inter) == 0,
                         f'search term(s) {_inter} overlap for "{disease1}" and "{disease2}"')
 
-    @unittest.skip('disease_names_expanded.json')
-    def test_json_keynames(self):
-        out = dict()
-        for disease, synonyms in filetool.read_disease_json('disease_names_expanded.json').items():
-            out[naming.name_unique(disease)] = synonyms
-        filetool.write_json(out, filetool.resource('disease_names_expanded.json'))
-
     @unittest.skip('disease_names_spelling.json')
     def test_spelling(self):
         """
@@ -100,7 +97,7 @@ class TestDiseaseNames(unittest.TestCase):
             disease_names.map_spellings(),
             filetool.resource('disease_names_spelling.json'))
 
-    # @unittest.skip('prompts.txt')
+    @unittest.skip('prompts.txt')
     def test_prompt_llm_synonyms(self, diseases_csv=filetool.DISEASES_CSV):
         """
         Enable this test to produce GPT4 suggestions.
