@@ -1,5 +1,5 @@
 import unittest
-from rapid import naming, disease_icd10, filetool
+from rapid import disease_icd10, filetool
 
 
 class TestDiseaseICD10(unittest.TestCase):
@@ -9,15 +9,14 @@ class TestDiseaseICD10(unittest.TestCase):
 
         self.assertEqual(expected, disease_icd10.list_icd10(text))
 
-    def test_entries(self):
-        for csv_file in filetool.CSV_LIST:
-            entries = disease_icd10.list_entries(csv_file)
-            table = naming.name_table(csv_file.replace('.csv', ''))
-            out = disease_icd10.list_to_sql(table, entries)
-            print(out)
+    def test_list_orpha(self):
+        text = "ORPHA:558;ORPHA:284963; ORPHA:284973; ORPHA:284993"
+        expected_int = [558, 284963, 284973, 284993]
+        expected_str = ['558', '284963', '284973', '284993']
 
-    # @unittest.skip("write output SQL files for each disease.csv file")
-    def test_csv_to_sql(self):
-        for csv_file in filetool.CSV_LIST:
-            file_sql = disease_icd10.csv_to_sql(csv_file)
-            print(file_sql)
+        self.assertEqual(expected_int, disease_icd10.list_orpha(text, as_int=True))
+        self.assertEqual(expected_str, disease_icd10.list_orpha(text, as_int=False))
+
+    @unittest.skip('rapid__codeset.sql')
+    def test_csv_to_sql(self, csv_file=filetool.DISEASES_CSV):
+        print(disease_icd10.csv_to_sql(csv_file))

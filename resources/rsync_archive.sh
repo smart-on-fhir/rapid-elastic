@@ -2,6 +2,7 @@
 
 # Infinite loop
 while true; do
+  gzip *.json
     for csv_file in *.csv; do
       [ -e "$csv_file" ] || continue
 

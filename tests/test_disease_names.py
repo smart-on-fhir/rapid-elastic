@@ -1,6 +1,4 @@
 import unittest
-from collections import OrderedDict
-
 from rapid import filetool
 from rapid import naming
 from rapid import disease_names
@@ -8,13 +6,25 @@ from rapid import disease_names
 
 class TestDiseaseNames(unittest.TestCase):
 
-    def test_expand(self):
+    def test_table_alias(self):
         """
-        Test that "mutation" LVG lexical variant generation for search phrase construction
+        Testing LLM initial selection
         """
-        expected = ['ABCD1 mutation', 'ABCD1 variant', 'ABCD1 pathogenic']
-        actual = disease_names.expand("ABCD1 mutation", "mutation", ["mutation", "variant", "pathogenic"])
-        self.assertEqual(expected, actual)
+        expected = sorted([
+            'noonan_syndrome',
+            'carbamoyl_phosphate_synthetase_i_deficiency',
+            'beckwith_wiedemann_syndrome',
+            'pompe_disease',
+            'angelman_syndrome'])
+
+        actual = naming.name_table_alias([
+            'Noonan syndrome',
+            'Carbamoyl phosphate synthetase I deficiency(CPS1)',
+            'Beckwith-Wiedemann syndrome',
+            'Pompe disease(infantile)',
+            'Angelman syndrome'])
+
+        self.assertEqual(sorted(expected), sorted(actual))
 
     def test_unique(self):
         """
@@ -25,15 +35,42 @@ class TestDiseaseNames(unittest.TestCase):
         disease_list = naming.name_unique(list(disease_json.keys()))
 
         _inter = set(spellings).intersection(set(disease_list))
-        # print(len(_inter), ' .intersect() ')
-
         _diff1 = set(spellings).difference(set(disease_list))
+        _diff2 = set(disease_list).difference(set(spellings))
+
         if len(_diff1) > 0:
             print(len(_diff1), '  .difference() ', 'missing?', str(_diff1))
 
-        _diff2 = set(disease_list).difference(set(spellings))
         if len(_diff2) > 0:
             print(len(_diff2), '  .difference() ', 'deprecated?', str(_diff2))
+
+    def test_expand(self):
+        """
+        Test that "mutation" LVG lexical variant generation for search phrase construction
+        """
+        expected = ['ABCD1 mutation', 'ABCD1 variant', 'ABCD1 pathogenic']
+        actual = disease_names.expand("ABCD1 mutation", "mutation", ["mutation", "variant", "pathogenic"])
+        self.assertEqual(expected, actual)
+
+    @unittest.skip
+    def test_expand_all(self):
+        print(disease_names.expand_all('disease_names.json'))
+
+    @unittest.skip('disease_names.json')
+    def test_update(self):
+        disease_list = disease_names.list_unique(filetool.DISEASES_CSV)
+        legacy_json = filetool.read_json(filetool.deprecated('disease_names_expanded.json'))
+        merged = dict()
+
+        for disease in disease_list:
+            if disease in legacy_json.keys():
+                merged[disease] = legacy_json[disease]
+                print(f'{disease} (matched)')
+            else:
+                merged[disease] = [disease]
+                print(f'{disease} (?missing?)')
+
+        filetool.write_json(merged, filetool.resource('disease_names.json'))
 
     def test_synonynms_no_query_intersection(self):
         """
@@ -54,35 +91,10 @@ class TestDiseaseNames(unittest.TestCase):
                         len(_inter) == 0,
                         f'search term(s) {_inter} overlap for "{disease1}" and "{disease2}"')
 
-    @unittest.skip('disease_names_expanded.json')
-    def test_json_keynames(self):
-        out = dict()
-        for disease, synonyms in filetool.read_disease_json('disease_names_expanded.json').items():
-            out[naming.name_unique(disease)] = synonyms
-        filetool.write_json(out, filetool.resource('disease_names_expanded.json'))
-
-    @unittest.skip('disease_names_spelling.json')
-    def test_spelling(self):
-        """
-        For historical purposes. GPT4o did not consistently name disease names and our outputs sometimes were duplicated.
-        Use this file to get a list of disease names that could have been used previously.
-        """
-        filetool.write_json(
-            disease_names.map_spellings(),
-            filetool.resource('disease_names_spelling.json'))
-
-    @unittest.skip('disease_names_expanded.json')
-    def test_prompt_llm_synonyms(self):
+    @unittest.skip('prompts.txt')
+    def test_prompt_llm_synonyms(self, diseases_csv=filetool.DISEASES_CSV):
         """
         Enable this test to produce GPT4 suggestions.
         HUMAN curation is complete. For historical purposes.
         """
-        print(disease_names.prompt_llm_synonyms('disease_names_expanded.json'))
-
-    @unittest.skip('disease_names_duplicates.json')
-    def test_find_duplicates(self):
-        """
-        Enable this test to list which GPT4 suggested rare diseases might be in multiple spreadsheets.
-        HUMAN curation is complete. For historical purposes.
-        """
-        print(disease_names.find_duplicates_across_sheets())
+        print(disease_names.prompt_llm_synonyms(diseases_csv))

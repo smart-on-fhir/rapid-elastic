@@ -108,7 +108,7 @@ def get_hits(disease_query_string: str, scroll_size=1000) -> dict:
     query = kql_syntax.query_string(disease_query_string)
     query = query | kql_syntax.response_fields(FIELD_INCLUDES, FIELD_EXCLUDES)
     print(query)
-    response = client.search(body=query, scroll='5m', size=scroll_size)
+    response = client.search(body=query, scroll='10m', size=scroll_size)
 
     total = response['hits']['total']
     print(f'{total} response hits')

@@ -3,9 +3,10 @@ from typing import List
 from pathlib import Path
 from rapid import filetool
 from rapid import naming
+from rapid.filetool import DISEASES_CSV
 
-def list_tables() -> List[str]:
-    return [naming.name_table(disease) for disease in list_unique()]
+def list_cohorts() -> List[str]:
+    return [naming.name_cohort(disease) for disease in list_unique()]
 
 def list_files() -> List[str]:
     return [naming.name_file(disease) for disease in list_unique()]
@@ -13,58 +14,65 @@ def list_files() -> List[str]:
 def list_files_csv() -> List[str]:
     return [naming.name_file(disease, 'csv') for disease in list_unique()]
 
-def list_unique() -> List[str]:
+def list_unique(file_csv=DISEASES_CSV) -> List[str]:
     unique_list = list()
-    for file_csv in filetool.CSV_LIST:
-        for original in csv_to_list(file_csv):
-            unique_list.append(naming.name_unique(original))
+    for original in csv_to_list(file_csv):
+        unique_list.append(naming.name_unique(original))
     return unique_list
 
 def map_spellings() -> dict:
     mapping = {}
-    for file_csv in filetool.CSV_LIST:
-        for original in csv_to_list(file_csv):
-            unique = naming.name_unique(original)
-            file = naming.name_file(original)
-            file_lower = naming.name_file(original).lower()
-            table = naming.name_table(original)
-            spaces = naming.strip_spaces(original)
-            spaces_paren = naming.strip_spaces(naming.strip_paren(original))
-            spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
+    for original in csv_to_list(DISEASES_CSV):
+        unique = naming.name_unique(original)
+        file = naming.name_file(original)
+        file_lower = naming.name_file(original).lower()
+        table = naming.name_cohort(original)
+        spaces = naming.strip_spaces(original)
+        spaces_paren = naming.strip_spaces(naming.strip_paren(original))
+        spaces_paren_lower = naming.strip_spaces(naming.strip_paren(original)).lower()
 
-            mapping_list = mapping.setdefault(unique, [])
-            mapping_list += [
-                file,
-                file_lower,
-                spaces,
-                spaces_paren,
-                spaces_paren_lower,
-            ]
+        mapping_list = mapping.setdefault(unique, [])
+        mapping_list += [
+            file,
+            file_lower,
+            spaces,
+            spaces_paren,
+            spaces_paren_lower,
+        ]
     return mapping
 
 
 ###############################################################################
 # Synonyms
+#
+# You are a helpful assistant curating a list of synonyms of rare diseases to search for in electronic health records.
+# I will ask you about synonyms of rare disease names.
+# Please use synonyms names from trusted biomedical knowledge sources,
+# especially OrphaNet, Mondo Disease Ontology,
+# US National Library of medicine sources (such as GeneReviews, ClinVar, and MedGen medical genetics),
+# or the Unified Medical Language system.
+# Please also list any genetic mutation search terms that definitively cause the disease.
+#
 ###############################################################################
-def prompt_llm_synonyms(disease_json: str) -> Path:
+def prompt_llm_synonyms(diseases_csv=DISEASES_CSV) -> Path:
     """
     LLM prompts tried thus far include
         "What are the EHR search terms in clinical note text for exact synonyms of "$disease"
         "What are the EHR search terms in clinical note text for exact synonyms of "$disease""
         "What are the EHR search terms of "$disease"? Respond with JSON where the key is "synonym" or "related" and the values are a list.'
+        "What are the EHR search terms for
 
     HUMAN curation by Andy was performed for all diseases, considerable HOURS of careful consideration.
     DO not change the synonyms list unless you are very sure you are fixing a known false positive or false negative hit!
     """
-    disease_dict = filetool.read_disease_json(disease_json)
     out = list()
-    for disease in disease_dict.keys():
+    for disease in list_unique(diseases_csv):
         # out.append(f'What are the EHR search terms in clinical note text for exact synonyms of "{disease}"?')
         prompt = f'What are the EHR search terms of "{disease}"? '
-        prompt += f'Respond with JSON where the key is "synonym" or "related" and the values are a list.'
+        # prompt += f'Respond with JSON where the key is "synonym" or "related" and the values are a list.'
         out.append(prompt)
     out = '\n'.join(out)
-    return filetool.write_text(out, filetool.resource(f'{disease_json}.prompts.txt'))
+    return filetool.write_text(out, filetool.resource(f'{diseases_csv}.prompts.txt'))
 
 def expand(phrase: str, search: str, replace_list: list) -> list:
     if search in phrase:
@@ -103,9 +111,7 @@ def expand_all(disease_json: str | Path) -> Path:
 ###############################################################################
 # Convert CSV to JSON
 ###############################################################################
-def csv_to_json_file(disease_csv=None) -> Path | List[Path]:
-    if not disease_csv:
-        return [csv_to_json_file(i) for i in filetool.CSV_LIST]
+def csv_to_json_file(disease_csv=DISEASES_CSV) -> Path:
 
     print(f'reading .... {disease_csv}')
     out = csv_to_json(disease_csv)
@@ -138,7 +144,7 @@ def csv_to_json(disease_csv: Path | str) -> dict:
 # Duplicates and Merging curation lists
 #
 ###############################################################################
-def find_duplicates_across_sheets() -> Path:
+def deprecated_find_duplicates_across_sheets() -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
     :return: path to duplicates found
@@ -146,7 +152,7 @@ def find_duplicates_across_sheets() -> Path:
     merged = dict()
     duplicates = dict()
 
-    for filename_csv in filetool.CSV_LIST:
+    for filename_csv in filetool.DEPRECATED_CSV_LIST:
         from_json = filetool.read_disease_json(f'{filename_csv}.json')
         for disease, _ in from_json.items():
             disease = naming.name_unique(disease)
@@ -164,22 +170,22 @@ def find_duplicates_across_sheets() -> Path:
     print(f'{len(duplicates.keys())}  "duplicates found"')
     return filetool.write_json(duplicates, filetool.resource('disease_names_duplicates.json'))
 
-def merge(filename_json: str) -> Path:
+def deprecated_merge(filename_json: str) -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
-    :param filename_json: JSON to merge with the CSV names.
+    :param filename_json: JSON to deprecated_merge with the CSV names.
     :return: Path to merged file
     """
     original = filetool.read_disease_json(filename_json)
     original_keys = [key.lower() for key in original.keys()]
     merged = original
 
-    for filename_csv in filetool.CSV_LIST:
+    for filename_csv in filetool.DEPRECATED_CSV_LIST:
         from_json = filetool.read_json(filetool.resource(f'{filename_csv}.json'))
         for disease, synonyms in from_json.items():
             disease.lower()
             if disease.lower() not in original_keys:
-                print(f'merge: {disease}')
+                print(f'deprecated_merge: {disease}')
                 merged[disease] = synonyms
 
     return filetool.write_json(merged, filetool.resource('disease_names_merged.json'))
