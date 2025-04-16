@@ -2,7 +2,7 @@
 name = "rapid-elastic"
 requires-python = ">= 3.10"
 dependencies = [
-    "elasticsearch",
+    "elasticsearch8",
     "rich",
 ]
 
