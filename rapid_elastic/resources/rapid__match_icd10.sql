@@ -1,14 +1,17 @@
+--    drop table if exists rapid__match_icd10;
+
 create table rapid__match_icd10 as
 select  distinct
         curated.icd10_code,
         curated.orpha_code,
         curated.disease_name,
         curated.disease_alias,
+        curated.icd10_code as icd10_code_curated,
         DX.*
 from    core__condition as DX,
         rapid__codeset as curated
 where   DX.system = 'http://hl7.org/fhir/sid/icd-10-cm'
-and     curated.icd10_code like concat(DX.code, '%');
+and     DX.code like concat(curated.icd10_code, '%') ;
 
 --    #################################################
 --    Examples to count ICD10 matches

@@ -67,14 +67,49 @@ select * from tabulate;
 --    Examples to compare matches
 --    #################################################
 
-select count(distinct subject_ref) as cnt_patients,
-        hit_notes,
-        hit_icd10,
-        hit_sample_patients
-from    rapid__match_compare
-group by
-        hit_notes,
-        hit_icd10,
-        hit_sample_patients,
-        hit_sample_notes
-order by cnt_patients desc
+--    select count(distinct subject_ref) as cnt_patients,
+--            hit_notes,
+--            hit_icd10
+--    from    rapid__match_compare
+--    group by
+--            hit_notes,
+--            hit_icd10
+--    order by hit_notes, hit_icd10;
+--
+--    select count(distinct subject_ref) as cnt_patients,
+--            hit_notes,
+--            hit_icd10,
+--            hit_sample_patients
+--    from    rapid__match_compare
+--    group by
+--            hit_notes,
+--            hit_icd10,
+--            hit_sample_patients,
+--            hit_sample_notes
+--    order by hit_notes, hit_icd10;
+--
+--    select      count(distinct subject_ref) as cnt_patients,
+--                disease_alias,
+--                hit_notes,
+--                hit_icd10
+--    from        rapid__match_compare
+--    group by    disease_alias,
+--                hit_notes,
+--                hit_icd10
+--    order by    disease_alias,
+--                hit_notes, hit_icd10;
+--
+--
+--    select      count(distinct subject_ref) as cnt_patients,
+--                disease_alias,
+--                hit_notes,
+--                hit_icd10,
+--                hit_sample_patients
+--    from        rapid__match_compare
+--    group by    disease_alias,
+--                hit_notes,
+--                hit_icd10,
+--                hit_sample_patients,
+--                hit_sample_notes
+--    order by    disease_alias,
+--                hit_notes, hit_icd10;
