@@ -40,4 +40,15 @@ include = [
 ]
 exclude = [
     "**/.pytest_cache",
+    # Basically, we just one disease_names_expanded.json from resources/
+    "rapid_elastic/resources/deprecated",
+    "rapid_elastic/resources/disease_names.json",
+    "rapid_elastic/resources/disease_names_expanded.json.query.json",
+    "rapid_elastic/resources/disease_names_legacy.json",
+    "rapid_elastic/resources/*.csv",
+    "rapid_elastic/resources/*.list",
+    "rapid_elastic/resources/*.py",
+    "rapid_elastic/resources/*.sh",
+    "rapid_elastic/resources/*.sql",
+    "rapid_elastic/resources/*.txt",
 ]
