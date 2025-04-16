@@ -31,18 +31,58 @@ Read the [server setup docs](docs/server-setup.md).
  * `document_title`        (optional)
 
 
-### SQL Athena
-#### SQL tables are generated from spreadsheet CSV files
-  * `disease_name`
-  * `orpha_code` 
-  * `icd10_code`
+## SQL Tables
 
-#### FHIR resources are referenced using 
- * `subject_ref`           (FHIR Patient.id)
- * `encounter_ref`         (FHIR Encounter.id)
- * `documentreference_ref` (FHIR DocumentReference.id) 
-  
-#### FHIR Condition.code is selected using 
-* `icd10_code` 
+SQL files are loaded in order 1-6 to produce the result table **rapid__match_compare** 
+
+### ICD10 diagnosis
+1. **rapid__codeset**.sql
+  * `disease_name`  (human label)
+  * `disease_alias` (machine label)
+  * `orpha_code`    (Orphanet code) 
+  * `icd10_code`    (ICD10 code)
+
+2. **rapid__match_icd10**.sql
+  * `disease_name`  (human label)
+  * `disease_alias` (machine label)
+  * `orpha_code`    (Orphanet code) 
+  * `icd10_code`    (ICD10 code)
+  * `subject_ref`           (FHIR Patient.id)
+  * `encounter_ref`         (FHIR Encounter.id)
+  * FHIR condition (optional metadata) 
+
+### NOTES search results
+3. **rapid__match_notes**.sql
+  * `disease_alias` (machine label)
+  * `subject_ref`   (FHIR Patient.id)
+  * `document_ref`  (FHIR DocumentReference.id)
+  * `encounter_ref` (FHIR Encounter.id)
+  * `document_title` (optional)
+  * `group_name` (optional)
  
+#### SAMPLE tables
+Select up to 100 patients per disease into these tables. 
 
+4. **rapid__match_notes_sample_patients**.sql
+  * `disease_alias` 
+  * `subject_ref`   
+
+5. **rapid__match_notes_sample_notes**.sql
+  * `disease_alias` 
+  * `subject_ref`   
+  * `document_ref`  
+  * `encounter_ref` 
+  * `document_title` (optional)
+  * `group_name` (optional)
+
+#### COMPARE results tables 
+
+6. **rapid__match_compare**.sql
+  * `disease_alias`
+  * `hit_icd10` (matched ICD10-10)
+  * `hit_notes` (matched note search)
+  * `hit_sample_patients` (in sample of selected patients)
+  * `hit_sample_notes` (in sample of selected patient notes)
+  * `icd10_code` (match result if hit_icd10=True)
+  * `document_ref`
+  * `subject_ref`
