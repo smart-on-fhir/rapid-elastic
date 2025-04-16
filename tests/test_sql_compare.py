@@ -1,8 +1,8 @@
 import unittest
-from rapid import filetool
-from rapid import naming
-from rapid import disease_names
-from rapid import sql_compare
+from rapid_elastic import filetool
+from rapid_elastic import naming
+from rapid_elastic import disease_names
+from rapid_elastic import sql_compare
 
 class TestSQLCompare(unittest.TestCase):
     def test_table_names(self):

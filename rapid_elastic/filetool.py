@@ -2,7 +2,7 @@ import os
 import json
 from typing import List, Dict, Any
 from pathlib import Path
-from rapid import timestamp
+from rapid_elastic import timestamp
 
 ######################################################################################
 # CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.
@@ -19,43 +19,26 @@ DEPRECATED_CSV_LIST = [
 
 DISEASES_CSV = "NEW_MASTER_04-13-2025.csv"
 
-def get_elastic_fields(override_default=None) -> dict:
-    if not override_default:
-        return read_json(resource('ELASTIC_FIELDS.json'))
-    else:
-        return read_json(override_default)
+def read_disease_json(filename: Path | str) -> dict:
+    return read_json(filename)
 
-def read_disease_json(filename='disease_names_expanded.json') -> dict:
-    return read_json(resource(filename))
-
-def write_disease_json(filename='disease_names.json') -> dict:
-    return read_json(resource(filename))
-
-def resource(filename) -> Path:
-    return Path(project_dir(), 'resources', filename)
+def resource(filename: Path | str) -> Path:
+    return Path(Path(__file__).parent.parent, 'resources', filename)
 
 def deprecated(filename) -> Path:
-    return Path(project_dir(), 'resources', 'deprecated', filename)
+    return resource(f"deprecated/{filename}")
 
-def output(filename) -> Path:
-    _output = Path(project_dir(), 'output', timestamp.date_str())
-    if not _output.exists():
-        _output.mkdir()
-        print(f'{_output} dir created.')
-    return Path(_output, filename)
-
-def project_dir() -> Path:
-    return Path(__file__).parent.parent
-
-def list_output_deprecated(disease) -> List[Path]:
-    return [output(f'{disease}.csv'),
-            output(f'{disease}.json')]
+def output_dir(base: str | None = None) -> Path:
+    base = base or "output"
+    base = Path(base, timestamp.date_str())
+    base.mkdir(parents=True, exist_ok=True)
+    return base
 
 def rsync_output() -> str:
     """
     :return: rsync command to "sync" uploading to a remote host the local output directory
     """
-    return f"rsync -azvrh --progress {output('*.csv.gz')} "
+    return f"rsync -azvrh --progress {output_dir() / '*.csv.gz'} "
 
 ###############################################################################
 #

@@ -1,0 +1,6 @@
+/.idea/
+/dist/
+/output/
+
+__pycache__/
+/site/

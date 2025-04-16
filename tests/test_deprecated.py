@@ -1,9 +1,9 @@
 import unittest
-from rapid import filetool
-from rapid import naming
-from rapid import disease_icd10
-from rapid import disease_names
-from rapid import sql_compare
+from rapid_elastic import filetool
+from rapid_elastic import naming
+from rapid_elastic import disease_icd10
+from rapid_elastic import disease_names
+from rapid_elastic import sql_compare
 
 
 class TestDeprecated(unittest.TestCase):

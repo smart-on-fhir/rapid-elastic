@@ -2,8 +2,8 @@ from typing import List
 from pathlib import Path
 import re
 import csv
-from rapid import filetool
-from rapid import naming
+from rapid_elastic import filetool
+from rapid_elastic import naming
 
 class DiseaseICD10:
     """

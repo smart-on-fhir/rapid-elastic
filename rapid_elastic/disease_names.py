@@ -1,9 +1,9 @@
 import csv
 from typing import List
 from pathlib import Path
-from rapid import filetool
-from rapid import naming
-from rapid.filetool import DISEASES_CSV
+from rapid_elastic import filetool
+from rapid_elastic import naming
+from rapid_elastic.filetool import DISEASES_CSV
 
 def list_cohorts() -> List[str]:
     return [naming.name_cohort(disease) for disease in list_unique()]
@@ -54,7 +54,7 @@ def map_spellings() -> dict:
 # Please also list any genetic mutation search terms that definitively cause the disease.
 #
 ###############################################################################
-def prompt_llm_synonyms(diseases_csv=DISEASES_CSV) -> Path:
+def prompt_llm_synonyms(diseases_csv: Path | str = DISEASES_CSV) -> Path:
     """
     LLM prompts tried thus far include
         "What are the EHR search terms in clinical note text for exact synonyms of "$disease"
@@ -153,7 +153,7 @@ def deprecated_find_duplicates_across_sheets() -> Path:
     duplicates = dict()
 
     for filename_csv in filetool.DEPRECATED_CSV_LIST:
-        from_json = filetool.read_disease_json(f'{filename_csv}.json')
+        from_json = filetool.read_disease_json(filetool.resource(f'{filename_csv}.json'))
         for disease, _ in from_json.items():
             disease = naming.name_unique(disease)
             disease = disease.lower()
@@ -170,7 +170,7 @@ def deprecated_find_duplicates_across_sheets() -> Path:
     print(f'{len(duplicates.keys())}  "duplicates found"')
     return filetool.write_json(duplicates, filetool.resource('disease_names_duplicates.json'))
 
-def deprecated_merge(filename_json: str) -> Path:
+def deprecated_merge(filename_json: Path | str) -> Path:
     """
     Deprecated status: this has been done and reviewed manually by Andy
     :param filename_json: JSON to deprecated_merge with the CSV names.
