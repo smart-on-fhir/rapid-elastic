@@ -23,7 +23,7 @@ def read_disease_json(filename: Path | str) -> dict:
     return read_json(filename)
 
 def resource(filename: Path | str) -> Path:
-    return Path(Path(__file__).parent.parent, 'resources', filename)
+    return Path(Path(__file__).parent, 'resources', filename)
 
 def deprecated(filename) -> Path:
     return resource(f"deprecated/{filename}")
