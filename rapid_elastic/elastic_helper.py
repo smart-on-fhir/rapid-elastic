@@ -1,10 +1,9 @@
 import dataclasses
 from typing import List
-from elasticsearch8 import Elasticsearch
+from elasticsearch import Elasticsearch
 from rapid_elastic import filetool
 from rapid_elastic import config
 from rapid_elastic import kql_syntax
-
 
 ###############################################################################
 # Elasticsearch Field names to uniquely reference
