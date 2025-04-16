@@ -111,3 +111,4 @@ select distinct 'noonan_syndrome' as disease_alias, * from cohorts__rare_noonan_
  UNION select distinct 'barth_syndrome' as disease_alias, * from cohorts__rare_barth_syndrome
  UNION select distinct 'alport_syndrome' as disease_alias, * from cohorts__rare_alport_syndrome
  UNION select distinct 'rubinstein_taybi_syndrome' as disease_alias, * from cohorts__rare_rubinstein_taybi_syndrome
+ ;
