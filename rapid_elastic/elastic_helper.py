@@ -1,6 +1,6 @@
 import dataclasses
 from typing import List
-from elasticsearch8 import Elasticsearch
+from elasticsearch import Elasticsearch
 from rapid_elastic import filetool
 from rapid_elastic import config
 from rapid_elastic import kql_syntax
@@ -145,3 +145,5 @@ def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFiel
     print(f"Total documents retrieved: {len(all_hits)}")
 
     return all_hits
+
+
