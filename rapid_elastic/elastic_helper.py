@@ -5,7 +5,6 @@ from rapid_elastic import filetool
 from rapid_elastic import config
 from rapid_elastic import kql_syntax
 
-
 ###############################################################################
 # Elasticsearch Field names to uniquely reference
 # * Document (required)

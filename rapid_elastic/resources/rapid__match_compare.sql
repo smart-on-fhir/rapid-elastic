@@ -21,20 +21,12 @@ match_notes as
             document_ref
     from    rapid__match_notes
 ),
-sample_patients as
-(
-    select  distinct
-            disease_alias,
-            subject_ref
-    from    rapid__match_notes_sample_patients
-),
 sample_notes as
 (
     select  distinct
             disease_alias,
-            subject_ref,
-            document_ref
-    from    rapid__match_notes_sample_notes
+            subject_ref
+    from    rapid__match_both_sample_notes
 ),
 tabulate as
 (
@@ -45,7 +37,6 @@ tabulate as
             match_icd10.icd10_code,
             match_notes.subject_ref is not null as hit_notes,
             match_notes.document_ref,
-            sample_patients.subject_ref is not null as hit_sample_patients,
             sample_notes.subject_ref is not null as hit_sample_notes
     from    patient_list
     left join   match_icd10
@@ -54,9 +45,6 @@ tabulate as
     left join   match_notes
                 on  patient_list.subject_ref=match_notes.subject_ref
                 and patient_list.disease_alias=match_notes.disease_alias
-    left join   sample_patients
-                on  patient_list.subject_ref=sample_patients.subject_ref
-                and patient_list.disease_alias=sample_patients.disease_alias
     left join   sample_notes
                 on  patient_list.subject_ref=sample_notes.subject_ref
                 and patient_list.disease_alias=sample_notes.disease_alias

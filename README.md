@@ -52,7 +52,7 @@ SQL files are loaded in order 1-6 to produce the result table **rapid__match_com
   * FHIR condition (optional metadata) 
 
 ### NOTES search results
-3. **rapid__match_notes**.sql
+3. **rapid__match_notes**.sql 
   * `disease_alias` (machine label)
   * `subject_ref`   (FHIR Patient.id)
   * `document_ref`  (FHIR DocumentReference.id)
@@ -67,13 +67,19 @@ Select up to 100 patients per disease into these tables.
   * `disease_alias` 
   * `subject_ref`   
 
-5. **rapid__match_notes_sample_notes**.sql
+5. **rapid__match_icd10_sample_patients**.sql
+  * `disease_alias` 
+  * `subject_ref`   
+
+6. **rapid__match_both_sample_notes**.sql
   * `disease_alias` 
   * `subject_ref`   
   * `document_ref`  
   * `encounter_ref` 
   * `document_title` (optional)
   * `group_name` (optional)
+
+X. _rapid__match_notes_sample_notes_.sql (**deprecated**)
 
 #### COMPARE results tables 
 
