@@ -14,6 +14,9 @@ def list_files() -> List[str]:
 def list_files_csv() -> List[str]:
     return [naming.name_file(disease, 'csv') for disease in list_unique()]
 
+def list_disease_alias() -> List[str]:
+    return [naming.name_table_alias(disease) for disease in list_unique()]
+
 def list_unique(file_csv=DISEASES_CSV) -> List[str]:
     unique_list = list()
     for original in csv_to_list(file_csv):
