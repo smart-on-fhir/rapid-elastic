@@ -1,6 +1,6 @@
 import dataclasses
 from typing import List
-from elasticsearch import Elasticsearch
+from elasticsearch8 import Elasticsearch
 from rapid_elastic import filetool
 from rapid_elastic import config
 from rapid_elastic import kql_syntax
