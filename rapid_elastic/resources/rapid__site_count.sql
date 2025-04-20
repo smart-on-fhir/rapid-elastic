@@ -1,3 +1,4 @@
+create table rapid__site_count as
 WITH
 disease_list as
 (
@@ -35,3 +36,5 @@ left join   icd10_notes on disease_list.disease_alias = icd10_notes.disease_alia
 left join   notes_only  on disease_list.disease_alias = notes_only.disease_alias
 order by disease_alias
 ;
+
+
