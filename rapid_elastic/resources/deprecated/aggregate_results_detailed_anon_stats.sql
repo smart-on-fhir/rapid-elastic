@@ -92,7 +92,7 @@ order by hit_icd10 desc, hit_notes desc;
 --    ;
 
 -- ############################################################################
-create table aggregate_results_detailed_anon_stats as
+create table rapid__aggregate_results_detailed_anon_stats as
 WITH
 match_icd10 as ( select  distinct disease_alias, subject_ref from rapid__match_icd10),
 match_notes as ( select  distinct disease_alias, subject_ref from rapid__match_notes),

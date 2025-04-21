@@ -6,11 +6,16 @@ match_notes as (select  distinct disease_alias, subject_ref from rapid__match_no
 match_gpt4  as
 (
     select      AGG.disease_alias,
-                AGG.asserted,
+                AGG.human,
                 concat('Patient/', AGG.subject_ref) as subject_ref,
                 match_icd10.subject_ref is not null as hit_icd10,
-                match_notes.subject_ref is not null as hit_notes
-    from        aggregate_results_detailed_anon as AGG
+                match_notes.subject_ref is not null as hit_notes,
+                case
+                    when AGG.human = 'TP' then 'Affirmed'
+                    when AGG.human = 'TN' then 'Denied'
+                    else AGG.asserted
+                    end as asserted
+    from        rapid__aggregate_results_detailed_anon as AGG
     left join   match_icd10
                 on AGG.disease_alias=match_icd10.disease_alias
                 and concat('Patient/', AGG.subject_ref)=match_icd10.subject_ref
@@ -22,9 +27,9 @@ GPT4 as
 (
     select      count(distinct match_gpt4.subject_ref) as cnt,
                 match_gpt4.disease_alias,
-                match_gpt4.asserted,
                 match_gpt4.hit_icd10,
-                match_gpt4.hit_notes
+                match_gpt4.hit_notes,
+                match_gpt4.asserted
     from        match_gpt4
     group by    match_gpt4.disease_alias, match_gpt4.asserted, match_gpt4.hit_icd10, match_gpt4.hit_notes
     order by    match_gpt4.disease_alias, match_gpt4.asserted, match_gpt4.hit_icd10, match_gpt4.hit_notes
@@ -72,7 +77,7 @@ sample_size as
 ),
 statifier as
 (
-    select      (cnt_affirmed >= 1)              as threshold,
+    select      (cnt_affirmed >= 1)             as threshold,
                 hit_icd10 and hit_notes         as hit_icd10_notes,
                 hit_notes and not hit_icd10     as hit_notes_only,
                 sample_size.*
