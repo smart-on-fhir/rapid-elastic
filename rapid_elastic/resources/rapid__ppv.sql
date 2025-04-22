@@ -93,5 +93,5 @@ PPV_calc as
     from        statifier
     order by    disease_alias, hit_icd10 desc, hit_notes desc
 )
-select * from PPV_calc;
+select * from PPV_calc order by disease_alias;
 

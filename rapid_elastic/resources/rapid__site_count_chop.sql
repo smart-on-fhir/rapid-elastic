@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE rapid__site_count_uthsc (
+CREATE EXTERNAL TABLE rapid__site_count_chop (
     cnt_icd10           int,
     cnt_icd10_notes	    int,
     cnt_notes_only	    int,
@@ -7,6 +7,6 @@ CREATE EXTERNAL TABLE rapid__site_count_uthsc (
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
-LOCATION 's3://cumulus-analytics/andy/rapid__site_count_uthsc'
+LOCATION 's3://cumulus-analytics/andy/rapid__site_count_chop/'
 TBLPROPERTIES ("skip.header.line.count"="1")
 ;

@@ -1,8 +1,26 @@
 import csv
 from pathlib import Path
+from statsmodels.stats.power import NormalIndPower
+from statsmodels.stats.proportion import proportion_effectsize
+
 from rapid_elastic import filetool
 from rapid_elastic import disease_names
 from rapid_elastic import sql_compare
+
+def calculate_sample_size(assert_pos: int, assert_neg: int) -> tuple:
+
+    # Assumed proportions
+    p1 = 0.90  # accuracy for affirmed
+    p2 = 0.75  # accuracy for denied
+    effect_size = proportion_effectsize(p1, p2)
+
+    # Power analysis
+    analysis = NormalIndPower()
+    n_per_group = analysis.solve_power(effect_size=effect_size, power=0.80, alpha=0.05, ratio=assert_neg / assert_pos,
+                                       alternative='two-sided')
+    n1 = n_per_group  # required sample size in group 1 (affirmed)
+    n2 = n1 * (assert_neg / assert_pos)  # required sample size in group 2 (denied)
+    return n1, n2
 
 def list_where(sample_table: str, disease_alias: list | str, num_patients=None) -> list | str:
     """

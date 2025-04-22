@@ -7,6 +7,6 @@ CREATE EXTERNAL TABLE rapid__site_count_uthsc (
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
-LOCATION 's3://cumulus-analytics/andy/rapid__site_count_uthsc'
+LOCATION 's3://cumulus-analytics/andy/rapid__site_count_uthsc/'
 TBLPROPERTIES ("skip.header.line.count"="1")
 ;

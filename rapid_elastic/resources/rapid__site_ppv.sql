@@ -14,8 +14,8 @@ tabulated as
             coalesce(rapid__site_count.cnt_icd10, 0)        as cnt_icd10,
             coalesce(rapid__site_count.cnt_icd10_notes, 0)  as cnt_icd10_notes,
             coalesce(rapid__site_count.cnt_notes_only, 0)   as cnt_notes_only,
-            coalesce(ppv_hit_notes_only.ppv, 0)  as  const_hit_notes_only_ppv,
-            coalesce(ppv_hit_icd10_notes.ppv, 0) as  const_icd10_notes_ppv
+            coalesce(ppv_hit_notes_only.ppv, 0)             as  const_hit_notes_only_ppv,
+            coalesce(ppv_hit_icd10_notes.ppv, 0)            as  const_icd10_notes_ppv
     from    rapid__site_count
     left    join ppv_hit_icd10_notes on rapid__site_count.disease_alias = ppv_hit_icd10_notes.disease_alias
     left    join ppv_hit_notes_only  on rapid__site_count.disease_alias = ppv_hit_notes_only.disease_alias

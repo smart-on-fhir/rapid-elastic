@@ -1,4 +1,5 @@
 import unittest
+
 from rapid_elastic import filetool
 from rapid_elastic import naming
 from rapid_elastic import disease_names
@@ -18,3 +19,16 @@ class TestSQLCompare(unittest.TestCase):
             create='rapid__match_notes',
             table_list=disease_names.list_cohorts(),
             create_table=True, alias_col='disease_alias'))
+
+    # @unittest.skip
+    def test_chart_review(self):
+        """
+        select  count(*) as cnt,
+                count(distinct subject_ref) as cnt_patients,
+                assertion
+        from    rapid__aggregate_results_review
+        group by assertion
+        order by cnt desc
+        """
+        aggregate_results_csv = 'aggregate-results-review-anon.csv'
+        print(sql_compare.reviewer_csv_to_sql_file(aggregate_results_csv))
