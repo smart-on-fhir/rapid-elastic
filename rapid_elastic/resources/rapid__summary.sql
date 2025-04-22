@@ -59,6 +59,20 @@ drop table if exists rapid__site_count;
 drop table if exists rapid__site_ppv;
 
 create      table   rapid__site_count as
+select *    from    rapid__site_count_regi
+order by    disease_alias;
+
+-- rapid__site_ppv.sql
+
+create      table   rapid__site_ppv_regi as
+select *    from rapid__site_ppv
+order by    disease_alias;
+
+-- ###########################################################################
+drop table if exists rapid__site_count;
+drop table if exists rapid__site_ppv;
+
+create      table   rapid__site_count as
 select *    from    rapid__site_count_uthsc
 order by    disease_alias;
 

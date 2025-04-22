@@ -6,12 +6,44 @@ from rapid_elastic import disease_names
 
 class TestDiseaseNamesREGI(unittest.TestCase):
 
-    def test_extract_regi(self):
-        file_raw = filetool.resource('rapid__site_count_regi.rrf')
-        for line in filetool.read_text(file_raw).splitlines():
-            print(line)
+        # cnt_icd10           int,
+        # cnt_icd10_notes	    int,
+        # cnt_notes_only	    int,
+        # disease_alias       string
 
-    def ignore_test(self):
+    def old_____test_extract_regi_wrong_column(self):
+        pass
+        # file_raw = filetool.resource('rapid__site_count_regi_wrong_column.csv')
+        # out = list()
+        # for line in filetool.read_text(file_raw).splitlines():
+        #     disease_name, icd10_code, patient_count = line.split(',')
+        #     disease_alias = naming.name_table_alias(disease_name)
+        #     out.append(f'{patient_count},0,0,{disease_alias}')
+        # out = '\n'.join(out)
+        # filetool.write_text(out, filetool.resource('rapid__site_count_regi_wrong_column.csv'))
+
+    def test_runonce_extract_regi_etl(self):
+        file_raw = filetool.resource('rapid__site_count_regi_etl.rrf')
+        out = list()
+        for line in filetool.read_text(file_raw).splitlines():
+            if not line.startswith('disease_name'):
+                disease_name, cnt_icd10_notes, cnt_icd10, cnt_notes_only, _ignore5, _ignore6, _ignore7 = line.split('|')
+                if cnt_icd10_notes == 'less than 10':
+                    cnt_icd10_notes = 5     # pick a point in the middle as an estimator
+                if not cnt_icd10_notes:
+                    cnt_icd10_notes = 0
+                if not cnt_icd10:
+                    cnt_icd10 = 0
+                if not cnt_notes_only:
+                    cnt_notes_only = 0
+
+                cnt_icd10 = int(cnt_icd10) + int(cnt_icd10_notes)
+                disease_alias = naming.name_table_alias(disease_name)
+                out.append(f'{cnt_icd10},{cnt_icd10_notes},{cnt_notes_only},{disease_alias}')
+        out = '\n'.join(out)
+        filetool.write_text(out, filetool.resource('rapid__site_count_regi.csv'))
+
+    def test_names(self):
         known = disease_names.list_disease_alias()
         site_raw = DISEASE_NAMES.splitlines()
         site_raw = [d for d in site_raw if (d is not None and len(d) > 1)]
@@ -23,120 +55,93 @@ class TestDiseaseNamesREGI(unittest.TestCase):
         duplicates = [item for item, count in Counter(site_alias).items() if count > 1]
         print(duplicates)
 
+        print(len(site_alias), ' len(site_alias)')
+        diff1 = set(known).difference(set(site_alias))
+        diff2 = set(site_alias).difference(set(known))
+
+        print(len(diff1))
+        print(diff1)
+        print(diff2)
+
         # {'glutaric_aciduria_type_1', 'sanfilippo_syndrome', 'neuronal_ceroid_lipofuscinosis', 'hurler_syndrome'}
-        self.assertEqual(set(), set(known).difference(set(site_alias)))
-        self.assertEqual(set(), set(site_alias).difference(set(known)))
+        self.assertEqual(set(), diff1)
+        self.assertEqual(set(), diff2)
 
 
 
 ###############################################################################
 
 DISEASE_NAMES = """
-Beta thalassemia major (Cooley's anemia)
-Fanconi anemia
-Shwachman-Diamond syndrome
-Diamond-Blackfan anemia
-Hemophilia A 
-Chronic granulomatous disease (CGD)
-Familial hemophagocytic lymphohistiocytosis (HLH)
-X-linked agammaglobulinemia (Bruton)
-Severe combined immunodeficiency (SCID)
-Wiskott-Aldrich syndrome
-22q11.2 deletion syndrome (DiGeorge)
-Pseudohypoparathyroidism type 1A (albright hereditary osteodystrophy)
-Isolated growth hormone deficiency (IGHD)
-Barth syndrome (3-methylglutaconic acidurea type 2)
-Medium-chain acyl-CoA dehydrogenase deficiency (MCADD)
-X-linked adrenoleukodystrophy (X-ALD)
-Cystinuria
-Cystinosis (nephropathic)
-Carbamoyl phosphate synthetase I deficiency (CPS1)
-Glutaric aciduria type 1 (GA1)
-Pompe disease (Glycogen storage type1)
-Transaldolase deficiency
-Neuronal ceroid lipofuscinosis (Batten disease) 
-Hurler syndrome (Mucopolysaccharidosis type1)
-Sanfilippo syndrome (Mucopolysaccharidosis type III )
-Salla disease (free sialic acid storage)
-COG8-Congenital Disorders of Glycosylation
-Wilson disease
-Menkes disease
-Cystic fibrosis (CF)
-Alpha-1 antitrypsin deficiency
-Rett syndrome
-Friedreich ataxia (FRDA)
-Ataxia-telangiectasia (AT)
-Spinal muscular atrophy (SMA)
-Opsoclonus-myoclonus syndrome
-Leigh syndrome (subacute necrotizing encephalopathy)
-Lennox-Gastaut syndrome (LGS)
-Dravet syndrome
-Juvenile myoclonic epilepsy (JME)
-Hereditary neuropathy with liability to pressure palsies (HNPP)
-Duchenne muscular dystrophy (DMD)
-Steinert myotonic dystrophy
-Ullrich congenital muscular dystrophy
-Neurodegeneration-spasticity-cerebellar atrophy-cortical visual impairment syndrome (NESCAV syndrome)
-Usher syndrome
-Leber congenital amaurosis (LCA)
-Stargardt disease (juvenile macular dystrophy)
-Achromatopsia (complete congenital color blindness)
-Pediatric pulmonary hypertension (PAH)
-Hereditary hemorrhagic telangiectasia
-Pediatric bronchiectasis (non-CF)
-Childhood interstitial lung disease (chILD)
-Surfactant Protein Deficiencies
-Chronic intestinal pseudo-obstruction (CIPO)
-Systemic-onset juvenile idiopathic arthritis (Still's disease)
-Gitelman syndrome
-Congenital hyperinsulinism
-Aicardi syndrome
-Joubert syndrome
-FLNA-related X-linked myxomatous valvular dysplasia
-Primary ciliary dyskinesia (PCD)
-Hirschsprung disease
-Biliary atresia
-Alagille Syndrome
-Autosomal recessive polycystic kidney disease (ARPKD)
-Nephronophthisis (juvenile)
-Cleidocranial dysplasia
-Treacher Collins syndrome
-Pseudoachondroplasia
-Melnick-Needles osteodysplasty
-Osteogenesis imperfecta (OI)
-McCune Albright syndrome (fibrous dysplasia)
-Ehlers-Danlos syndrome (Classical type)
-Epidermolysis bullosa (EB)
-Neurofibromatosis type 1 (NF1)
-Tuberous sclerosis complex (TSC)
-Sturge-Weber syndrome
-Cowden syndrome/multiple hamartoma syndrome
-Moebius syndrome
-Stickler syndrome
-Pitt-Hopkins syndrome
-Otopalataldigital syndrome type 1
-Otopalataldigital syndrome type 2
-Noonan syndrome
-Smith-Lemli-Opitz syndrome (SLOS)
-Prader-Willi syndrome
-Russell-Silver syndrome
-VACTERL/VATER association
-Rubinstein-Taybi syndrome
-Beckwith-Wiedemann syndrome
-Marfan syndrome
-Loeys-Dietz syndrome
-Sensenbrenner syndrome (cranioectodermal dysplasia)
-Arterial Tortuosity Syndrome
-CHARGE syndrome
-Bannayan-Riley-Ruvalcaba syndrome
-Alport syndrome
-Bardet-Biedl syndrome (BBS)
-Heterotaxy syndrome (situs ambiguus)
-Kabuki syndrome
-1p36 deletion syndrome
-16p11.2 microdeletion syndrome (? distal or proximal)
-Smith-Magenis syndrome (17p11.2 microdeletion syndrome)
-Angelman syndrome
-Williams syndrome
-Fragile X syndrome
+16p11_2_microdeletion_syndrome
+1p36_deletion_syndrome
+achromatopsia
+aicardi_syndrome
+alagille_syndrome
+angelman_syndrome
+ataxia_telangiectasia
+barth_syndrome
+beta_thalassemia_major
+biliary_atresia
+carbamoyl_phosphate_synthetase_i_deficiency
+childhood_interstitial_lung_disease
+chronic_granulomatous_disease
+chronic_intestinal_pseudo_obstruction
+cleidocranial_dysplasia
+cog8_congenital_disorders_of_glycosylation
+congenital_hyperinsulinism
+cowden_syndrome_multiple_hamartoma_syndrome
+cystic_fibrosis
+cystinosis
+cystinuria
+diamond_blackfan_anemia
+dravet_syndrome
+duchenne_muscular_dystrophy
+epidermolysis_bullosa
+familial_hemophagocytic_lymphohistiocytosis
+fanconi_anemia
+flna_related_x_linked_myxomatous_valvular_dysplasia
+friedreich_ataxia
+gitelman_syndrome
+glutaric_aciduria_type_1
+hereditary_hemorrhagic_telangiectasia
+hereditary_neuropathy_with_liability_to_pressure_palsies
+heterotaxy_syndrome
+isolated_growth_hormone_deficiency
+joubert_syndrome
+juvenile_myoclonic_epilepsy
+kabuki_syndrome
+leigh_syndrome
+lennox_gastaut_syndrome
+mccune_albright_syndrome
+melnick_needles_osteodysplasty
+menkes_disease
+hurler_syndrome
+nephronophthisis
+neuronal_ceroid_lipofuscinosis
+opsoclonus_myoclonus_syndrome
+osteogenesis_imperfecta
+pediatric_bronchiectasis
+pediatric_pulmonary_hypertension
+pompe_disease
+primary_ciliary_dyskinesia
+pseudoachondroplasia
+pseudohypoparathyroidism_type_1a
+rubinstein_taybi_syndrome
+salla_disease
+sensenbrenner_syndrome
+severe_combined_immunodeficiency
+shwachman_diamond_syndrome
+smith_magenis_syndrome
+spinal_muscular_atrophy
+steinert_myotonic_dystrophy
+sturge_weber_syndrome
+surfactant_protein_deficiencies
+systemic_onset_juvenile_idiopathic_arthritis
+transaldolase_deficiency
+treacher_collins_syndrome
+ullrich_congenital_muscular_dystrophy
+vacterl_vater_association
+wilson_disease
+wiskott_aldrich_syndrome
+x_linked_agammaglobulinemia
 """
