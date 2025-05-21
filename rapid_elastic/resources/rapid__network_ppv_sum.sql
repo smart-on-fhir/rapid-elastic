@@ -3,6 +3,7 @@ WITH
 prevalence as
 (
     select  disease_alias,
+            icd10_by_api,
             (15 * 1000 * 1000) * prevalence_max / (100*1000) as large_prev
     from    rapid__disease_prevalence
 ),
@@ -10,6 +11,7 @@ sum_sites as
 (
     SELECT  distinct
         prevalence.disease_alias,
+        prevalence.icd10_by_api,
         prevalence.large_prev,
         round(
             cnt_total_ppv_bch           +

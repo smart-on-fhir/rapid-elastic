@@ -55,7 +55,6 @@ Russell-Silver syndrome
 Congenital hyperinsulinism
 Hirschsprung disease
 Biliary atresia
-Alagille syndrome
 Shwachman-Diamond syndrome
 Alpha-1 antitrypsin deficiency
 Chronic intestinal pseudo-obstruction (CIPO)
@@ -78,7 +77,6 @@ Osteogenesis imperfecta (OI)
 Ehlers-Danlos syndrome (Classical type)
 Ullrich congenital muscular dystrophy
 Cleidocranial dysplasia
-Pompe Disease (Infantile-onset)
 Pitt-Hopkins syndrome
 Rett syndrome
 Angelman syndrome
@@ -100,8 +98,6 @@ Aicardi syndrome
 Neuronal ceroid lipofuscinosis (Batten disease)
 Fragile X syndrome
 Joubert syndrome
-X-linked adrenoleukodystrophy (ALD)
-Prader-Willi Syndrome
 COG8-Congenital Disorders of Glycosylation
 Transaldolase deficiency
 Stargardt disease (juvenile macular dystrophy)
@@ -135,6 +131,5 @@ Cowden syndrome/multiple hamartoma syndrome
 Steinert myotonic dystrophy
 Smith-Magenis syndrome (17p11.2 microdeletion syndrome)
 Barth syndrome (3-methylglutaconic acidurea type 2)
-Alport syndrome
 Rubinstein-Taybi syndrome
 """

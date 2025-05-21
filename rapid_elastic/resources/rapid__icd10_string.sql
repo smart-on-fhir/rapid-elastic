@@ -23,12 +23,12 @@ less_and_more as
     union
     select disease_alias, icd10_code || '*' as icd10_code from more_specific
 ),
-icd10_list as
+aggregated as
 (
     SELECT disease_alias,
-           array_join(array_sort(array_agg(icd10_code)), ', ') AS icd10_str
+           array_join(array_sort(array_agg(icd10_code)), ', ') AS icd10_list
     FROM less_and_more
     GROUP BY disease_alias
 )
-select * from icd10_list
+select * from aggregated
 order by disease_alias;

@@ -42,9 +42,9 @@ n_case_icd_nlp as
             check_list.disease_alias,
             cnt_icd10_notes_ppv,
             concat('n_case_icd_nlp: ',
-                    'Patients with both ICD code ',
+                    'Patients with both an ICD code ',
                     check_list.icd10_list,
-                    ' and note mentions (PPV_icd_nlp=',
+                    ' AND note mentions (PPV_icd_nlp=',
                     ppv_percent.ppv_string,
                     '% confirmed out of ',
                     cast(cnt_icd10_notes as varchar),
@@ -71,8 +71,7 @@ n_case_notes_only as
     where       check_list.disease_alias = ppv_percent.disease_alias
     and         ppv_percent.hit_notes_only
 )
-select  check_bool.disease_alias,
-        case
+select  case
         when    not check_bool.failed
         then    check_bool.cnt_total_ppv
         else    check_bool.cnt_icd10_notes_ppv end as column_J,
@@ -84,10 +83,11 @@ select  check_bool.disease_alias,
                         n_case_notes_only.report_text)
         else    concat('n_total= ',
                         n_case_icd_nlp.report_text)
-        end     as report_text
+        end     as column_L,
+        check_bool.*
 from check_bool
 left join   n_case_icd_nlp      on check_bool.disease_alias = n_case_icd_nlp.disease_alias
 left join   n_case_notes_only   on check_bool.disease_alias = n_case_notes_only.disease_alias
-order by disease_alias
+order by check_bool.disease_alias
 
 
