@@ -31,7 +31,10 @@ class TestDiseaseNames(unittest.TestCase):
         """
         Test that CSV input sheets are mapped in `disease_names_expanded.json`
         """
-        spellings = disease_names.list_unique()
+        spellings = sorted(list(set(disease_names.list_unique())))
+        for s in spellings:
+            print(naming.name_table_alias(s))
+
         disease_json = filetool.read_disease_json()
         disease_list = naming.name_unique(list(disease_json.keys()))
 

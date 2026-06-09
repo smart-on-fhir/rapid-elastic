@@ -34,6 +34,11 @@ def output_dir(base: str | None = None) -> Path:
     base.mkdir(parents=True, exist_ok=True)
     return base
 
+def output_note(filename: Path | str) -> Path:
+    target = Path(Path(__file__).parent, 'output', timestamp.date_str(), 'note', filename)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    return target
+
 def rsync_output() -> str:
     """
     :return: rsync command to "sync" uploading to a remote host the local output directory

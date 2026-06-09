@@ -1,6 +1,6 @@
 import dataclasses
 from typing import List
-from elasticsearch8 import Elasticsearch
+from elasticsearch import Elasticsearch
 from rapid_elastic import filetool
 from rapid_elastic import config
 from rapid_elastic import kql_syntax
@@ -145,3 +145,24 @@ def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFiel
     print(f"Total documents retrieved: {len(all_hits)}")
 
     return all_hits
+
+def get_note(document_ref: str, client: Elasticsearch = None) -> str | None:
+    """
+    :param document_ref: DocumentReference/uuid or DiagnosticReport/uuid
+    :return: str of the note text
+    """
+    if not client:
+        client = connect()
+    key = ElasticFields.note_ref
+    query = kql_syntax.query_string(f'{key}:"{document_ref}"')
+    response = client.search(index='*', body=query)
+
+    if response.get('hits'):
+        cnt = len(response['hits']['hits'])
+        if cnt != 1:
+            print(f'WARN {cnt} hits for {document_ref}')
+            return None
+
+        for hit in response['hits']['hits']:
+            _source = hit['_source']
+            return _source.get(ElasticFields.note)
