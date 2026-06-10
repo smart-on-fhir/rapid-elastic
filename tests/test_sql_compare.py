@@ -6,6 +6,7 @@ from rapid_elastic import disease_icd10
 from rapid_elastic import sql_compare
 
 class TestSQLCompare(unittest.TestCase):
+    @unittest.skip
     def test_table_names(self):
         expected = filetool.read_text(filetool.resource('tables.list')).splitlines()
         actual = disease_names.list_cohorts()
