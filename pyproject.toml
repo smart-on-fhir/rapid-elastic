@@ -5,6 +5,7 @@ dependencies = [
     "rich",
     "elasticsearch>=8,<9",
     "paramiko",
+    "statsmodels",
     "scp"
 ]
 
