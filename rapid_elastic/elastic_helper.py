@@ -113,7 +113,10 @@ class ElasticHit:
 ###############################################################################
 def connect() -> Elasticsearch:
     return Elasticsearch(hosts=config.ELASTIC_HOST,
-                         basic_auth=(config.ELASTIC_USER, config.ELASTIC_PASS))
+                         basic_auth=(config.ELASTIC_USER, config.ELASTIC_PASS),
+                         request_timeout=120,
+                         max_retries=3,
+                         retry_on_timeout=True)
 
 def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFields) -> dict:
     print(f'connecting user "{config.ELASTIC_USER}"')
