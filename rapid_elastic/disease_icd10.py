@@ -6,11 +6,6 @@ from rapid_elastic import filetool
 from rapid_elastic import naming
 
 class DiseaseICD10:
-    """
-    Content from curated spreadsheet
-    "ARPA-H Rare Disease Prioritization via ChatGPT with GIC counts"
-    https://docs.google.com/spreadsheets/d/1lNgKOyt1cK_cTA72WbywsjjrvWCM0HUpv1nMFqKEngM/edit?gid=217264283#gid=217264283
-    """
     disease_name: str = None
     orpha_list: List[str] = None
     icd10_list: List[str] = None
