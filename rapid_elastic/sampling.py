@@ -1,4 +1,6 @@
 from pathlib import Path
+from statsmodels.stats.power import NormalIndPower
+from statsmodels.stats.proportion import proportion_effectsize
 from rapid_elastic import filetool
 from rapid_elastic import disease_names
 from rapid_elastic import sql_compare
@@ -43,3 +45,56 @@ def sample_match_notes(num_patients=None) -> Path:
         create='rapid__match_notes_sample_patients',
         table_list=disease_names.list_cohorts(),
         create_table=True, alias_col='disease_alias', num_patients=num_patients)
+
+def calculate_sample_size(assert_pos: int, assert_neg: int) -> tuple:
+
+    # Assumed proportions
+    p1 = 0.90  # accuracy for affirmed
+    p2 = 0.75  # accuracy for denied
+    effect_size = proportion_effectsize(p1, p2)
+
+    # Power analysis
+    analysis = NormalIndPower()
+    n_per_group = analysis.solve_power(effect_size=effect_size, power=0.80, alpha=0.05, ratio=assert_neg / assert_pos,
+                                       alternative='two-sided')
+    n1 = n_per_group  # required sample size in group 1 (affirmed)
+    n2 = n1 * (assert_neg / assert_pos)  # required sample size in group 2 (denied)
+    return n1, n2
+
+def sample_csv_to_json(sample_csv='rapid__match_both_sample_notes.csv', num_patients=100) -> dict:
+    """
+    Get lookups of notes to fetch
+
+    select distinct disease_alias, subject_ref, document_ref
+    from rapid__match_both_sample_notes
+    order by disease_alias, subject_ref, document_ref
+
+    :param sample_csv: saved SQL query result
+    :param num_patients: max number of patients per disease_alias
+    :return: dict where keys=disease_alias, document_ref, subject_ref
+    """
+    with open(filetool.resource(sample_csv), newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        out = dict()
+        for row in reader:
+            _disease_alias = row['disease_alias']
+            _subject_ref = row['subject_ref']
+            _document_ref = row['document_ref']
+
+            if _disease_alias not in out.keys():
+                print(f'INIT {num_patients} for {_disease_alias}')
+                out[_disease_alias] = {'subject_ref': list(),
+                                       'document_ref': list()}
+
+            if num_patients >= len(out[_disease_alias]['subject_ref']):
+                if _subject_ref not in out[_disease_alias]['subject_ref']:
+                    out[_disease_alias]['subject_ref'].append(_subject_ref)
+
+                if _subject_ref not in out[_disease_alias]['document_ref']:
+                    out[_disease_alias]['document_ref'].append(_document_ref)
+    return out
+
+def sample_csv_to_json_file(sample_csv='rapid__match_both_sample_notes.csv', num_patients=100) -> Path:
+    as_json = sample_csv_to_json(sample_csv, num_patients)
+    file_json = sample_csv.replace('.csv', '.json')
+    return filetool.write_json(as_json, filetool.resource(file_json))
