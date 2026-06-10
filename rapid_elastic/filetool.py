@@ -1,6 +1,5 @@
 import os
 import json
-from typing import List, Dict, Any
 from pathlib import Path
 from rapid_elastic import timestamp
 
@@ -19,7 +18,9 @@ DEPRECATED_CSV_LIST = [
 
 DISEASES_CSV = "NEW_MASTER_04-13-2025.csv"
 
-def read_disease_json(filename: Path | str) -> dict:
+def read_disease_json(filename: Path | str = None) -> dict:
+    if not filename:
+        return read_disease_json(resource('disease_names_expanded.json'))
     return read_json(filename)
 
 def resource(filename: Path | str) -> Path:
@@ -50,7 +51,7 @@ def rsync_output() -> str:
 # Read/Write Text
 #
 ###############################################################################
-def read_text(text_file: Path | str, encoding: str = 'UTF-8') -> str:
+def read_text(text_file: Path | str, encoding: str = 'UTF-8') -> str | None:
     """
     Read text from file
     :param text_file: absolute path to file
@@ -85,7 +86,7 @@ def write_bytes(data: str, file_path: str) -> None:
     with m_open(file=file_path, mode='wb') as bytes_file:
         bytes_file.write(data.encode('UTF-8'))
 
-def read_bytes(binary_file: str) -> bytes:
+def read_bytes(binary_file: str) -> bytes | None:
     """
     Read bytes from binary file
     :param binary_file: absolute path to file
@@ -122,7 +123,7 @@ def m_open(**kwargs):
 # Read/Write JSON
 #
 ###############################################################################
-def read_json(json_file: Path | str, encoding: str = 'UTF-8') -> Dict[Any, Any]:
+def read_json(json_file: Path | str, encoding: str = 'UTF-8') -> dict:
     """
     Read json from file
     :param json_file: absolute path to file
@@ -133,7 +134,7 @@ def read_json(json_file: Path | str, encoding: str = 'UTF-8') -> Dict[Any, Any]:
         with m_open(file=json_file, encoding=encoding) as j_file:
             return json.load(j_file)
 
-def write_json(contents: Dict[Any, Any], json_file_path: Path | str, encoding: str = 'UTF-8') -> Path:
+def write_json(contents: dict, json_file_path: Path | str, encoding: str = 'UTF-8') -> Path:
     """
     Write JSON to file
     :param contents: json (dict) contents

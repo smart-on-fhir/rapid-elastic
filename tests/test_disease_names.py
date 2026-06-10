@@ -35,8 +35,9 @@ class TestDiseaseNames(unittest.TestCase):
         for s in spellings:
             print(naming.name_table_alias(s))
 
-        disease_json = filetool.read_disease_json()
-        disease_list = naming.name_unique(list(disease_json.keys()))
+        disease_file = filetool.resource('disease_names_expanded.json')
+        disease_dict = filetool.read_disease_json(disease_file)
+        disease_list = naming.name_unique(list(disease_dict.keys()))
 
         _inter = set(spellings).intersection(set(disease_list))
         _diff1 = set(spellings).difference(set(disease_list))
