@@ -56,3 +56,4 @@ def _quote(expression: str) -> str:
 
 def _sort_by(sortable_field: str) -> dict:
     return {"sort": [{sortable_field: {"order": "desc"}}]}
+

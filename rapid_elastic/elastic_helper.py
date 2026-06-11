@@ -7,11 +7,11 @@ from rapid_elastic import kql_syntax
 
 ###############################################################################
 # Elasticsearch Field names to uniquely reference
-# * Document (required)
-# * Patient (required unless your document reference links to the patient)
-# * Encounter (optional)
-# * group_name (optional)
-# * codes (optional, additional document metadata)
+# * Document    (required)
+# * Patient     (required unless your document reference links to the patient)
+# * Encounter   (optional)
+# * group_name  (optional)
+# * codes       (optional, additional document metadata)
 #
 #  (Optional fields can be disabled by setting the entry to None)
 #
@@ -69,7 +69,7 @@ class ElasticHit:
     """
     HEADERS_OUT = ['subject_ref',       # Patient id
                    'encounter_ref',     # Encounter id
-                   'document_ref',      # Document id
+                   'note_ref',          # Document id
                    'group_name',        # Group name (optional)
                    'document_title']    # Document Title (optional)
     group_name: str = ''

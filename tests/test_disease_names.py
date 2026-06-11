@@ -9,7 +9,7 @@ class TestDiseaseNames(unittest.TestCase):
         This test should be considered optional depending on your use case.
         You may want to have superset queries like "genetic mutation" and "TCF4 genetic mutation"
         """
-        disease_json = filetool.read_disease_json()
+        disease_json = filetool.read_query_topics()
 
         for disease, syn_list in disease_json.items():
             syn_list_lower = [s.lower() for s in syn_list]

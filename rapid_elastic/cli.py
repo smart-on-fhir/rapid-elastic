@@ -1,12 +1,9 @@
 import argparse
 import asyncio
 import sys
-from typing import NoReturn
-
 import rich.console
-
+from typing import NoReturn
 from rapid_elastic import config, filetool, pipeline
-
 
 def fatal_error(message: str) -> NoReturn:
     stderr = rich.console.Console(stderr=True)
@@ -17,10 +14,10 @@ def fatal_error(message: str) -> NoReturn:
 async def main(argv: list[str]) -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--diseases",
+        "--topics",
         metavar="FILE",
-        help="disease config (default is the RAPID collection of rare diseases)",
-        default=filetool.resource("disease_names_expanded.json"),
+        help="curated query topics where key=topic and values=search terms",
+        default=filetool.path_query_topics(),
     )
     parser.add_argument(
         "--output", "-o",
@@ -34,7 +31,7 @@ async def main(argv: list[str]) -> None:
     if not config.ELASTIC_USER or not config.ELASTIC_PASS:
         fatal_error("You must first set the ELASTIC_USER and ELASTIC_PASS environment variables.")
 
-    pipeline.pipe_file(args.diseases, output_base=args.output, fields_config=args.fields)
+    pipeline.pipe_batch(args.topics, output_base=args.output, fields_config=args.fields)
 
 
 def main_cli():

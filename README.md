@@ -2,7 +2,7 @@
 
 ### Disease Synonyms Curation
 * Disease names and synonyms were **HUMAN expert curated** and assisted via ChatGPT with additional checks within NLM GeneReviews, OrphaNet, and Google searches.
-* [disease_names_expanded.json](rapid_elastic/resources/disease_names_expanded.json) is pre-built and recommended for use without modification.
+* [disease_names_expanded.json](rapid_elastic/resources/query_topics.json) is pre-built and recommended for use without modification.
 * [disease_names.py](rapid_elastic/disease_names.py) assists curation if changes need to be made: read spreadsheet CSV, write disease names JSON, recommend GPT4 prompts, find duplicates, and merges curated JSON.
 
 ### Quickstart

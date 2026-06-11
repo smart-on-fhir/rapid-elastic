@@ -10,41 +10,30 @@ from rapid_elastic import timestamp
 # https://docs.google.com/spreadsheets/d/1lNgKOyt1cK_cTA72WbywsjjrvWCM0HUpv1nMFqKEngM
 #
 #####################################################################################
-DEPRECATED_CSV_LIST = [
-    "UNIQUE_LT10_PER_100K.csv",
-    "UNIQUE_LT50_PER_100K.csv",
-    "BROAD_LT10_PER_100K.csv",
-    "BROAD_LT50_PER_100K.csv"]
+QUERY_TOPICS_JSON = 'query_topics.json'
 
-DISEASES_CSV = "NEW_MASTER_04-13-2025.csv"
+def read_query_topics(filename: Path | str = QUERY_TOPICS_JSON) -> dict:
+    return read_json(path_query_topics(filename))
 
-def read_disease_json(filename: Path | str = None) -> dict:
-    if not filename:
-        return read_disease_json(resource('disease_names_expanded.json'))
-    return read_json(filename)
+def path_query_topics(filename: Path | str = QUERY_TOPICS_JSON) -> Path:
+    if isinstance(filename, Path):
+        return filename
+    else:
+        return path_resource(filename)
 
-def resource(filename: Path | str) -> Path:
+def path_resource(filename: Path | str) -> Path:
     return Path(Path(__file__).parent, 'resources', filename)
 
-def deprecated(filename) -> Path:
-    return resource(f"deprecated/{filename}")
-
-def output_dir(base: str | None = None) -> Path:
+def path_output(base: str | None = None) -> Path:
     base = base or "output"
     base = Path(base, timestamp.date_str())
     base.mkdir(parents=True, exist_ok=True)
     return base
 
-def output_note(filename: Path | str) -> Path:
+def path_output_note(filename: Path | str) -> Path:
     target = Path(Path(__file__).parent, 'output', timestamp.date_str(), 'note', filename)
     target.parent.mkdir(parents=True, exist_ok=True)
     return target
-
-def rsync_output() -> str:
-    """
-    :return: rsync command to "sync" uploading to a remote host the local output directory
-    """
-    return f"rsync -azvrh --progress {output_dir() / '*.csv.gz'} "
 
 ###############################################################################
 #
