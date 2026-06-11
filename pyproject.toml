@@ -2,8 +2,11 @@
 name = "rapid-elastic"
 requires-python = ">= 3.10"
 dependencies = [
-    "elasticsearch8",
     "rich",
+    "elasticsearch>=8,<9",
+    "paramiko",
+    "statsmodels",
+    "scp"
 ]
 
 readme = "README.md"

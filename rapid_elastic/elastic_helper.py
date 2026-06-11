@@ -1,17 +1,17 @@
 import dataclasses
 from typing import List
-from elasticsearch8 import Elasticsearch
+from elasticsearch import Elasticsearch
 from rapid_elastic import filetool
 from rapid_elastic import config
 from rapid_elastic import kql_syntax
 
 ###############################################################################
 # Elasticsearch Field names to uniquely reference
-# * Document (required)
-# * Patient (required unless your document reference links to the patient)
-# * Encounter (optional)
-# * group_name (optional)
-# * codes (optional, additional document metadata)
+# * Document    (required)
+# * Patient     (required unless your document reference links to the patient)
+# * Encounter   (optional)
+# * group_name  (optional)
+# * codes       (optional, additional document metadata)
 #
 #  (Optional fields can be disabled by setting the entry to None)
 #
@@ -69,7 +69,7 @@ class ElasticHit:
     """
     HEADERS_OUT = ['subject_ref',       # Patient id
                    'encounter_ref',     # Encounter id
-                   'document_ref',      # Document id
+                   'note_ref',          # Document id
                    'group_name',        # Group name (optional)
                    'document_title']    # Document Title (optional)
     group_name: str = ''
@@ -113,7 +113,10 @@ class ElasticHit:
 ###############################################################################
 def connect() -> Elasticsearch:
     return Elasticsearch(hosts=config.ELASTIC_HOST,
-                         basic_auth=(config.ELASTIC_USER, config.ELASTIC_PASS))
+                         basic_auth=(config.ELASTIC_USER, config.ELASTIC_PASS),
+                         request_timeout=120,
+                         max_retries=3,
+                         retry_on_timeout=True)
 
 def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFields) -> dict:
     print(f'connecting user "{config.ELASTIC_USER}"')

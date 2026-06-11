@@ -1,8 +1,7 @@
 import os
 import json
-from typing import List, Dict, Any
 from pathlib import Path
-from rapid_elastic import timestamp
+from datetime import datetime
 
 ######################################################################################
 # CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.
@@ -11,41 +10,40 @@ from rapid_elastic import timestamp
 # https://docs.google.com/spreadsheets/d/1lNgKOyt1cK_cTA72WbywsjjrvWCM0HUpv1nMFqKEngM
 #
 #####################################################################################
-DEPRECATED_CSV_LIST = [
-    "UNIQUE_LT10_PER_100K.csv",
-    "UNIQUE_LT50_PER_100K.csv",
-    "BROAD_LT10_PER_100K.csv",
-    "BROAD_LT50_PER_100K.csv"]
+QUERY_TOPICS_JSON = 'query_topics.json'
 
-DISEASES_CSV = "NEW_MASTER_04-13-2025.csv"
+def read_query_topics(filename: Path | str = QUERY_TOPICS_JSON) -> dict:
+    return read_json(path_query_topics(filename))
 
-def read_disease_json(filename: Path | str) -> dict:
-    return read_json(filename)
+def path_query_topics(filename: Path | str = QUERY_TOPICS_JSON) -> Path:
+    if isinstance(filename, Path):
+        return filename
+    else:
+        return path_resource(filename)
 
-def resource(filename: Path | str) -> Path:
-    return Path(Path(__file__).parent, 'resources', filename)
+def path_project() -> Path:
+    return Path(Path(__file__).parent)
 
-def deprecated(filename) -> Path:
-    return resource(f"deprecated/{filename}")
+def path_resource(filename: Path | str) -> Path:
+    return path_project() / 'resources' / filename
 
-def output_dir(base: str | None = None) -> Path:
+def path_output(base: str | None = None) -> Path:
     base = base or "output"
-    base = Path(base, timestamp.date_str())
+    base = path_project() / base / date_str()
     base.mkdir(parents=True, exist_ok=True)
     return base
 
-def rsync_output() -> str:
-    """
-    :return: rsync command to "sync" uploading to a remote host the local output directory
-    """
-    return f"rsync -azvrh --progress {output_dir() / '*.csv.gz'} "
+def date_str(datetime_obj=None) -> str:
+    if not datetime_obj:
+        datetime_obj = datetime.now()
+    return datetime_obj.strftime("%Y-%m-%d")
 
 ###############################################################################
 #
 # Read/Write Text
 #
 ###############################################################################
-def read_text(text_file: Path | str, encoding: str = 'UTF-8') -> str:
+def read_text(text_file: Path | str, encoding: str = 'UTF-8') -> str | None:
     """
     Read text from file
     :param text_file: absolute path to file
@@ -80,7 +78,7 @@ def write_bytes(data: str, file_path: str) -> None:
     with m_open(file=file_path, mode='wb') as bytes_file:
         bytes_file.write(data.encode('UTF-8'))
 
-def read_bytes(binary_file: str) -> bytes:
+def read_bytes(binary_file: str) -> bytes | None:
     """
     Read bytes from binary file
     :param binary_file: absolute path to file
@@ -117,7 +115,7 @@ def m_open(**kwargs):
 # Read/Write JSON
 #
 ###############################################################################
-def read_json(json_file: Path | str, encoding: str = 'UTF-8') -> Dict[Any, Any]:
+def read_json(json_file: Path | str, encoding: str = 'UTF-8') -> dict:
     """
     Read json from file
     :param json_file: absolute path to file
@@ -128,7 +126,7 @@ def read_json(json_file: Path | str, encoding: str = 'UTF-8') -> Dict[Any, Any]:
         with m_open(file=json_file, encoding=encoding) as j_file:
             return json.load(j_file)
 
-def write_json(contents: Dict[Any, Any], json_file_path: Path | str, encoding: str = 'UTF-8') -> Path:
+def write_json(contents: dict, json_file_path: Path | str, encoding: str = 'UTF-8') -> Path:
     """
     Write JSON to file
     :param contents: json (dict) contents
@@ -141,3 +139,4 @@ def write_json(contents: Dict[Any, Any], json_file_path: Path | str, encoding: s
     with m_open(file=json_file_path, mode='w', encoding=encoding) as json_file_path:
         json.dump(contents, json_file_path, indent=4)
         return Path(json_file_path.name)
+
