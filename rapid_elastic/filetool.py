@@ -1,7 +1,7 @@
 import os
 import json
 from pathlib import Path
-from rapid_elastic import timestamp
+from datetime import datetime
 
 ######################################################################################
 # CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.
@@ -21,19 +21,22 @@ def path_query_topics(filename: Path | str = QUERY_TOPICS_JSON) -> Path:
     else:
         return path_resource(filename)
 
+def path_project() -> Path:
+    return Path(Path(__file__).parent)
+
 def path_resource(filename: Path | str) -> Path:
-    return Path(Path(__file__).parent, 'resources', filename)
+    return path_project() / 'resources' / filename
 
 def path_output(base: str | None = None) -> Path:
     base = base or "output"
-    base = Path(base, timestamp.date_str())
+    base = path_project() / base / date_str()
     base.mkdir(parents=True, exist_ok=True)
     return base
 
-def path_output_note(filename: Path | str) -> Path:
-    target = Path(Path(__file__).parent, 'output', timestamp.date_str(), 'note', filename)
-    target.parent.mkdir(parents=True, exist_ok=True)
-    return target
+def date_str(datetime_obj=None) -> str:
+    if not datetime_obj:
+        datetime_obj = datetime.now()
+    return datetime_obj.strftime("%Y-%m-%d")
 
 ###############################################################################
 #
@@ -136,3 +139,4 @@ def write_json(contents: dict, json_file_path: Path | str, encoding: str = 'UTF-
     with m_open(file=json_file_path, mode='w', encoding=encoding) as json_file_path:
         json.dump(contents, json_file_path, indent=4)
         return Path(json_file_path.name)
+

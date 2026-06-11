@@ -1,6 +1,5 @@
-import sys
 from pathlib import Path
-from rapid_elastic import timestamp
+from datetime import datetime
 from rapid_elastic import filetool
 from rapid_elastic import kql_syntax
 from rapid_elastic import elastic_helper
@@ -36,13 +35,13 @@ def pipe_query(
 
     fields = elastic_helper.ElasticFields(config_path=fields_config)
 
-    _time1 = timestamp.datetime.now()
+    _time1 = filetool.datetime.now()
     #
     all_hits = elastic_helper.get_hits(query, fields=fields)
     #
-    _time2 = timestamp.datetime.now()
+    _time2 = datetime.now()
 
-    print("Elastic took: ", timestamp.diff_seconds(_time1, _time2), ' seconds')
+    print("Elastic took: ", diff_seconds(_time1, _time2), ' seconds')
     print(f'{len(all_hits)} hits to process')
 
     entry_list = [elastic_helper.ElasticHit(hit['_source'], fields=fields) for hit in all_hits]
@@ -72,18 +71,22 @@ def pipe_batch(
     print(f'{num_topics} topics, processing now....')
 
     file_list = list()
-
-    _time_begin = timestamp.datetime.now()
-    print("Begin: ", timestamp.datetime_str(_time_begin))
+    start_time = datetime.now()
 
     for topic, query in query_topics_json.items():
         file_list.append(pipe_query(topic, query, output_base=output_base, fields_config=fields_config))
         print(f'Progress= {len(file_list)} / {num_topics}')
 
-    _time_done = timestamp.datetime.now()
-    print("Done: ", timestamp.datetime_str(_time_begin), 'seconds')
-    print("Took: ", timestamp.diff_seconds(_time_begin, _time_done), 'seconds')
+    stop_time = datetime.now()
+    print("Took: ", diff_seconds(start_time, stop_time), 'seconds')
     return file_list
+
+def diff_seconds(start_time: datetime, stop_time: datetime):
+    """
+    Simple wall-clock Timer
+    """
+    delta = stop_time - start_time
+    return abs(delta.total_seconds())
 
 
 ###############################################################################
