@@ -2,6 +2,7 @@ import os
 import json
 from pathlib import Path
 from datetime import datetime
+import pandas as pd
 
 ######################################################################################
 # CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.
@@ -10,12 +11,25 @@ from datetime import datetime
 # https://docs.google.com/spreadsheets/d/1lNgKOyt1cK_cTA72WbywsjjrvWCM0HUpv1nMFqKEngM
 #
 #####################################################################################
-QUERY_TOPICS_JSON = 'query_topics.json'
+QUERY_TOPICS_FILE = 'query_topics.json'
 
-def read_query_topics(filename: Path | str = QUERY_TOPICS_JSON) -> dict:
+def read_query_topics(filename: Path | str) -> dict:
+    path = path_query_topics(filename)
+    if path.suffix == '.json':
+        return read_query_topics_json(path)
+    elif path.suffix == '.tsv':
+        return read_query_topics_tsv(path)
+    else:
+        raise ValueError('Unsupported file type', filename)
+
+def read_query_topics_json(filename: Path | str) -> dict:
     return read_json(path_query_topics(filename))
 
-def path_query_topics(filename: Path | str = QUERY_TOPICS_JSON) -> Path:
+def read_query_topics_tsv(filename: Path | str, col_key='topic', col_value='query') -> dict:
+    df = pd.read_csv(filename, sep="\t", on_bad_lines="error")
+    return dict(zip(df[col_key], df[col_value]))
+
+def path_query_topics(filename: Path | str = QUERY_TOPICS_FILE) -> Path:
     if isinstance(filename, Path):
         return filename
     else:

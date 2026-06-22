@@ -59,21 +59,23 @@ def pipe_query(
 # Batch mode
 ###############################################################################
 def pipe_batch(
-    query_topics_json: Path | dict,
+    query_topics: Path | dict,
     output_base: str | None = None,
     fields_config: str | None = None,
 ) -> list[Path]:
 
-    if not isinstance(query_topics_json, dict):
-        query_topics_json = filetool.read_query_topics(query_topics_json)
+    if not isinstance(query_topics, dict):
+        return pipe_batch(query_topics=prepare_query_topics(query_topics),
+                          output_base=output_base,
+                          fields_config=fields_config)
 
-    num_topics = len(query_topics_json.keys())
+    num_topics = len(query_topics.keys())
     print(f'{num_topics} topics, processing now....')
 
     file_list = list()
     start_time = datetime.now()
 
-    for topic, query in query_topics_json.items():
+    for topic, query in query_topics.items():
         file_list.append(pipe_query(topic, query, output_base=output_base, fields_config=fields_config))
         print(f'Progress= {len(file_list)} / {num_topics}')
 
@@ -88,6 +90,24 @@ def diff_seconds(start_time: datetime, stop_time: datetime):
     delta = stop_time - start_time
     return abs(delta.total_seconds())
 
+def prepare_query_topics(query_topics: Path | dict) -> dict[str, str]:
+    """
+    :param query_topics: Path or dict
+    :return: dict containing "topic" and "query"
+    """
+    if isinstance(query_topics, Path):
+        return prepare_query_topics(filetool.read_query_topics(query_topics))
+    elif isinstance(query_topics, dict):
+        prepared = dict()
+        for topic, query in query_topics.items():
+            if isinstance(query, list):
+                prepared[topic] = kql_syntax.match_phrase_any(query)
+            elif isinstance(query, str):
+                prepared[topic] = query
+            else:
+                print('invalid topic', topic, 'type(query)', type(query), 'query', query)
+                raise TypeError(type(query))
+        return prepared
 
 ###############################################################################
 #
