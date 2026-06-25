@@ -1,6 +1,7 @@
 import dataclasses
 from typing import List
 from elasticsearch import Elasticsearch
+from elasticsearch import helpers
 from rapid_elastic import filetool
 from rapid_elastic import config
 from rapid_elastic import kql_syntax
@@ -118,33 +119,17 @@ def connect() -> Elasticsearch:
                          max_retries=3,
                          retry_on_timeout=True)
 
-def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFields) -> dict:
+def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFields) -> list:
     print(f'connecting user "{config.ELASTIC_USER}"')
     client = connect()
     query = kql_syntax.query_string(disease_query_string)
     query = query | kql_syntax.response_fields(fields.includes, fields.excludes)
     print(query)
-    response = client.search(body=query, scroll='10m', size=scroll_size)
 
-    total = response['hits']['total']
-    print(f'{total} response hits')
-
-    # Extract the first scroll ID and hits
-    scroll_id = response['_scroll_id']
-    all_hits = response['hits']['hits']
-
-    # Keep scrolling until no more results
-    while True:
-        scroll_response = client.scroll(scroll_id=scroll_id, scroll='2m')
-        hits = scroll_response['hits']['hits']
-        if not hits:
-            break
-        all_hits.extend(hits)
-        scroll_id = scroll_response['_scroll_id']  # Update scroll ID for next round
-
-        print(f"count hits: {len(all_hits)}")
-
-    client.clear_scroll(scroll_id=scroll_id)
+    all_hits = list(helpers.scan(client,
+                                 query=query,
+                                 scroll='30m',
+                                 size=scroll_size,
+                                 request_timeout=120))
     print(f"Total documents retrieved: {len(all_hits)}")
-
     return all_hits
