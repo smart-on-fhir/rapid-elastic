@@ -126,10 +126,17 @@ def get_hits(disease_query_string: str, scroll_size=1000, *, fields: ElasticFiel
     query = query | kql_syntax.response_fields(fields.includes, fields.excludes)
     print(query)
 
-    all_hits = list(helpers.scan(client,
-                                 query=query,
-                                 scroll='30m',
-                                 size=scroll_size,
-                                 request_timeout=120))
-    print(f"Total documents retrieved: {len(all_hits)}")
+    total = client.count(body={'query': query['query']})['count']
+    print(f'{total} response hits', flush=True)
+
+    all_hits = []
+    for hit in helpers.scan(client,
+                            query=query,
+                            scroll='30m',
+                            size=scroll_size,
+                            request_timeout=120):
+        all_hits.append(hit)
+        if len(all_hits) % scroll_size == 0:
+            print(f"count hits: {len(all_hits)}", flush=True)
+    print(f"Total documents retrieved: {len(all_hits)}", flush=True)
     return all_hits
