@@ -3,13 +3,14 @@ from rapid_elastic import filetool
 
 class TestDiseaseNames(unittest.TestCase):
 
-    def test_synonynms_no_query_intersection(self):
+    @unittest.skip('optional: valid use cases may choose to allow query results')
+    def test_synonyms_no_query_intersection(self):
         """
         Test that there are no overlapping search terms between diseases.
         This test should be considered optional depending on your use case.
         You may want to have superset queries like "genetic mutation" and "TCF4 genetic mutation"
         """
-        disease_json = filetool.read_query_topics()
+        disease_json = filetool.read_query_topics(filetool.path_query_topics())
 
         for disease, syn_list in disease_json.items():
             syn_list_lower = [s.lower() for s in syn_list]

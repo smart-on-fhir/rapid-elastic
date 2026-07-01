@@ -12,7 +12,7 @@ def query_string(expression) -> dict:
 
 def match_phrase_any(keyword_list) -> str:
     """
-    :param keyword_list: list of keywords that were HUMAN expert curated, assited by GPT suggestions.
+    :param keyword_list: list of keywords that were HUMAN expert curated, assisted by LLM suggestions.
     :return: prepared KQL querysting
     """
     if not isinstance(keyword_list, list):
@@ -34,7 +34,7 @@ def response_fields(include_list: list, exclude_list: list) -> dict:
         return {'_source': {'excludes': include_list}}
 
 ###############################################################################
-# Helper methods, future state (not curently used) for more complex queries
+# Helper methods, future state (not currently used) for more complex queries
 ###############################################################################
 def _query(expression) -> dict:
     return {'query': expression}
