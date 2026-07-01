@@ -4,13 +4,6 @@ from pathlib import Path
 from datetime import datetime
 import pandas as pd
 
-######################################################################################
-# CSV files curated by Ken Mandl assisted by ChatGPT. Each sheet is a CSV file.
-#
-# "ARPA-H Rare Disease Prioritization via ChatGPT with GIC counts"
-# https://docs.google.com/spreadsheets/d/1lNgKOyt1cK_cTA72WbywsjjrvWCM0HUpv1nMFqKEngM
-#
-#####################################################################################
 QUERY_TOPICS_FILE = 'query_topics.json'
 
 def read_query_topics(filename: Path | str) -> dict:
