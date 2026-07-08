@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 import pandas as pd
+from rapid_elastic import config
 
 QUERY_TOPICS_FILE = 'query_topics.json'
 
@@ -35,7 +36,7 @@ def path_resource(filename: Path | str) -> Path:
     return path_project() / 'resources' / filename
 
 def path_output(base: str | None = None) -> Path:
-    base = base or "output"
+    base = base or config.ELASTIC_OUTPUT or "output"
     base = path_project() / base / date_str()
     base.mkdir(parents=True, exist_ok=True)
     return base
