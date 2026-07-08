@@ -71,7 +71,7 @@ def pipe_batch(
 
     num_topics = len(query_topics.keys())
     print(f'{num_topics} topics, processing now....')
-    print('Path output:', filetool.path_output())
+    print('Path output:', filetool.path_output(output_base))
 
     file_list = list()
     start_time = datetime.now()
