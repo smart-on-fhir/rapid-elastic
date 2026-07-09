@@ -10,6 +10,7 @@
    1. `ELASTIC_HOST` : default http://localhost:9200
    2. `ELASTIC_USER` : basic auth
    3. `ELASTIC_PASS` : basic auth
+   4. `ELASTIC_OUTPUT` : optional output directory
 
 2. pip3 install rapid-elastic
 
@@ -22,7 +23,7 @@ Read the [server setup docs](docs/server-setup.md).
 * By default, synonyms used to match any "exact phrase" in the note. 
 * see `kql_syntax.py` for alternate methods of building Elasticsearch queries.
 
-### Each Elasticsearch hit is saved to "output" folder 
+### Each Elasticsearch hit is saved to `ELASTIC_OUTPUT` or the default "output" folder 
  * `subject_ref`       (FHIR Patient.id)
  * `encounter_ref`     (FHIR Encounter.id)
  * `note_ref`          (FHIR DocumentReference.id) 
