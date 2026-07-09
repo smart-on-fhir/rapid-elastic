@@ -45,8 +45,6 @@ Exit codes:
     2 = static TSV validation failed
 """
 
-from __future__ import annotations
-
 import argparse
 import csv
 import re
