@@ -60,7 +60,7 @@ def pipe_query(
 ###############################################################################
 def pipe_batch(
     query_topics: Path | dict,
-    output_base: str | None = None,
+    output_base: str,
     fields_config: str | None = None,
 ) -> list[Path]:
 
@@ -71,7 +71,7 @@ def pipe_batch(
 
     num_topics = len(query_topics.keys())
     print(f'{num_topics} topics, processing now....')
-    print('Path output:', filetool.path_output())
+    print('Path output:', filetool.path_output(output_base))
 
     file_list = list()
     start_time = datetime.now()
@@ -118,4 +118,4 @@ def prepare_query_topics(query_topics: Path | dict) -> dict[str, str]:
 #
 ###############################################################################
 if __name__ == "__main__":
-    pipe_batch(filetool.path_query_topics())
+    pipe_batch(filetool.path_query_topics(), "output")
