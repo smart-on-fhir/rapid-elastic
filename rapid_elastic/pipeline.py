@@ -20,7 +20,14 @@ def pipe_query(
     :param fields_config: file with elasticsearch field overrides
     :return: List of elasticsearch results written to disk, a CSV file and a JSON file
     """
-    output_dir = filetool.path_output(output_base)
+    output_dir = None
+    if output_base is not None and Path(output_base).is_absolute():
+        output_dir = Path(output_base)
+        if not output_dir.exists():
+            output_dir.mkdir(exist_ok=True, parents=True)
+    else:
+        output_dir = filetool.path_output(output_base)
+
     output_csv = output_dir / f'{topic}.csv'
     output_csv_gz = output_dir / f'{topic}.csv.gz'
 
