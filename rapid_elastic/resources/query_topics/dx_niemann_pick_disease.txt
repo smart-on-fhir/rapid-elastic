@@ -1,0 +1,67 @@
+Niemann Pick disease
+Niemann-Pick disease
+Niemann Pick disorder
+Niemann-Pick disorder
+Niemann Pick syndrome
+Niemann-Pick syndrome
+Niemann Pick storage disease
+Niemann-Pick storage disease
+Niemann Pick disease type A
+Niemann-Pick disease type A
+Niemann Pick disease type B
+Niemann-Pick disease type B
+Niemann Pick disease type AB
+Niemann-Pick disease type AB
+Niemann Pick disease type A/B
+Niemann-Pick disease type A/B
+NPD type A
+NPD-A
+NPD type B
+NPD-B
+NPD type AB
+NPD-AB
+Acid sphingomyelinase deficiency
+Acid sphingomyelinase-deficiency
+Acid sphingomyelinase deficient Niemann Pick disease
+Acid sphingomyelinase-deficient Niemann-Pick disease
+ASMD
+ASMD type A
+ASMD type B
+ASMD type A/B
+Sphingomyelinase deficiency
+SMPD1 deficiency
+SMPD1 mutation
+SMPD1 pathogenic
+SMPD1 variant
+SMPD1 gene mutation
+Niemann Pick disease type C
+Niemann-Pick disease type C
+Niemann Pick type C
+Niemann-Pick type C
+NPD type C
+NPD-C
+NPC disease
+NPC1 disease
+NPC2 disease
+Niemann Pick disease type C1
+Niemann-Pick disease type C1
+Niemann Pick disease type C2
+Niemann-Pick disease type C2
+Niemann Pick disease due to NPC1 deficiency
+Niemann-Pick disease due to NPC1 deficiency
+Niemann Pick disease due to NPC2 deficiency
+Niemann-Pick disease due to NPC2 deficiency
+NPC1 deficiency
+NPC1 mutation
+NPC1 pathogenic
+NPC1 variant
+NPC1 gene mutation
+NPC2 deficiency
+NPC2 mutation
+NPC2 pathogenic
+NPC2 variant
+NPC2 gene mutation
+Niemann Pick disease type D
+Niemann-Pick disease type D
+NPD type D
+NPD-D

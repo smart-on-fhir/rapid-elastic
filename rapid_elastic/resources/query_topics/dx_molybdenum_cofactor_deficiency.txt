@@ -1,0 +1,43 @@
+Molybdenum cofactor deficiency
+Molybdenum cofactor deficiency type A
+Molybdenum cofactor deficiency type B
+Molybdenum cofactor deficiency type C
+Molybdenum cofactor deficiency type D
+MoCD
+MoCo deficiency
+MOCOD
+Molybdenum cofactor biosynthesis disorder
+Molybdenum cofactor biosynthetic disorder
+Molybdenum cofactor synthesis defect
+Molybdenum cofactor synthesis deficiency
+Sulfite oxidase deficiency due to molybdenum cofactor deficiency
+Combined sulfite oxidase deficiency
+Combined deficiency of sulfite oxidase and xanthine dehydrogenase
+MOCS1 deficiency
+MOCS1 mutation
+MOCS1 pathogenic
+MOCS1 variant
+MOCS1 gene mutation
+Molybdenum cofactor deficiency due to MOCS1 deficiency
+Molybdenum cofactor deficiency type A due to MOCS1 deficiency
+MOCS2 deficiency
+MOCS2 mutation
+MOCS2 pathogenic
+MOCS2 variant
+MOCS2 gene mutation
+Molybdenum cofactor deficiency due to MOCS2 deficiency
+Molybdenum cofactor deficiency type B due to MOCS2 deficiency
+GPHN deficiency
+GPHN mutation
+GPHN pathogenic
+GPHN variant
+GPHN gene mutation
+Molybdenum cofactor deficiency due to GPHN deficiency
+Molybdenum cofactor deficiency type C due to GPHN deficiency
+MOCS3 deficiency
+MOCS3 mutation
+MOCS3 pathogenic
+MOCS3 variant
+MOCS3 gene mutation
+Molybdenum cofactor deficiency due to MOCS3 deficiency
+Molybdenum cofactor deficiency type D due to MOCS3 deficiency

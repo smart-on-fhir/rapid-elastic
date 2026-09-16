@@ -12,9 +12,25 @@ def read_query_topics(filename: Path | str) -> dict:
         return read_query_topics_json(path)
     elif path.suffix == '.tsv':
         return read_query_topics_tsv(path)
+    elif path.suffix == ".txt":
+        return read_query_topics_txt(path)
     else:
         raise ValueError('Unsupported file type', filename)
 
+def read_query_topics_txt(filename: Path | str) -> dict:
+    key = None
+    values = None
+    
+    if isinstance(filename, str):
+        key = filename.split("/")[-1].split(".")[0]
+    else:
+        key = filename.stem
+        
+    with open(filename, "r") as f:
+        values = f.read().splitlines()
+        
+    return {key: values}
+    
 def read_query_topics_json(filename: Path | str) -> dict:
     return read_json(path_query_topics(filename))
 
