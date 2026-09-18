@@ -22,8 +22,8 @@ async def main(argv: list[str]) -> None:
     parser.add_argument(
         "--output", "-o",
         metavar="DIR",
-        help="output folder (default is ./output/)",
-        default="output",
+        help="output folder; default is ELASTIC_OUTPUT or ./output/",
+        default=None,
     )
     parser.add_argument("--fields", metavar="FILE", help="elasticsearch field config")
     args = parser.parse_args(argv)
