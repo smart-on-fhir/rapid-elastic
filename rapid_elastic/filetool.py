@@ -4,17 +4,41 @@ from pathlib import Path
 from datetime import datetime
 import pandas as pd
 
-QUERY_TOPICS_FILE = 'query_topics.json'
+QUERY_TOPICS_FILE = 'query_topics'
 
-def read_query_topics(filename: Path | str) -> dict:
-    path = path_query_topics(filename)
-    if path.suffix == '.json':
-        return read_query_topics_json(path)
-    elif path.suffix == '.tsv':
-        return read_query_topics_tsv(path)
+def read_query_topics(directory_path: Path) -> dict:
+    output = dict()
+    
+    if not directory_path.is_dir():
+        raise ValueError("Query topics path should be a directory with each query in its own file.")
     else:
-        raise ValueError('Unsupported file type', filename)
+        for file in directory_path.iterdir():
+            if not file.is_file():
+                continue
+    
+            query = ""
+    
+            with open(directory_path / file, "r") as f:
+                query = f.read()  # TODO verify query is correct syntax
+    
+            output[file] = query
+            
+    return output
 
+def read_query_topics_txt(filename: Path | str) -> dict:
+    key = None
+    values = None
+    
+    if isinstance(filename, str):
+        key = filename.split("/")[-1].split(".")[0]
+    else:
+        key = filename.stem
+        
+    with open(filename, "r") as f:
+        values = f.read().splitlines()
+        
+    return {key: values}
+    
 def read_query_topics_json(filename: Path | str) -> dict:
     return read_json(path_query_topics(filename))
 

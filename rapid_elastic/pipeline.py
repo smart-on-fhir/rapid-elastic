@@ -9,13 +9,13 @@ from rapid_elastic import elastic_helper
 ###############################################################################
 def pipe_query(
     topic,
-    query: str | list[str],
+    query: str,
     output_base: str | None = None,
     fields_config: str | None = None,
 ) -> Path:
     """
     :param topic: example "sanfilippo_syndrome"
-    :param query: str prepared KQL query, List[str] synonyms to prepare KQL query for you.
+    :param query: str prepared KQL query.
     :param output_base: toplevel output folder
     :param fields_config: file with elasticsearch field overrides
     :return: List of elasticsearch results written to disk, a CSV file and a JSON file
@@ -36,9 +36,6 @@ def pipe_query(
         return output_csv
     else:
         print(f'"{topic}" processing')
-
-    if isinstance(query, list):
-        query = kql_syntax.match_phrase_any(query)
 
     fields = elastic_helper.ElasticFields(config_path=fields_config)
 
@@ -72,7 +69,7 @@ def pipe_batch(
 ) -> list[Path]:
 
     if not isinstance(query_topics, dict):
-        return pipe_batch(query_topics=prepare_query_topics(query_topics),
+        return pipe_batch(query_topics=filetool.read_query_topics(query_topics),
                           output_base=output_base,
                           fields_config=fields_config)
 
@@ -98,24 +95,6 @@ def diff_seconds(start_time: datetime, stop_time: datetime):
     delta = stop_time - start_time
     return abs(delta.total_seconds())
 
-def prepare_query_topics(query_topics: Path | dict) -> dict[str, str]:
-    """
-    :param query_topics: Path or dict
-    :return: dict containing "topic" and "query"
-    """
-    if isinstance(query_topics, Path):
-        return prepare_query_topics(filetool.read_query_topics(query_topics))
-    elif isinstance(query_topics, dict):
-        prepared = dict()
-        for topic, query in query_topics.items():
-            if isinstance(query, list):
-                prepared[topic] = kql_syntax.match_phrase_any(query)
-            elif isinstance(query, str):
-                prepared[topic] = query
-            else:
-                print('invalid topic', topic, 'type(query)', type(query), 'query', query)
-                raise TypeError(type(query))
-        return prepared
 
 ###############################################################################
 #
