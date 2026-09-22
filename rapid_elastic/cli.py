@@ -16,7 +16,7 @@ async def main(argv: list[str]) -> None:
     parser.add_argument(
         "--topics",
         metavar="FILE",
-        help="curated query topics where key=topic and values=search terms",
+        help="Path to directory containing files with curated query topics where filename=topic and text=search terms",
         default=filetool.path_query_topics(),
     )
     parser.add_argument(
