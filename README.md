@@ -2,7 +2,7 @@
 
 ### Disease Synonyms Curation
 * Disease names and synonyms were **HUMAN expert curated** and assisted via LLM with additional checks within NLM GeneReviews, OrphaNet, and Google searches.
-* [query_topics.json](rapid_elastic/resources/query_topics.json) is pre-built example of rare diseases of inborn errors of metabolism.
+* [query_topics](rapid_elastic/resources/query_topics) is a directory that contains pre-built examples of rare diseases of inborn errors of metabolism.
 
 ### Quickstart
 
