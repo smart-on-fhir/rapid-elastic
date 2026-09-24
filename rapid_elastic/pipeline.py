@@ -75,13 +75,20 @@ def pipe_batch(
 
     num_topics = len(query_topics.keys())
     print(f'{num_topics} topics, processing now....')
-    print('Path output:', filetool.path_output(output_base))
+    output_base = filetool.path_output(output_base)
+    print('Path output:', output_base)
 
     file_list = list()
     start_time = datetime.now()
 
     for topic, query in query_topics.items():
-        file_list.append(pipe_query(topic, query, output_base=output_base, fields_config=fields_config))
+        file_list.append(
+            pipe_query(
+                topic.stem if isinstance(topic, Path) else topic,
+                query,
+                output_base=output_base,
+                fields_config=fields_config)
+        )
         print(f'Progress= {len(file_list)} / {num_topics}')
 
     stop_time = datetime.now()

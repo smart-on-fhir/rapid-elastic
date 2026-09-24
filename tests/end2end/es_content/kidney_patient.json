@@ -1,0 +1,28 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "patient-10-1-1",
+  "subject": {
+    "reference": "Patient/patient-10"
+  },
+  "encounter": {
+    "reference": "Encounter/patient-10-1"
+  },
+  "date": "2020-06-10",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "display": "Pre-Op History & Physical \u2013 ESRD due to IgA nephropathy; scheduled deceased donor kidney transplant"
+      }
+    ]
+  },
+  "content": [
+    {
+      "attachment": {
+        "data": "a",
+        "contentType": "text/plain; charset=utf-8",
+        "title": "patient-10-1-1 (2020-06-10)"
+      }
+    }
+  ]
+}

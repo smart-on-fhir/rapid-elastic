@@ -1,0 +1,20 @@
+{
+  "group_name": "groupname1",
+  "note": "lorem ipsum cardiac amet",
+  "resourceType": "DiagnosticReport",
+  "@version": "1",
+  "anon_subject_ref": "Patient/a",
+  "@timestamp": "2026-05-20T17:32:00.000Z",
+  "fhir_ref": "DiagnosticReport/a",
+  "anon_encounter_ref": "Encounter/a",
+  "codes": {
+    "coding": [
+      {
+        "system": "urn",
+        "code": "code"
+      }
+    ],
+    "text": "CBC and differential"
+  },
+  "anon_ref": "DiagnosticReport/a"
+}
